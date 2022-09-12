@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Templates.css";
-import {Template1} from "../../Components/Templates/Template1/Template1"
-import {Template2} from "../../Components/Templates/Template2/Template2"
-import {Template3} from "../../Components/Templates/Template3/Template3"
 
 export const Templates = () => {
-  
+   
+    const [template1, setTemplate1] = useState("https://www.cvmaker.com.ar/assets/images/cvs/2/cv-ejemplo-harvard-434a54.jpg");
+    const [template2, setTemplate2] = useState("https://www.cvmaker.com.ar/assets/images/cvs/3/cv-ejemplo-standford-424954.jpg");
+    const [template3, setTemplate3] = useState("https://www.cvmaker.com.ar/assets/images/cvs/9/cv-ejemplo-edinburgh-505577.jpg");
+
   const allTemplates = [
     {
       id: 1,
       name: "Harvard",
-      templates: <Template1 />
+      templates: template1
     },
     {
       id: 2,
       name: "Edingburgh",
-      templates: <Template2 />
+      templates: template2
     },
     {
       id: 3,
       name: "Standford",
-      templates: <Template3 />
+      templates: template3
     },
   ];
 
@@ -34,7 +35,7 @@ export const Templates = () => {
       {allTemplates.map((item) => (
           <li className="templates-li" key={item.id}>
               <h2 className="templates-li-h2">{item.name}</h2>
-              {item.templates}
+              <img className="templates-li-img" src={item.templates}></img>
           </li>
         ))}
       </ul>

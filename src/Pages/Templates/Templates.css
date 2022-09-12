@@ -62,6 +62,9 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+.templates-li-img{
+  width: 205px;
+}
 @media screen and (max-width: 768px){
 
 }
