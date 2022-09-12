@@ -24,8 +24,8 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-li">
-            <NavLink className="nav-link" to="/template" onClick={() => setShowNav(false)} role="button">
-              Template
+            <NavLink className="nav-link" to="/templates" onClick={() => setShowNav(false)} role="button">
+              Templates
             </NavLink>
           </li>
           <li className="nav-li">
