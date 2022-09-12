@@ -1,48 +1,10 @@
-*{
-  padding: 0;
-  margin: 0;
+* {
   box-sizing: border-box;
-  font-family: 'RobotoMono Regular';
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-  font-size: 10px;
-  font-family: 'Roboto Mono';
-}
-
-a{
+a {
   text-decoration: none;
-}
-img, svg{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-button{
-  outline: none
-}
-.container {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-
-@font-face {
-  font-family: 'RobotoMono Regular';
-  src: url('./Assets/fonts/RobotoMono-Regular.ttf');
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat SemiBold';
-  src: url('./Assets/fonts/Montserrat-SemiBold.ttf');
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat Bold';
-  src: url('./Assets/fonts/Montserrat-Bold.ttf');
-  font-style: normal;
-}
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Montserrat SemiBold'
 }
