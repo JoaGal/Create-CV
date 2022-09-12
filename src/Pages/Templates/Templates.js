@@ -30,7 +30,7 @@ export const Templates = () => {
     <div className="templates-screen">
       <h1 className="templates-title">Examples of professional CV</h1>
       <p className="templates-subtitle">Increase your chances of finding a job and build your resume with one of our professionally designed resume templates.</p>
-      <button className="templates-button">Create CVaa</button>
+      <button className="templates-button">Create CV</button>
       <ul className="templates-ul">
       {allTemplates.map((item) => (
           <li className="templates-li" key={item.id}>
