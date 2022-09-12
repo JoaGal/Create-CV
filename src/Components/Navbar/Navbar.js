@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MdMenu, MdMenuOpen } from "react-icons/md";
+import cvLogo from "./cv-logo.svg";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -10,12 +11,7 @@ export const Navbar = () => {
     <div className="nav-height">
       <div className="nav">
         <NavLink className="nav-logo-link" to="/">
-          <img
-            className="nav-logo-img"
-            src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
-            alt="Netflix Logo"
-            onClick={() => setShowNav(false)}
-          />
+          <img className="nav-logo-img" src={cvLogo} alt="CV Logo" onClick={() => setShowNav(false)} />
         </NavLink>
 
         <div className="mobile-menu-icon" onClick={() => setShowNav(!showNav)} role="button">
