@@ -4,8 +4,8 @@ import "./Templates.css";
 export const Templates = () => {
    
     const [template1, setTemplate1] = useState("https://www.cvmaker.com.ar/assets/images/cvs/2/cv-ejemplo-harvard-434a54.jpg");
-    const [template2, setTemplate2] = useState("https://www.cvmaker.com.ar/assets/images/cvs/3/cv-ejemplo-standford-424954.jpg");
-    const [template3, setTemplate3] = useState("https://www.cvmaker.com.ar/assets/images/cvs/9/cv-ejemplo-edinburgh-505577.jpg");
+    const [template2, setTemplate2] = useState("https://www.cvmaker.com.ar/assets/images/cvs/9/cv-ejemplo-edinburgh-ffc209.jpg");
+    const [template3, setTemplate3] = useState("https://www.cvmaker.com.ar/assets/images/cvs/3/cv-ejemplo-standford-424954.jpg");
 
   const allTemplates = [
     {
@@ -15,12 +15,12 @@ export const Templates = () => {
     },
     {
       id: 2,
-      name: "Edingburgh",
+      name: "Standford",
       templates: template2
     },
     {
       id: 3,
-      name: "Standford",
+      name: "Edingburgh",
       templates: template3
     },
   ];
