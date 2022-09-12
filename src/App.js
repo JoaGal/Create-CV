@@ -5,6 +5,7 @@ import { Templates } from "./Pages/Templates/Templates";
 import { Contact } from "./Pages/Contact/Contact";
 import { Error } from "./Pages/Error/Error";
 import { Navbar } from "./Components/Navbar/Navbar";
+import { Footer } from "./Components/Footer/Footer";
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

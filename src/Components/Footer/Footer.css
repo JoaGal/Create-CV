@@ -1,0 +1,21 @@
+.footer {
+  background-color: #0584ce;
+  padding: 20px;
+}
+
+.footer-span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-span-a {
+  color: rgb(210, 210, 210);
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.footer-span-a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
