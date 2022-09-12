@@ -14,6 +14,7 @@ export const Navbar = () => {
             className="nav-logo-img"
             src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
             alt="Netflix Logo"
+            onClick={() => setShowNav(false)}
           />
         </NavLink>
 
@@ -23,16 +24,16 @@ export const Navbar = () => {
           role="button"
           onKeyDown={() => setShowNav(!showNav)}
         >
-          <MdMenu size={48} />
+          <MdMenu size={48} fill="white" />
         </div>
         <ul className={!showNav ? "navItems hide-item" : "navItems"}>
           <li className="nav-li">
             <NavLink
               className="nav-link"
               to="/"
-              onClick={() => setShowNav(!showNav)}
+              onClick={() => setShowNav(false)}
               role="button"
-              onKeyDown={() => setShowNav(!showNav)}
+              onKeyDown={() => setShowNav(false)}
             >
               Home
             </NavLink>
@@ -41,9 +42,9 @@ export const Navbar = () => {
             <NavLink
               className="nav-link"
               to="/template"
-              onClick={() => setShowNav(!showNav)}
+              onClick={() => setShowNav(false)}
               role="button"
-              onKeyDown={() => setShowNav(!showNav)}
+              onKeyDown={() => setShowNav(false)}
             >
               Template
             </NavLink>
@@ -52,9 +53,9 @@ export const Navbar = () => {
             <NavLink
               className="nav-link"
               to="/contact"
-              onClick={() => setShowNav(!showNav)}
+              onClick={() => setShowNav(false)}
               role="button"
-              onKeyDown={() => setShowNav(!showNav)}
+              onKeyDown={() => setShowNav(false)}
             >
               Contact
             </NavLink>

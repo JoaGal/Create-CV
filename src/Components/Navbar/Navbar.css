@@ -71,7 +71,7 @@
   }
 
   .hide-item {
-    transform: translateY(calc(-100% - var(--top)));
+    transform: translateY(calc(-150% - var(--top)));
   }
 
   .mobile-menu-icon {
@@ -88,7 +88,7 @@
     border-radius: 12px;
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: 6rem;
   }
 
   .closeNavIcon {
