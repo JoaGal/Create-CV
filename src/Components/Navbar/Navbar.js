@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Navbar = () => {
   return (
-    <div>Navbaraaaaa</div>
+    <div>Navbaraaaaaaaaa</div>
   )
 }
