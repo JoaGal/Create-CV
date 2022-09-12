@@ -9,9 +9,8 @@ export const Footer = () => {
       <span className="footer-span">
         © {currentYear}{" "}
         <a className="footer-span-a" href="https://github.com/JoaGal/Create-CV">
-          Grupo 2.
+          MyCVsfg.
         </a>{" "}
-        MyCVsfg.
       </span>
     </footer>
   );
