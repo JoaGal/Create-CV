@@ -34,7 +34,7 @@ export const Templates = () => {
       <ul className="templates-ul">
       {allTemplates.map((item) => (
           <li className="templates-li" key={item.id}>
-              <h2 className="templates-li-h2">{item.name}</h2>
+              <h2 className="templates-li-h2">{item.name} aaaa</h2>
               <img className="templates-li-img" src={item.templates}></img>
           </li>
         ))}
