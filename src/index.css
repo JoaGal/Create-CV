@@ -2,23 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'RobotoMono Regular';
 }
-:root{
-  --dark-bg: #262626;
-  --gray-1: #BCB4B4;
-  --deep-dark: #1E1E1E;
-  --gray-2: #363636;
-  --white : white;
-  --black: black;
-}
+
 html{
   font-size: 10px;
   font-family: 'Roboto Mono';
-  background-color: var(--dark-bg);
 }
-ul,li{
-  list-style: none;
-}
+
 a{
   text-decoration: none;
 }
@@ -51,14 +42,6 @@ button{
   font-family: 'Montserrat Bold';
   src: url('./Assets/fonts/Montserrat-Bold.ttf');
   font-style: normal;
-}
-html{
-  font-family: 'RobotoMono Regular';
-  color: var(--gray-1);
-}
-*{
-  font-family: 'RobotoMono Regular';
-  color: var(--gray-1);
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat SemiBold'
