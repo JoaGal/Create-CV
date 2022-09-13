@@ -34,7 +34,7 @@
 }
 
 .contact-form-input {
-  border: 1px solid #ccc;
+  border: 0.13rem solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
   height: 3rem;
@@ -44,11 +44,11 @@
 }
 
 .contact-form-input:focus {
-  outline: 1px solid #0584ce;
+  outline: 0.13rem solid #0584ce;
 }
 
 .contact-form-textarea {
-  border: 1px solid #ccc;
+  border: 0.13rem solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
   height: 10rem;
@@ -58,7 +58,7 @@
 }
 
 .contact-form-textarea:focus {
-  outline: 1px solid #0584ce;
+  outline: 0.13rem solid #0584ce;
 }
 
 .contact-form-button{
