@@ -123,3 +123,7 @@
 .personalInf-button-more:hover{
     background-color: #0584ce;
 }
+
+.personalInf-ico-button{
+    font-size: 1.5rem;
+}
