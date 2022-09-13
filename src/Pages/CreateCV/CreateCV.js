@@ -10,7 +10,7 @@ export const CreateCV = () => {
     <div className="createCV-screen">
         <h2 className="createCV-title">Personal information</h2>
         <div className="createCV-level">
-            <div className="createCV-level-box" id="createCV-level-box-left">
+            <div className="createCV-level-box">
                 <BsFillPersonFill className="createCV-icon"/>
                 <p className="createCV-p">Personal</p>
             </div>
@@ -18,7 +18,7 @@ export const CreateCV = () => {
                 <FiFileText className='createCV-icon'/>
                 <p className="createCV-p">Experiences</p>
             </div>
-            <div className="createCV-level-box" id="createCV-level-box-rigth">
+            <div className="createCV-level-box">
                 <RiPencilFill className="createCV-icon"/>
                 <p className="createCV-p">Template</p>
             </div>

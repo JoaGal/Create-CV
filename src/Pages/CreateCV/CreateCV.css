@@ -35,8 +35,15 @@
     height: 2.8rem;
     padding: 0.4rem;
     color: #a6a6a6;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: #cccccc;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.createCV-icon:hover{
+    background-color: #0584ce;
+    color: #fff;
 }
 
 .createCV-p {
