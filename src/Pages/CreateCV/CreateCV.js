@@ -24,6 +24,7 @@ export const CreateCV = () => {
             </div>
         </div>
         <PersonalInf/>
+        <button className="createCV-button">Next step</button>
     </div>
   )
 }

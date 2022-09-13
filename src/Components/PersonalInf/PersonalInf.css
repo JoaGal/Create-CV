@@ -52,11 +52,11 @@
 }
 
 .personalInf-name {
-    margin: 1.4rem 1.4rem 1.4rem 0rem;
+    margin: 1.4rem 0rem 1.4rem 0rem;
 }
 
 .personalInf-lastname {
-    margin: 2.4rem 1.4rem 1.4rem 0rem;
+    margin: 1.4rem 0rem 1.4rem 0rem;
 }
 
 .personalInf-p {
@@ -107,5 +107,19 @@
 
 .personalInf-button-more {
     margin-top: 1.4rem;
+    color: #fff;
+    background-color: #0575b6;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
     width: 100%;
+    height: 3rem;
+}
+
+.personalInf-button-more:hover{
+    background-color: #0584ce;
 }

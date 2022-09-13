@@ -1,6 +1,8 @@
 import React from "react";
 import "./PersonalInf.css";
 import { AiFillCamera } from "react-icons/ai";
+import { MdAddCircleOutline } from "react-icons/md";
+
 
 export const PersonalInf = () => {
   return (
@@ -47,7 +49,7 @@ export const PersonalInf = () => {
           <input type="text" className="personalInf-input" />
         </div>
       </div>
-        <button className="personalInf-button-more">More</button>
+        <button className="personalInf-button-more"><MdAddCircleOutline className="personalInf-ico-button"/> Additional Information</button>
     </div>
     
   );

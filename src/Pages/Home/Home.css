@@ -22,7 +22,7 @@
 }
 
 .home-button {
-  background-color: #00a2ff;
+  background-color: #0575b6;
   border: 1px solid #ccc;
   border-radius: 5px;
   color: #fff;
@@ -36,7 +36,7 @@
 }
 
 .home-button:hover {
-  background-color: #0080ff;
+  background-color: #0584ce;
 }
 
 .home-ul {

@@ -51,6 +51,25 @@
     color: #a6a6a6;
 }
 
+.createCV-button{
+    margin-top: 1.4rem;
+    color: #fff;
+    background-color: #05b605;
+    outline: none;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    width: 20rem;
+    height: 3rem;
+}
+
+.createCV-button:hover{
+    background-color: #05ce26;
+}
+
 @media only screen and (max-width: 768px) {
     #createCV-level-box-mid {
         margin-left: 5rem;
