@@ -3,6 +3,7 @@ import "./CreateCV.css";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
 import { RiPencilFill } from "react-icons/ri";
+import {PersonalInf} from "../../Components/PersonalInf/PersonalInf"
 
 export const CreateCV = () => {
   return (
@@ -11,14 +12,18 @@ export const CreateCV = () => {
         <div className="createCV-level">
             <div className="createCV-level-box" id="createCV-level-box-left">
                 <BsFillPersonFill className="createCV-icon"/>
+                <p className="createCV-p">Personal</p>
             </div>
             <div className="createCV-level-box" id="createCV-level-box-mid">
                 <FiFileText className='createCV-icon'/>
+                <p className="createCV-p">Experiences</p>
             </div>
             <div className="createCV-level-box" id="createCV-level-box-rigth">
                 <RiPencilFill className="createCV-icon"/>
+                <p className="createCV-p">Template</p>
             </div>
         </div>
+        <PersonalInf/>
     </div>
   )
 }

@@ -1,0 +1,12 @@
+.personalInf-box {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    width: 15rem;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    max-width: 700px;
+    padding: 1rem;
+}
