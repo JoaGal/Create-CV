@@ -76,7 +76,7 @@ export const PersonalInf = () => {
           </div>
           <div className="personalInf-box3">
             <div className="personalInf-email">
-              <p className="personalInf-p">LinkedIN</p>
+              <p className="personalInf-p">LinkedIn</p>
               <input type="text" className="personalInf-input" />
             </div>
             <div className="personalInf-number-phone">
