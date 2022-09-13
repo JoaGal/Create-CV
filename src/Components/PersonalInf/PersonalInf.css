@@ -46,27 +46,27 @@
 }
 
 
-.personalInf-box1-complete-name{
+.personalInf-box1-complete-name {
     display: block;
-    width: 100%;    
+    width: 100%;
 }
 
 .personalInf-name {
     margin: 1.4rem 1.4rem 1.4rem 0rem;
 }
 
-.personalInf-lastname{
+.personalInf-lastname {
     margin: 2.4rem 1.4rem 1.4rem 0rem;
 }
 
 .personalInf-p {
     font-size: 1rem;
     text-align: left;
-    margin-bottom:0.4rem;
+    margin-bottom: 0.4rem;
     color: #333333;
 }
 
-.personalInf-input{
+.personalInf-input {
     width: 100%;
     height: 2.5rem;
     border-radius: 0.2rem;
@@ -76,19 +76,36 @@
     border: 0.13rem solid #ccc;
 }
 
-.personalInf-input:focus{
+.personalInf-input:focus {
     border-color: #0584ce;
     background-color: #0583cc1a;
 }
-.personalInf-box2{
+
+.personalInf-box2 {
     display: flex;
 }
 
-.personalInf-email{
+.personalInf-email {
     width: 50%;
     margin-right: 1.4rem;
 }
 
-.personalInf-number-phone{
+.personalInf-number-phone {
     width: 50%;
+}
+
+.personalInf-adress {
+    display: block;
+    width: 100%;
+    margin-top: 1.4rem;
+}
+
+.personalInf-box3 {
+    display: flex;
+    margin-top: 1.4rem;
+}
+
+.personalInf-button-more {
+    margin-top: 1.4rem;
+    width: 100%;
 }

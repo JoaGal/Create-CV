@@ -33,6 +33,22 @@ export const PersonalInf = () => {
           <input type="text" className="personalInf-input" />
         </div>
       </div>
+      <div className="personalInf-adress">
+        <p className="personalInf-p">Adress</p>
+        <input type="text" className="personalInf-input" />
+      </div>
+      <div className="personalInf-box3">
+        <div className="personalInf-email">
+          <p className="personalInf-p">Postal Code</p>
+          <input type="text" className="personalInf-input" />
+        </div>
+        <div className="personalInf-number-phone">
+          <p className="personalInf-p">Country/City</p>
+          <input type="text" className="personalInf-input" />
+        </div>
+      </div>
+        <button className="personalInf-button-more">More</button>
     </div>
+    
   );
 };
