@@ -6,6 +6,7 @@ import { Contact } from "./Pages/Contact/Contact";
 import { Error } from "./Pages/Error/Error";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { Footer } from "./Components/Footer/Footer";
+import { CreateCV } from "./Pages/CreateCV/CreateCV";
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/templates" element={<Templates />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/createcv" element={<CreateCV/>}/>
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

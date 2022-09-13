@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const howItWorks = [
@@ -29,8 +30,12 @@ export const Home = () => {
   return (
     <div className="home-screen">
       <h1 className="home-title">Create a professional CV</h1>
-      <p className="home-subtitle">Create a CV in less than 15 minutes and download it immediately.</p>
-      <button className="home-button">Create CV</button>
+      <p className="home-subtitle">
+        Create a CV in less than 15 minutes and download it immediately.
+      </p>
+      <Link to="/createcv">
+        <button className="home-button">Create CV</button>
+      </Link>
       <ul className="home-ul">
         {howItWorks.map((item) => (
           <li className="home-li" key={item.id}>

@@ -1,0 +1,46 @@
+.createCV-screen {
+    align-items: center;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.createCV-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem;
+    text-align: center;
+}
+
+.createCV-level {
+    display: flex;
+    margin: 1rem;
+    margin-top: 1rem;
+}
+
+.createCV-level-box{
+    background-color: #cccccc;
+    border-radius: 50%;
+    text-align: center;
+    color: #a6a6a6;
+    width: 3rem;
+}
+
+#createCV-level-box-mid{
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+}
+
+.createCV-icon{
+    font-size: 1.7rem;
+    margin: 0.5rem;
+}
+
+@media only screen and (max-width: 768px){
+    #createCV-level-box-mid{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
