@@ -106,9 +106,6 @@ export const PersonalInf = ({ personalInfo, setPersonalInfo, nextStep }) => {
         )}
         Additional Information
       </button>
-      <button className="createCV-button" type="submit" onClick={nextStep}>
-        Next step
-      </button>
     </form>
   );
 };
