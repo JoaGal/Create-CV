@@ -11,7 +11,8 @@ export const ExperiencesInf = () => {
   const [editSectionName, setEditSectionName] = useState(false);
 
   const closeEditSectionName = (e) => {
-    if (e.target.id !== "changeSectionName") {
+    console.log(e);
+    if (!e.target.className.includes("changeSectionName")) {
       setEditSectionName(false);
     }
   };
@@ -20,8 +21,8 @@ export const ExperiencesInf = () => {
     <>
       {editSectionName && (
         <div className="experiencesInf-container" onClick={closeEditSectionName}>
-          <div className="experiencesInf-box-open" id="changeSectionName">
-            <h3 className="experiencesInf-h3">Perfil</h3>
+          <div className="experiencesInf-box-open changeSectionName">
+            <input type="text" className="experiencesInf-h3 changeSectionName" value="hola" />
           </div>
           <button className="experiencesInf-button-fixed" onClick={closeEditSectionName}>
             X
