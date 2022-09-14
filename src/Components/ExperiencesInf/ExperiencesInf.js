@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ExperiencesInf.css";
 import { BsPersonSquare, BsFillBriefcaseFill, BsFillMouse2Fill } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
@@ -8,14 +8,34 @@ import { FaWrench } from "react-icons/fa";
 const title = ["Work experience", "Profile", "Skill", "Languages", "Studies and certifications"];
 
 export const ExperiencesInf = () => {
+  const [editSectionName, setEditSectionName] = useState(false);
+
+  const closeEditSectionName = (e) => {
+    if (e.target.id !== "changeSectionName") {
+      setEditSectionName(false);
+    }
+  };
+
   return (
     <>
+      {editSectionName && (
+        <div className="experiencesInf-container" onClick={closeEditSectionName}>
+          <div className="experiencesInf-box-open" id="changeSectionName">
+            <h3 className="experiencesInf-h3">Perfil</h3>
+          </div>
+          <button className="experiencesInf-button-fixed" onClick={closeEditSectionName}>
+            X
+          </button>
+        </div>
+      )}
       <div className="experiencesInf-box">
         <h3 className="experiencesInf-h3">
           <BsFillBriefcaseFill className="experiencesInf-ico" />
           {title[0]}
         </h3>
-        <FaWrench className="experiencesInf-ico-config" />
+        <button onClick={() => setEditSectionName(!editSectionName)}>
+          <FaWrench className="experiencesInf-ico-config" />
+        </button>
       </div>
       <div className="experiencesInf-box">
         <h3 className="experiencesInf-h3">
