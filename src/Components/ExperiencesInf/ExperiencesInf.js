@@ -17,14 +17,6 @@ export const ExperiencesInf = () => {
         </h3>
         <FaWrench className="experiencesInf-ico-config" />
       </div>
-
-      <div className="experiencesInf-box">
-        <h3 className="experiencesInf-h3">
-          <BsFillBriefcaseFill className="experiencesInf-ico" />
-          {title[0]}
-        </h3>
-        <FaWrench className="experiencesInf-ico-config" />
-      </div>
       <div className="experiencesInf-box">
         <h3 className="experiencesInf-h3">
           <BsPersonSquare className="experiencesInf-ico" />
