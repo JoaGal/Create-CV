@@ -9,6 +9,21 @@ import "./CreateCV.css";
 
 export const CreateCV = () => {
   const [reference, setReference] = useState(0);
+  const [personalInfo, setPersonalInfo] = useState({
+    name: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    address: "",
+    country: "",
+    city: "",
+    date: "",
+    maritalStatus: "",
+    postalCode: "",
+    gender: "",
+    linkedin: "",
+    briefcase: "",
+  });
 
   const nextStep = () => {
     if (reference < 2) {
@@ -48,7 +63,7 @@ export const CreateCV = () => {
           <p className="createCV-p">Template</p>
         </div>
       </div>
-      {reference === 0 && <PersonalInf />}
+      {reference === 0 && <PersonalInf personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} nextStep={nextStep} />}
       {reference === 1 && <ExperiencesInf />}
       {reference === 2 && <TemplatesInf />}
       <button className="createCV-button" onClick={nextStep}>
