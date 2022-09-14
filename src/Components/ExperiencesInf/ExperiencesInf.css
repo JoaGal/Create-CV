@@ -6,9 +6,6 @@
     width: 52rem;
     max-width: 52rem;
     padding: 1.5rem;
-}
-
-.experiencesInf-box-box{
     display: flex;
     justify-content: space-between;
 }
