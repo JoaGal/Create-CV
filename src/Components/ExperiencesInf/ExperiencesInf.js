@@ -9,7 +9,7 @@ import { BiWorld } from "react-icons/bi";
 import { GiGraduateCap } from "react-icons/gi";
 import { FaWrench } from "react-icons/fa";
 
-const title = ["Work experience", "Profile" , "Skill", "Languages", "Studies and certifications"]
+const title = ["Work experience", "Profile" , "Skill", "Languages", "Studies and certifications"];
 
 export const ExperiencesInf = () => {
   return (
