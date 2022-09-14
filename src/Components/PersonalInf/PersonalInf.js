@@ -14,13 +14,8 @@ export const PersonalInf = ({ personalInfo, setPersonalInfo, nextStep }) => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    nextStep();
-  };
-
   return (
-    <form className="personalInf-box" onSubmit={handleSubmit}>
+    <form className="personalInf-box" onSubmit={nextStep}>
       <h3 className="personalInf-title">Personal information</h3>
       <hr />
       <div className="personalInf-box1">

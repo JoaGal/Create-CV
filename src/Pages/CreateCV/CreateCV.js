@@ -63,7 +63,9 @@ export const CreateCV = () => {
           <p className="createCV-p">Template</p>
         </div>
       </div>
-      {reference === 0 && <PersonalInf personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} nextStep={nextStep} />}
+      {reference === 0 && (
+        <PersonalInf personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} nextStep={nextStep} />
+      )}
       {reference === 1 && <ExperiencesInf />}
       {reference === 2 && <TemplatesInf />}
       <button className="createCV-button" onClick={nextStep}>
