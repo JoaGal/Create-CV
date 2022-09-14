@@ -1,0 +1,29 @@
+.experiencesInf-box {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    width: 52rem;
+    max-width: 52rem;
+    padding: 1.5rem;
+}
+
+.experiencesInf-box-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiencesInf-h3{
+    color: #333333;
+    display: flex;
+}
+
+.experiencesInf-ico{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.experiencesInf-ico-config{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
