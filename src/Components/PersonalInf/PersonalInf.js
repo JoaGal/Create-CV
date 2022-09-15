@@ -25,18 +25,18 @@ export const PersonalInf = ({ personalInfo, setPersonalInfo, nextStep }) => {
         </button>
         <div className="personalInf-box1-complete-name">
           <div className="personalInf-name">
-            <p className="personalInf-p">Name*</p>
+            <p className="personalInf-p" >Name</p>
             <input type="text" className="personalInf-input" name="name" onChange={handleChange} />
           </div>
           <div className="personalInf-lastname">
-            <p className="personalInf-p">Last Name*</p>
+            <p className="personalInf-p">Last Name</p>
             <input type="text" className="personalInf-input" name="lastname" onChange={handleChange} />
           </div>
         </div>
       </div>
       <div className="personalInf-box2">
         <div className="personalInf-email">
-          <p className="personalInf-p">Email*</p>
+          <p className="personalInf-p">Email</p>
           <input type="text" className="personalInf-input" name="email" onChange={handleChange} />
         </div>
         <div className="personalInf-number-phone">
