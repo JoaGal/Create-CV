@@ -84,7 +84,7 @@ export const ExperiencesInf = () => {
       )}
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="0" onClick={openInfo}>
-          <h3 className="experiencesInf-h3">
+          <h3 className="experiencesInf-h3" id="0">
             <BsFillBriefcaseFill className="experiencesInf-ico" />
             {title[0]}
           </h3>
@@ -104,7 +104,7 @@ export const ExperiencesInf = () => {
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="1" onClick={openInfo}>
-          <h3 className="experiencesInf-h3">
+          <h3 className="experiencesInf-h3" id="1">
             <BsPersonSquare className="experiencesInf-ico" />
             {title[1]}
           </h3>
@@ -124,7 +124,7 @@ export const ExperiencesInf = () => {
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="2" onClick={openInfo}>
-          <h3 className="experiencesInf-h3">
+          <h3 className="experiencesInf-h3" id="2">
             <BsFillMouse2Fill className="experiencesInf-ico" />
             {title[2]}
           </h3>
@@ -144,7 +144,7 @@ export const ExperiencesInf = () => {
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="3" onClick={openInfo}>
-          <h3 className="experiencesInf-h3">
+          <h3 className="experiencesInf-h3" id="3">
             <BiWorld className="experiencesInf-ico" />
             {title[3]}
           </h3>
@@ -164,7 +164,7 @@ export const ExperiencesInf = () => {
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="4" onClick={openInfo}>
-          <h3 className="experiencesInf-h3">
+          <h3 className="experiencesInf-h3" id="4">
             <GiGraduateCap className="experiencesInf-ico" />
             {title[4]}
           </h3>
