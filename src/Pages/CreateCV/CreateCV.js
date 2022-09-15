@@ -63,7 +63,23 @@ export const CreateCV = () => {
         setReference(0);
       }
     }
-  };
+  }
+
+  const navegateIcon0 = ()=>{
+    if (checkInputs() && reference !== 0) {
+      setReference(0)
+    }
+  }
+  const navegateIcon1 = ()=>{
+    if (checkInputs() && reference !== 1) {
+      setReference(1)
+    }
+  }
+  const navegateIcon2 = ()=>{
+    if (checkInputs() && reference !== 2) {
+      setReference(2)
+    }
+  }
 
   return (
     <div className="createCV-screen">
@@ -78,7 +94,7 @@ export const CreateCV = () => {
             className={`createCV-icon ${
               reference === 0 && "createCV-icon-active"
             }`}
-            onClick={() => setReference(0)}
+            onClick={navegateIcon0}
           />
           <p className="createCV-p">Personal</p>
         </div>
@@ -87,7 +103,7 @@ export const CreateCV = () => {
             className={`createCV-icon ${
               reference === 1 && "createCV-icon-active"
             }`}
-            onClick={() => setReference(1)}
+            onClick={navegateIcon1}
           />
           <p className="createCV-p">Experiences</p>
         </div>
@@ -96,7 +112,7 @@ export const CreateCV = () => {
             className={`createCV-icon ${
               reference === 2 && "createCV-icon-active"
             }`}
-            onClick={() => setReference(2)}
+            onClick={navegateIcon2}
           />
           <p className="createCV-p">Template</p>
         </div>
