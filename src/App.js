@@ -14,8 +14,6 @@ import { Template3 } from "./Components/Templates/Template3/Template3";
 export const App = () => {
   const urlPage = window.location.pathname;
 
-  console.log(urlPage);
-
   return (
     <BrowserRouter>
       {urlPage !== "/template1" && urlPage !== "/template2" && urlPage !== "/template3" && <Navbar />}
@@ -30,6 +28,7 @@ export const App = () => {
         <Route path="/template3" element={<Template3 />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      
       {urlPage !== "/template1" && urlPage !== "/template2" && urlPage !== "/template3" && <Footer />}
     </BrowserRouter>
   );
