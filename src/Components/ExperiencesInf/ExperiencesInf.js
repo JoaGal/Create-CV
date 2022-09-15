@@ -44,7 +44,7 @@ export const ExperiencesInf = () => {
       {editSectionName && (
         <div className="experiencesInf-container" onClick={closeEditSectionName}>
           <div className="experiencesInf-box-open changeSectionName">
-            <input type="text" className="experiencesInf-input-change changeSectionName" placeholder={title[reference]} />
+            <input type="text" className="experiencesInf-input-change changeSectionName" name="change" placeholder={title[reference]} />
           </div>
           <button className="experiencesInf-button-fixed" onClick={closeEditSectionName}>
             X
