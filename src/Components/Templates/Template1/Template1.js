@@ -1,10 +1,15 @@
 import React from "react";
 import "./Template1.css";
 
-export const Template1 = () => {
+export const Template1 = ({ styleZoom }) => {
   return (
-    <div id="page-wrap">
-      <img className="template-1-img" src="https://avatars.githubusercontent.com/u/88043910?v=4" alt="Foto de perfil" id="pic" />
+    <div id="page-wrap" style={{ zoom: styleZoom }}>
+      <img
+        className="template-1-img"
+        src="https://avatars.githubusercontent.com/u/88043910?v=4"
+        alt="Foto de perfil"
+        id="pic"
+      />
 
       <div id="contact-info" className="vcard">
         <h1 className="h1">Giuliano Conti</h1>
@@ -34,7 +39,7 @@ export const Template1 = () => {
       </div>
 
       <div id="objective">
-        <p>
+        <p className="p">
           Soy una persona autodidacta. Me gustan los desafíos. Tengo muchas ganas de unirme a un grupo de trabajo para
           aportar, seguir aprendiendo y crecer con la programación.
         </p>
@@ -68,8 +73,8 @@ export const Template1 = () => {
           <h2 className="h2">Habilidades extras</h2>
           <p className="p">
             SketchUp, Software de productividad de Microsoft Office (Word, Excel, etc), Creación de mapas para juegos
-            FPS de Valve (Valve Hammer Editor), Linux (Ubuntu), Windows, Bueno googleando y
-            encontrando soluciones a diferentes problemas
+            FPS de Valve (Valve Hammer Editor), Linux (Ubuntu), Windows, Bueno googleando y encontrando soluciones a
+            diferentes problemas
           </p>
         </dd>
 
