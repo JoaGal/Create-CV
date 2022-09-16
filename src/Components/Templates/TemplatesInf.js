@@ -27,6 +27,7 @@ export const TemplatesInf = () => {
           {templateOpen === 1 && <Template1 styleZoom="0.7" />}
           {templateOpen === 2 && <Template2 />}
           {templateOpen === 3 && <Template3 />}
+          <a href="/template1" target="_blank">Select this resume</a>
         </div>
       )}
       <div className="templatesInf-grid">
