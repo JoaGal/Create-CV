@@ -54,7 +54,7 @@ export const PersonalInf = ({ personalInfo, setPersonalInfo, nextStep }) => {
           <input type="text" className="personalInf-input" name="country" onChange={handleChange} />
         </div>
         <div className="personalInf-number-phone">
-          <p className="personalInf-p">Village/City</p>
+          <p className="personalInf-p">Town/City</p>
           <input type="text" className="personalInf-input" name="city" onChange={handleChange} />
         </div>
       </div>

@@ -54,7 +54,6 @@ export const CreateCV = () => {
     return false;
   };
 
-
   const nextStep = () => {
     if (checkInputs()) {
       if (reference < 2) {
@@ -63,23 +62,13 @@ export const CreateCV = () => {
         setReference(0);
       }
     }
-  }
+  };
 
-  const navegateIcon0 = ()=>{
-    if (checkInputs() && reference !== 0) {
-      setReference(0)
+  const navegateIcon = (number) => {
+    if (checkInputs() && reference !== number) {
+      setReference(number);
     }
-  }
-  const navegateIcon1 = ()=>{
-    if (checkInputs() && reference !== 1) {
-      setReference(1)
-    }
-  }
-  const navegateIcon2 = ()=>{
-    if (checkInputs() && reference !== 2) {
-      setReference(2)
-    }
-  }
+  };
 
   return (
     <div className="createCV-screen">
@@ -94,7 +83,9 @@ export const CreateCV = () => {
             className={`createCV-icon ${
               reference === 0 && "createCV-icon-active"
             }`}
-            onClick={navegateIcon0}
+            onClick={() => {
+              navegateIcon(0);
+            }}
           />
           <p className="createCV-p">Personal</p>
         </div>
@@ -103,7 +94,9 @@ export const CreateCV = () => {
             className={`createCV-icon ${
               reference === 1 && "createCV-icon-active"
             }`}
-            onClick={navegateIcon1}
+            onClick={() => {
+              navegateIcon(1);
+            }}
           />
           <p className="createCV-p">Experiences</p>
         </div>
@@ -112,7 +105,9 @@ export const CreateCV = () => {
             className={`createCV-icon ${
               reference === 2 && "createCV-icon-active"
             }`}
-            onClick={navegateIcon2}
+            onClick={() => {
+              navegateIcon(2);
+            }}
           />
           <p className="createCV-p">Template</p>
         </div>

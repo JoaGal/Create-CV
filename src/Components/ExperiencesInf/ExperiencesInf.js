@@ -30,32 +30,42 @@ export const ExperiencesInf = () => {
     }
   };
 
-  const openInfo = (e)=>{
+  const openInfo = (e) => {
     if (e.target.id.includes("0")) {
-      setReference2(0)
-    }else if (e.target.id.includes("1")) {
-      setReference2(1);
-    }else if (e.target.id.includes("2")) {
-      setReference2(2);
+      if (reference2 !== 0) {
+        setReference2(0);
+      }else{
+        setReference2(null);
+      }
+    } else if (e.target.id.includes("1")) {
+      if (reference2 !== 1) {
+        setReference2(1);
+      }else{
+        setReference2(null);
+      }
+    } else if (e.target.id.includes("2")) {
+      if (reference2 !== 2) {
+        setReference2(2);
+      }else{
+        setReference2(null);
+      }
     } else if (e.target.id.includes("3")) {
-      setReference2(3);
+      if (reference2 !== 3) {
+        setReference2(3);
+      }else{
+        setReference2(null);
+      }
     } else if (e.target.id.includes("4")) {
-      setReference2(4);
+      if (reference2 !== 0) {
+        setReference2(4);
+      }else{
+        setReference2(null);
+      }
     }
   };
 
-  const changeSectionName = (e) => {
-    if (e.target.id.includes("0")) {
-      setReference(0);
-    } else if (e.target.id.includes("1")) {
-      setReference(1);
-    } else if (e.target.id.includes("2")) {
-      setReference(2);
-    } else if (e.target.id.includes("3")) {
-      setReference(3);
-    } else if (e.target.id.includes("4")) {
-      setReference(4);
-    }
+  const changeSectionName = (number) => {
+    setReference(number);
     setEditSectionName(true);
   };
 
@@ -89,15 +99,12 @@ export const ExperiencesInf = () => {
             {title[0]}
           </h3>
           <button
-            onClick={changeSectionName}
-            id="0"
+            onClick={() => {
+              changeSectionName(0);
+            }}
             className="experiencesInf-button-change"
           >
-            <FaWrench
-              className="experiencesInf-ico-config"
-              id="0"
-              onClick={() => setReference(0)}
-            />
+            <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
         {reference2 === 0 && <h1>Giuli</h1>}
@@ -109,15 +116,12 @@ export const ExperiencesInf = () => {
             {title[1]}
           </h3>
           <button
-            onClick={changeSectionName}
-            id="1"
+            onClick={() => {
+              changeSectionName(1);
+            }}
             className="experiencesInf-button-change"
           >
-            <FaWrench
-              className="experiencesInf-ico-config "
-              id="1"
-              onClick={() => setReference(1)}
-            />
+            <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
         {reference2 === 1 && <ProfileExperience />}
@@ -129,15 +133,12 @@ export const ExperiencesInf = () => {
             {title[2]}
           </h3>
           <button
-            onClick={changeSectionName}
-            id="2"
+            onClick={() => {
+              changeSectionName(2);
+            }}
             className="experiencesInf-button-change"
           >
-            <FaWrench
-              className="experiencesInf-ico-config "
-              id="2"
-              onClick={() => setReference(2)}
-            />
+            <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
         {reference2 === 2 && <h1>como</h1>}
@@ -149,15 +150,12 @@ export const ExperiencesInf = () => {
             {title[3]}
           </h3>
           <button
-            onClick={changeSectionName}
-            id="3"
+            onClick={() => {
+              changeSectionName(3);
+            }}
             className="experiencesInf-button-change"
           >
-            <FaWrench
-              className="experiencesInf-ico-config 3"
-              id="3"
-              onClick={() => setReference(3)}
-            />
+            <FaWrench className="experiencesInf-ico-config 3" />
           </button>
         </div>
         {reference2 === 3 && <h1>andas</h1>}
@@ -169,15 +167,12 @@ export const ExperiencesInf = () => {
             {title[4]}
           </h3>
           <button
-            onClick={changeSectionName}
-            id="4"
+            onClick={() => {
+              changeSectionName(4);
+            }}
             className="experiencesInf-button-change"
           >
-            <FaWrench
-              className="experiencesInf-ico-config"
-              id="4"
-              onClick={() => setReference(4)}
-            />
+            <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
         {reference2 === 4 && <h1>?</h1>}
