@@ -12,6 +12,7 @@ import { ProfileExperience } from "./ProfileExperience/ProfileExperience";
 import { WorkExperience } from "./WorkExperience/WorkExperience";
 import { SkillExperience } from "./SkillExperience/SkillExperience";
 import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
+import { FaRegWindowClose } from "react-icons/fa";
 
 const title = [
   "Work experience",
@@ -91,7 +92,7 @@ export const ExperiencesInf = () => {
             className="experiencesInf-button-fixed"
             onClick={closeEditSectionName}
           >
-            X
+            x
           </button>
         </div>
       )}
