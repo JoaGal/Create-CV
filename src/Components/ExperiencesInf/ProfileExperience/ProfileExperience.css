@@ -6,13 +6,13 @@
 .profileExperience-p {
     font-size: 1rem;
     text-align: left;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
     color: #333333;
 }
 
 .profileExperience-textarea {
     width: 100%;
-    margin: 0.5rem 0rem;
+    margin-top: 0.4rem;
     border: 0.13rem solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
@@ -36,6 +36,7 @@
     border: none;
     border-radius: 0.2rem;
     cursor: pointer;
+    margin-top: 1.4rem;
     font-size: 1rem;
     font-weight: 600;
 }

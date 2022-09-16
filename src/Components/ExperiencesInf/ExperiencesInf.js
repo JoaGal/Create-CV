@@ -9,6 +9,9 @@ import { BiWorld } from "react-icons/bi";
 import { GiGraduateCap } from "react-icons/gi";
 import { FaWrench } from "react-icons/fa";
 import { ProfileExperience } from "./ProfileExperience/ProfileExperience";
+import { WorkExperience } from "./WorkExperience/WorkExperience";
+import { SkillExperience } from "./SkillExperience/SkillExperience";
+import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
 
 const title = [
   "Work experience",
@@ -34,31 +37,31 @@ export const ExperiencesInf = () => {
     if (e.target.id.includes("0")) {
       if (reference2 !== 0) {
         setReference2(0);
-      }else{
+      } else {
         setReference2(null);
       }
     } else if (e.target.id.includes("1")) {
       if (reference2 !== 1) {
         setReference2(1);
-      }else{
+      } else {
         setReference2(null);
       }
     } else if (e.target.id.includes("2")) {
       if (reference2 !== 2) {
         setReference2(2);
-      }else{
+      } else {
         setReference2(null);
       }
     } else if (e.target.id.includes("3")) {
       if (reference2 !== 3) {
         setReference2(3);
-      }else{
+      } else {
         setReference2(null);
       }
     } else if (e.target.id.includes("4")) {
       if (reference2 !== 0) {
         setReference2(4);
-      }else{
+      } else {
         setReference2(null);
       }
     }
@@ -107,7 +110,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 0 && <h1>Giuli</h1>}
+        {reference2 === 0 && <WorkExperience />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="1" onClick={openInfo}>
@@ -141,7 +144,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 2 && <h1>como</h1>}
+        {reference2 === 2 && <SkillExperience />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="3" onClick={openInfo}>
@@ -158,7 +161,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config 3" />
           </button>
         </div>
-        {reference2 === 3 && <h1>andas</h1>}
+        {reference2 === 3 && <LenguageExperience/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="4" onClick={openInfo}>

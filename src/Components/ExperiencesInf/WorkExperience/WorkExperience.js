@@ -3,18 +3,33 @@ import "./WorkExperience.css";
 
 export const WorkExperience = () => {
   return (
-    <div>
+    <div className="workExperience-box">
         <hr/>
-        <div className="personalInf-box1-complete-name">
-          <div className="personalInf-name">
-            <p className="personalInf-p" >Workstation</p>
-            <input type="text" className="personalInf-input" name="name" onChange={handleChange} />
+        <div className="workExperience-box1">
+          <div className="workExperience-double1">
+            <p className="workExperience-p" >Workstation</p>
+            <input type="text" className="workExperience-input" name="workstation"/>
           </div>
-          <div className="personalInf-lastname">
-            <p className="personalInf-p">City/Town</p>
-            <input type="text" className="personalInf-input" name="lastname" onChange={handleChange} />
+          <div className="workExperience-double2">
+            <p className="workExperience-p">City/Town</p>
+            <input type="text" className="workExperience-input" name="city" />
           </div>
         </div>
+        <div className="workExperience-employer">
+            <p className="workExperience-p">Employer</p>
+            <input type="text" className="workExperience-input" name="employer" />
+        </div>
+        <div className="workExperience-box1">
+          <div className="workExperience-double1">
+            <p className="workExperience-p" >Start date</p>
+            <input type="date" className="workExperience-input" name="workstation"/>
+          </div>
+          <div className="workExperience-double2">
+            <p className="workExperience-p">Finish date</p>
+            <input type="date" className="workExperience-input" name="city" />
+          </div>
+        </div>
+        <button className="workExperience-button">Save</button>
     </div>
   )
 }
