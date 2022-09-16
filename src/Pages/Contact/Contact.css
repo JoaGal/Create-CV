@@ -41,10 +41,12 @@
   margin-bottom: 1rem;
   padding: 0.5rem;
   width: 100%;
+  outline: none;
 }
 
 .contact-form-input:focus {
-  outline: 0.13rem solid #0584ce;
+  border-color: #0584ce;
+  background-color: #0583cc1a;
 }
 
 .contact-form-textarea {
@@ -53,12 +55,14 @@
   font-size: 1rem;
   height: 10rem;
   padding: 0.5rem;
+  outline: none;
   resize: none;
   width: 100%;
 }
 
 .contact-form-textarea:focus {
-  outline: 0.13rem solid #0584ce;
+  border-color: #0584ce;
+  background-color: #0583cc1a;
 }
 
 .contact-form-button{
