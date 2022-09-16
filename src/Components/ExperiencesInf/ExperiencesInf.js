@@ -59,7 +59,7 @@ export const ExperiencesInf = () => {
         setReference2(null);
       }
     } else if (e.target.id.includes("4")) {
-      if (reference2 !== 0) {
+      if (reference2 !== 4) {
         setReference2(4);
       } else {
         setReference2(null);
