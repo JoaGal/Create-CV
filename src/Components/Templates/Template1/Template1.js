@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Template1.css";
 
-export const Template1 = ({ styleZoom }) => {
+export const Template1 = ({ styleZoom = "1" }) => {
+  useEffect(() => {
+    if (window.location.href.includes("template1")) {
+      document.title = "Resume";
+      setTimeout(() => {
+        window.print();
+      }, 1000);
+    }
+  }, []);
+
   return (
-    <div id="page-wrap" style={{ zoom: styleZoom }}>
+    <div id="template1" style={{ zoom: styleZoom }}>
       <img
         className="template-1-img"
         src="https://avatars.githubusercontent.com/u/88043910?v=4"
