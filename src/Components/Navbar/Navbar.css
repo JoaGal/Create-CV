@@ -9,6 +9,7 @@
   background: #0584ce;
   display: flex;
   align-items: center;
+  z-index: 50;
 }
 
 .nav-logo-link {

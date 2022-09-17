@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Template1.css";
 
-export const Template1 = ({ styleZoom = "1" }) => {
+export const Template1 = ({ styleScale = "1" }) => {
   useEffect(() => {
     if (window.location.href.includes("template1")) {
       document.title = "Resume";
@@ -12,7 +12,10 @@ export const Template1 = ({ styleZoom = "1" }) => {
   }, []);
 
   return (
-    <div id="template1" style={{ zoom: styleZoom }}>
+    <div
+      id="template1"
+      style={{ transform: `scale(${styleScale})`, transformOrigin: `${styleScale === "0.24" ? "0 0" : "center"}` }}
+    >
       <img
         className="template-1-img"
         src="https://avatars.githubusercontent.com/u/88043910?v=4"

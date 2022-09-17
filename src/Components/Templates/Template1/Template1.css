@@ -3,10 +3,11 @@
 }
 
 #template1 {
-  margin: 20px auto;
-  padding: 20px;
-  width: 800px;
   background-color: white;
+  margin: auto;
+  padding: 20px;
+  position: absolute;
+  width: 800px;
 }
 
 .template-1-img {
