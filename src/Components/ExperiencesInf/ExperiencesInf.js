@@ -92,7 +92,7 @@ export const ExperiencesInf = () => {
             className="experiencesInf-button-fixed"
             onClick={closeEditSectionName}
           >
-            x
+            X
           </button>
         </div>
       )}
