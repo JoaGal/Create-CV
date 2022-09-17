@@ -1,30 +1,16 @@
-.workExperience-box{
+.studiesExperience-box{
     display: block;
     margin-top: 1.5rem;
 }
 
-.workExperience-box1 {
-    display: flex;
-    width: 100%;
-}
-
-.workExperience-double1{
-    width: 50%;
-    margin-right: 1.4rem;
-}
-
-.workExperience-double2{
-    width: 50%;
-}
-
-.workExperience-p{
+.studiesExperience-p{
     font-size: 1rem;
     text-align: left;
     margin-top: 1.4rem;
     color: #333333;
 }
 
-.workExperience-input{
+.studiesExperience-input{
     width: 100%;
     height: 2.5rem;
     border-radius: 0.2rem;
@@ -35,12 +21,42 @@
     border: 0.13rem solid #ccc;
 }
 
-.workExperience-input:focus {
+.studiesExperience-input:focus {
     border-color: #0584ce;
     background-color: #0583cc1a;
 }
 
-.workExperience-textarea {
+.studiesExperience-box1 {
+    display: flex;
+    width: 100%;
+}
+
+.studiesExperience-double1{
+    width: 50%;
+    margin-right: 1.4rem;
+}
+
+.studiesExperience-double2{
+    width: 50%;
+}
+
+.studiesExperience-select{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+    font-size: 1.1rem;
+    outline: none;
+    border: 0.13rem solid #ccc;
+}
+
+.studiesExperience-select:focus {
+    border-color: #0584ce;
+    background-color: #0583cc1a;
+}
+
+.studiesExperience-textarea {
     width: 100%;
     margin-top: 0.4rem;
     border: 0.13rem solid #ccc;
@@ -52,12 +68,12 @@
     outline: none;
 }
 
-.workExperience-textarea:focus {
+.studiesExperience-textarea:focus {
     border-color: #0584ce;
     background-color: #0583cc1a;
 }
 
-.workExperience-button{
+.studiesExperience-button{
     width: 7rem;
     height: 2rem;
     color: #fff;
@@ -71,6 +87,6 @@
     margin-top: 1.4rem;
 }
 
-.workExperience-button:hover{
+.studiesExperience-button:hover{
     background-color: #0584ce;
 }

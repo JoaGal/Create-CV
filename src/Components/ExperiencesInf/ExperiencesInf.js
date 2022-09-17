@@ -13,6 +13,7 @@ import { WorkExperience } from "./WorkExperience/WorkExperience";
 import { SkillExperience } from "./SkillExperience/SkillExperience";
 import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
 import { FaRegWindowClose } from "react-icons/fa";
+import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 
 const title = [
   "Work experience",
@@ -179,7 +180,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 4 && <h1>?</h1>}
+        {reference2 === 4 && <StudiesExperience/>}
       </div>
     </>
   );
