@@ -4,13 +4,16 @@ import { AiFillCamera } from "react-icons/ai";
 import { MdAddCircleOutline } from "react-icons/md";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 
-export const PersonalInf = ({ personalInfo, setPersonalInfo, nextStep }) => {
+export const PersonalInf = ({ allInformation, setAllInformation, nextStep }) => {
   const [moreInfo, setMoreInfo] = useState(false);
 
   const handleChange = (e) => {
-    setPersonalInfo({
-      ...personalInfo,
-      [e.target.name]: e.target.value,
+    setAllInformation({
+      ...allInformation,
+      personal: {
+        ...allInformation.personal,
+        [e.target.name]: e.target.value,
+      },
     });
   };
 
@@ -25,7 +28,7 @@ export const PersonalInf = ({ personalInfo, setPersonalInfo, nextStep }) => {
         </button>
         <div className="personalInf-box1-complete-name">
           <div className="personalInf-name">
-            <p className="personalInf-p" >Name</p>
+            <p className="personalInf-p">Name</p>
             <input type="text" className="personalInf-input" name="name" onChange={handleChange} />
           </div>
           <div className="personalInf-lastname">

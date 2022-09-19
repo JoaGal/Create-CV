@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Template1.css";
 
-export const Template1 = ({ styleScale = "1" }) => {
+export const Template1 = ({ styleScale = "1", allInformation = {} }) => {
   useEffect(() => {
     if (window.location.href.includes("template1")) {
       document.title = "Resume";
@@ -24,18 +24,20 @@ export const Template1 = ({ styleScale = "1" }) => {
       />
 
       <div id="contact-info" className="vcard">
-        <h1 className="h1">Giuliano Conti</h1>
+        <h1 className="h1">
+          {allInformation.personal.name} {allInformation.personal.lastname}
+        </h1>
 
         <p className="p">
           CUIL: 20-43343429-4
           <br />
-          Cel: +5493624223320
+          Phone: {allInformation.personal.phone}
           <br />
-          Domicilio: Pasaje Mármol 959, Resistencia, Chaco
+          Address: {allInformation.personal.address}
           <br />
           Email:
-          <a className="email a" href="mailto:giuliconti1@gmail.com">
-            giuliconti1@gmail.com
+          <a className="email a" href={`mailto:${allInformation.personal.email}`}>
+            {allInformation.personal.email}
           </a>
           <br />
           Github:
