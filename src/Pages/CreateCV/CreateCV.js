@@ -105,6 +105,7 @@ export const CreateCV = () => {
         setReference(0);
       }
     }
+    console.log("checkInputs false");
   };
 
   const navegateIcon = (number) => {
