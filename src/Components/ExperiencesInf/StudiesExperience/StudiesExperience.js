@@ -1,12 +1,29 @@
 import React from "react";
 import "./StudiesExperience.css";
+import PropTypes from "prop-types";
 
-export const StudiesExperience = () => {
+export const StudiesExperience = ({ allInformation, setAllInformation }) => {
+  const handleChange = (e) => {
+    setAllInformation({
+      ...allInformation,
+      studies: {
+        ...allInformation.experiences.studies,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
   return (
     <div className="studiesExperience-box">
       <hr />
       <p className="studiesExperience-p">Study</p>
-      <input type="text" className="studiesExperience-input" name="study" />
+      <input
+        type="text"
+        className="studiesExperience-input"
+        name="study"
+        value={allInformation?.experiences?.studies?.study}
+        onChange={handleChange}
+      />
       <div className="studiesExperience-box1">
         <div className="studiesExperience-double1">
           <p className="studiesExperience-p">Start period</p>
@@ -14,11 +31,19 @@ export const StudiesExperience = () => {
             type="date"
             className="studiesExperience-input"
             name="startPeriod"
+            value={allInformation?.experiences?.studies?.startPeriod}
+            onChange={handleChange}
           />
         </div>
         <div className="studiesExperience-double2">
           <p className="studiesExperience-p">¿Finished?</p>
-          <select type="text" className="studiesExperience-select" name="processPeriod" >
+          <select
+            type="text"
+            className="studiesExperience-select"
+            name="processPeriod"
+            value={allInformation?.experiences?.studies?.processPeriod}
+            onChange={handleChange}
+          >
             <option>---</option>
             <option>Finished</option>
             <option>Process</option>
@@ -26,8 +51,19 @@ export const StudiesExperience = () => {
         </div>
       </div>
       <p className="studiesExperience-p">Description</p>
-      <textarea type="text" className="studiesExperience-textarea" name="descriptionStudy" />
+      <textarea
+        type="text"
+        className="studiesExperience-textarea"
+        name="descriptionStudy"
+        value={allInformation?.experiences?.studies?.descriptionStudy}
+        onChange={handleChange}
+      />
       <button className="workExperience-button">Save</button>
     </div>
   );
+};
+
+StudiesExperience.propTypes = {
+  allInformation: PropTypes.object.isRequired,
+  setAllInformation: PropTypes.func.isRequired,
 };
