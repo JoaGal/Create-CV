@@ -70,174 +70,310 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
     });
   };
 
+  const deleteThisInput = (e) => {
+    e.preventDefault();
+    setAllInformation({
+      ...allInformation,
+      personal: {
+        ...allInformation.personal,
+        [e.target.name]: "",
+      },
+    });
+  };
+
   return (
     <form className="personalInf-box">
-      <h3 className="personalInf-title">Personal information</h3>
-      <button className="personalInf-button-delete-form" type="button" onClick={deleteFormInfo}>
-        Delete form
-      </button>
-      <hr />
-      <div className="personalInf-box1">
-        <button className="personalInf-button-photo">
-          <AiFillCamera className="personalInf-ico-photo" />
-          <p className="personalInf-p-photo">Add photo</p>
+      <div className="personalInf-box-flex">
+        <h3 className="personalInf-title">Personal Information</h3>
+        <button className="personalInf-button-delete-form" type="button" onClick={deleteFormInfo}>
+          delete form
         </button>
-        <div className="personalInf-box1-complete-name">
-          <div className="personalInf-name">
-            <p className="personalInf-p">Name</p>
+        <button className="personalInf-button-img">
+          <AiFillCamera size="48" />
+          Add photo
+        </button>
+        <div className="w-68">
+          <div className="personalInf-item w-100">
+            <label className="personalInf-label" htmlFor="name">
+              Name
+            </label>
             <input
-              type="text"
               className="personalInf-input"
+              type="text"
               name="name"
-              value={allInformation?.personal.name || ""}
+              id="name"
+              value={allInformation.personal.name}
               onChange={handleChange}
             />
+            {allInformation.personal.name !== "" && (
+              <button className="personalInf-button-delete-input" type="button" name="name" onClick={deleteThisInput}>
+                x
+              </button>
+            )}
           </div>
-          <div className="personalInf-lastname">
-            <p className="personalInf-p">Last Name</p>
+          <div className="personalInf-item w-100" style={{ display: "flex" }}>
+            <label className="personalInf-label" htmlFor="lastname">
+              Lastname
+            </label>
             <input
-              type="text"
               className="personalInf-input"
+              type="text"
               name="lastname"
-              value={allInformation?.personal.lastname || ""}
+              id="lastname"
+              value={allInformation.personal.lastname}
               onChange={handleChange}
             />
+            {allInformation.personal.lastname !== "" && (
+              <button
+                className="personalInf-button-delete-input"
+                type="button"
+                name="lastname"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
           </div>
         </div>
-      </div>
-      <div className="personalInf-box2">
-        <div className="personalInf-email">
-          <p className="personalInf-p">Email</p>
-          <input
-            type="text"
-            className="personalInf-input"
-            name="email"
-            value={allInformation?.personal.email || ""}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="personalInf-number-phone">
-          <p className="personalInf-p">Number Phone</p>
-          <input
-            type="text"
-            className="personalInf-input"
-            name="phone"
-            value={allInformation?.personal.phone || ""}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
-      <div className="personalInf-adress">
-        <p className="personalInf-p">Adress</p>
-        <input
-          type="text"
-          className="personalInf-input"
-          name="address"
-          value={allInformation?.personal.address || ""}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="personalInf-box3">
-        <div className="personalInf-email">
-          <p className="personalInf-p">Country</p>
-          <input
-            type="text"
-            className="personalInf-input"
-            name="country"
-            value={allInformation?.personal.country || ""}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="personalInf-number-phone">
-          <p className="personalInf-p">Town/City</p>
-          <input
-            type="text"
-            className="personalInf-input"
-            name="city"
-            value={allInformation?.personal.city || ""}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
 
-      {moreInfo ? (
-        <>
-          <div className="personalInf-box3">
-            <div className="personalInf-email">
-              <p className="personalInf-p">Date of Birth</p>
+        <div className="personalInf-item">
+          <label className="personalInf-label" htmlFor="email">
+            Email
+          </label>
+          <input
+            className="personalInf-input"
+            type="text"
+            name="email"
+            id="email"
+            value={allInformation.personal.email}
+            onChange={handleChange}
+          />
+          {allInformation.personal.email !== "" && (
+            <button className="personalInf-button-delete-input" type="button" name="email" onClick={deleteThisInput}>
+              x
+            </button>
+          )}
+        </div>
+        <div className="personalInf-item">
+          <label className="personalInf-label" htmlFor="phone">
+            Phone
+          </label>
+          <input
+            className="personalInf-input"
+            type="text"
+            name="phone"
+            id="phone"
+            value={allInformation.personal.phone}
+            onChange={handleChange}
+          />
+          {allInformation.personal.phone !== "" && (
+            <button className="personalInf-button-delete-input" type="button" name="phone" onClick={deleteThisInput}>
+              x
+            </button>
+          )}
+        </div>
+        <div className="personalInf-item w-100">
+          <label className="personalInf-label" htmlFor="address">
+            Address
+          </label>
+          <input
+            className="personalInf-input"
+            type="text"
+            name="address"
+            id="address"
+            value={allInformation.personal.address}
+            onChange={handleChange}
+          />
+          {allInformation.personal.address !== "" && (
+            <button className="personalInf-button-delete-input" type="button" name="address" onClick={deleteThisInput}>
+              x
+            </button>
+          )}
+        </div>
+        <div className="personalInf-item">
+          <label className="personalInf-label" htmlFor="country">
+            Country
+          </label>
+          <input
+            className="personalInf-input"
+            type="text"
+            name="country"
+            id="country"
+            value={allInformation.personal.country}
+            onChange={handleChange}
+          />
+          {allInformation.personal.country !== "" && (
+            <button className="personalInf-button-delete-input" type="button" name="country" onClick={deleteThisInput}>
+              x
+            </button>
+          )}
+        </div>
+        <div className="personalInf-item">
+          <label className="personalInf-label" htmlFor="city">
+            City
+          </label>
+          <input
+            className="personalInf-input"
+            type="text"
+            name="city"
+            id="city"
+            value={allInformation.personal.city}
+            onChange={handleChange}
+          />
+          {allInformation.personal.city !== "" && (
+            <button className="personalInf-button-delete-input" type="button" name="city" onClick={deleteThisInput}>
+              x
+            </button>
+          )}
+        </div>
+
+        <button className="personalInf-button-more" type="button" onClick={() => setMoreInfo(!moreInfo)}>
+          {moreInfo ? (
+            <AiOutlineMinusCircle className="personalInf-ico-button" />
+          ) : (
+            <MdAddCircleOutline className="personalInf-ico-button" />
+          )}
+          Additional Information
+        </button>
+
+        {moreInfo && (
+          <>
+            <div className="personalInf-item">
+              <label className="personalInf-label" htmlFor="date">
+                Date
+              </label>
               <input
+                className="personalInf-input"
                 type="date"
-                className="personalInf-input"
                 name="date"
-                value={allInformation?.personal.date || ""}
+                id="date"
+                value={allInformation.personal.date}
                 onChange={handleChange}
               />
+              {allInformation.personal.date !== "" && (
+                <button className="personalInf-button-delete-input" type="button" name="date" onClick={deleteThisInput}>
+                  x
+                </button>
+              )}
             </div>
-            <div className="personalInf-number-phone">
-              <p className="personalInf-p">Marital status</p>
+            <div className="personalInf-item">
+              <label className="personalInf-label" htmlFor="maritalStatus">
+                MaritalStatus
+              </label>
               <input
-                type="text"
                 className="personalInf-input"
+                type="text"
                 name="maritalStatus"
-                value={allInformation?.personal.maritalStatus || ""}
+                id="maritalStatus"
+                value={allInformation.personal.maritalStatus}
                 onChange={handleChange}
               />
+              {allInformation.personal.maritalStatus !== "" && (
+                <button
+                  className="personalInf-button-delete-input"
+                  type="button"
+                  name="maritalStatus"
+                  onClick={deleteThisInput}
+                >
+                  x
+                </button>
+              )}
             </div>
-          </div>
-          <div className="personalInf-box3">
-            <div className="personalInf-email">
-              <p className="personalInf-p">Postal Code</p>
+            <div className="personalInf-item">
+              <label className="personalInf-label" htmlFor="postalCode">
+                PostalCode
+              </label>
               <input
-                type="text"
                 className="personalInf-input"
+                type="text"
                 name="postalCode"
-                value={allInformation?.personal.postalCode || ""}
+                id="postalCode"
+                value={allInformation.personal.postalCode}
                 onChange={handleChange}
               />
+              {allInformation.personal.postalCode !== "" && (
+                <button
+                  className="personalInf-button-delete-input"
+                  type="button"
+                  name="postalCode"
+                  onClick={deleteThisInput}
+                >
+                  x
+                </button>
+              )}
             </div>
-            <div className="personalInf-number-phone">
-              <p className="personalInf-p">Gender</p>
+            <div className="personalInf-item">
+              <label className="personalInf-label" htmlFor="gender">
+                Gender
+              </label>
               <input
-                type="text"
                 className="personalInf-input"
+                type="text"
                 name="gender"
-                value={allInformation?.personal.gender || ""}
+                id="gender"
+                value={allInformation.personal.gender}
                 onChange={handleChange}
               />
+              {allInformation.personal.gender !== "" && (
+                <button
+                  className="personalInf-button-delete-input"
+                  type="button"
+                  name="gender"
+                  onClick={deleteThisInput}
+                >
+                  x
+                </button>
+              )}
             </div>
-          </div>
-          <div className="personalInf-box3">
-            <div className="personalInf-email">
-              <p className="personalInf-p">LinkedIn</p>
+            <div className="personalInf-item">
+              <label className="personalInf-label" htmlFor="linkedin">
+                Linkedin
+              </label>
               <input
-                type="text"
                 className="personalInf-input"
+                type="text"
                 name="linkedin"
-                value={allInformation?.personal.linkedin || ""}
+                id="linkedin"
+                value={allInformation.personal.linkedin}
                 onChange={handleChange}
               />
+              {allInformation.personal.linkedin !== "" && (
+                <button
+                  className="personalInf-button-delete-input"
+                  type="button"
+                  name="linkedin"
+                  onClick={deleteThisInput}
+                >
+                  x
+                </button>
+              )}
             </div>
-            <div className="personalInf-number-phone">
-              <p className="personalInf-p">Briefcase</p>
+            <div className="personalInf-item">
+              <label className="personalInf-label" htmlFor="briefcase">
+                Briefcase
+              </label>
               <input
-                type="text"
                 className="personalInf-input"
+                type="text"
                 name="briefcase"
-                value={allInformation?.personal.briefcase || ""}
+                id="briefcase"
+                value={allInformation.personal.briefcase}
                 onChange={handleChange}
               />
+              {allInformation.personal.briefcase !== "" && (
+                <button
+                  className="personalInf-button-delete-input"
+                  type="button"
+                  name="briefcase"
+                  onClick={deleteThisInput}
+                >
+                  x
+                </button>
+              )}
             </div>
-          </div>
-        </>
-      ) : null}
-      <button className="personalInf-button-more" type="button" onClick={() => setMoreInfo(!moreInfo)}>
-        {moreInfo ? (
-          <AiOutlineMinusCircle className="personalInf-ico-button" />
-        ) : (
-          <MdAddCircleOutline className="personalInf-ico-button" />
+          </>
         )}
-        Additional Information
-      </button>
+      </div>
     </form>
   );
 };

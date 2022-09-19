@@ -1,152 +1,168 @@
 .personalInf-box {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    margin: 2rem;
-    width: 52rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    max-width: 52rem;
-    padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  margin: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  max-width: 52rem;
+  padding: 1.5rem;
+}
+
+.personalInf-box-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .personalInf-title {
-    color: #333333;
-    display: inline-block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0.4rem;
-    text-align: left;
-    width: 70%;
+  color: #333333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 75%;
 }
 
 .personalInf-button-delete-form {
-    background-color: #fff;
-    border: 1px solid #ff0000;
-    border-radius: 5px;
-    color: #ff0000;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin: 0.4rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    width: 20%;
+  background-color: #fff;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+  text-align: center;
+  width: 25%;
 }
 
 .personalInf-button-delete-form:hover {
-    background-color: #ff0000;
-    color: #fff;
+  background-color: #ff0000;
+  color: #fff;
 }
 
-.personalInf-box1 {
-    display: flex;
+.personalInf-button-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  outline: none;
+  border: none;
+  width: 12rem;
+  height: 12rem;
+  text-align: center;
+  border: 2px dashed #a6a6a6;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: #a6a6a6;
 }
 
-.personalInf-button-photo {
-    outline: none;
-    border: none;
-    width: 14rem;
-    height: 10rem;
-    margin: 1.4rem 1.4rem 1.4rem 0rem;
-    text-align: center;
-    border: 2px dashed #a6a6a6;
-    border-radius: 0.2rem;
-    cursor: pointer;
+.personalInf-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 4rem;
+  margin: 0.5rem 0;
+  width: 48%;
 }
 
-.personalInf-ico-photo {
-    margin: auto;
-    font-size: 4.5rem;
-    color: #a6a6a6;
-}
-
-.personalInf-p-photo {
-    font-size: 0.7rem;
-    color: #a6a6a6;
-}
-
-
-.personalInf-box1-complete-name {
-    display: block;
-    width: 100%;
-}
-
-.personalInf-name {
-    margin: 1.4rem 0rem 1.4rem 0rem;
-}
-
-.personalInf-lastname {
-    margin: 1rem 0rem 1.4rem 0rem;
-}
-
-.personalInf-p {
-    font-size: 1rem;
-    text-align: left;
-    margin-bottom: 0.4rem;
-    color: #333333;
+.personalInf-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+  color: #333333;
 }
 
 .personalInf-input {
-    width: 100%;
-    height: 2.5rem;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    outline: none;
-    border: 0.13rem solid #ccc;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  outline: none;
+  border: 0.13rem solid #ccc;
 }
 
 .personalInf-input:focus {
-    border-color: #0584ce;
-    background-color: #0583cc1a;
+  border-color: #0584ce;
+  background-color: #0583cc1a;
 }
 
-.personalInf-box2 {
-    display: flex;
+.personalInf-button-delete-input {
+  position: absolute;
+  top: 1.5rem;
+  right: 0.4rem;
+  border: none;
+  background-color: transparent;
+  color: #333333;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem;
+  text-align: center;
 }
 
-.personalInf-email {
-    width: 50%;
-    margin-right: 1.4rem;
-}
-
-.personalInf-number-phone {
-    width: 50%;
-}
-
-.personalInf-adress {
-    display: block;
-    width: 100%;
-    margin-top: 1.4rem;
-}
-
-.personalInf-box3 {
-    display: flex;
-    margin-top: 1.4rem;
+.personalInf-button-delete-input:hover {
+  color: #000000;
 }
 
 .personalInf-button-more {
-    margin-top: 1.4rem;
-    color: #fff;
-    background-color: #0575b6;
-    outline: none;
-    border: none;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
+  color: #fff;
+  background-color: #0575b6;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personalInf-button-more:hover {
+  background-color: #0584ce;
+}
+
+.personalInf-ico-button {
+  margin-right: 0.5rem;
+}
+
+.mb-0_5 {
+  margin-bottom: 0.5rem;
+}
+
+.w-68 {
+  width: 68%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .personalInf-box {
+    margin: 0.5rem;
+  }
+
+  .personalInf-item {
     width: 100%;
-    height: 3rem;
-}
+  }
 
-.personalInf-button-more:hover{
-    background-color: #0584ce;
-}
+  .personalInf-button-more {
+    margin-top: 1rem;
+  }
 
-.personalInf-ico-button{
-    font-size: 1.5rem;
+  .w-68 {
+    width: 100%;
+  }
 }
