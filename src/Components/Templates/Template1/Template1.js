@@ -26,12 +26,12 @@ export const Template1 = ({ styleScale = "1" }) => {
         id="pic"
       />
 
-      <div id="contact-info" className="vcard">
-        <h1 className="h1">
+      <div>
+        <h1 className="template-1-h1">
           {allInformation?.personal?.name} {allInformation?.personal?.lastname}
         </h1>
 
-        <p className="p">
+        <p className="template-1-p">
           CUIL: 20-43343429-4
           <br />
           Phone: {allInformation?.personal?.phone}
@@ -39,37 +39,37 @@ export const Template1 = ({ styleScale = "1" }) => {
           Address: {allInformation?.personal?.address}
           <br />
           Email:
-          <a className="email a" href={`mailto:${allInformation?.personal?.email}`}>
+          <a className="template-1-a" href={`mailto:${allInformation?.personal?.email}`}>
             {allInformation?.personal?.email}
           </a>
           <br />
           Github:
-          <a className="linkedin a" href="https://github.com/GiuliannT">
+          <a className="template-1-a" href="https://github.com/GiuliannT">
             https://github.com/GiuliannT
           </a>
           <br />
           Linkedin:
-          <a className="linkedin a" href="https://www.linkedin.com/in/giulianoconti/">
+          <a className="template-1-a" href="https://www.linkedin.com/in/giulianoconti/">
             https://www.linkedin.com/in/giulianoconti
           </a>
         </p>
       </div>
 
-      <div id="objective">
-        <p className="p">
+      <div id="template-1-objective">
+        <p className="template-1-objective-p">
           Soy una persona autodidacta. Me gustan los desafíos. Tengo muchas ganas de unirme a un grupo de trabajo para
           aportar, seguir aprendiendo y crecer con la programación.
         </p>
       </div>
 
-      <div className="clear"></div>
+      <div className="template-1-clear"></div>
 
       <dl>
-        <dd className="clear dd"></dd>
+        <dd className="template-1-clear template-1-dd"></dd>
 
-        <dt className="dt">Educación</dt>
-        <dd className="dd">
-          <p className="p">
+        <dt className="template-1-dt">Educación</dt>
+        <dd className="template-1-dd">
+          <p className="template-1-p">
             <strong>Primaria:</strong> Instituto Educativo Privado N° 2 (Arbo y Blanco 470, Resistencia, Chaco)
             <br />
             <strong>Secundaria:</strong> Título de Bachiller - EES N° 76 Colegio Nacional Jose Maria Paz (Av. 9 de Julio
@@ -80,26 +80,26 @@ export const Template1 = ({ styleScale = "1" }) => {
           </p>
         </dd>
 
-        <dd className="clear dd"></dd>
+        <dd className="template-1-clear template-1-dd"></dd>
 
-        <dt className="dt">Habilidades</dt>
-        <dd className="dd">
-          <h2 className="h2">Habilidades de programación</h2>
-          <p className="p">React, HTML5, CSS3, JavaScript y Git</p>
+        <dt className="template-1-dt">Habilidades</dt>
+        <dd className="template-1-dd">
+          <h2 className="template-1-h2">Habilidades de programación</h2>
+          <p className="template-1-p">React, HTML5, CSS3, JavaScript y Git</p>
 
-          <h2 className="h2">Habilidades extras</h2>
-          <p className="p">
+          <h2 className="template-1-h2">Habilidades extras</h2>
+          <p className="template-1-p">
             SketchUp, Software de productividad de Microsoft Office (Word, Excel, etc), Creación de mapas para juegos
             FPS de Valve (Valve Hammer Editor), Linux (Ubuntu), Windows, Bueno googleando y encontrando soluciones a
             diferentes problemas
           </p>
         </dd>
 
-        <dd className="clear dd"></dd>
+        <dd className="template-1-clear template-1-dd"></dd>
 
-        <dt className="dt">Certificados</dt>
-        <dd className="dd">
-          <p className="p">
+        <dt className="template-1-dt">Certificados</dt>
+        <dd className="template-1-dd">
+          <p className="template-1-p">
             Curso de Desarrollo Web - Informatorio (Subsecretaría de Empleo del Chaco - SEC)
             <br />
             Curso de Introducción a la programación - Informatorio (SEC)
@@ -108,13 +108,14 @@ export const Template1 = ({ styleScale = "1" }) => {
             <br />
             JavaScript for Beginners - The Complete introduction to JS - Udemy
           </p>
+          <br />
         </dd>
 
-        <dd className="clear dd"></dd>
+        <dd className="template-1-clear template-1-dd"></dd>
 
-        <dt className="dt">Pasatiempos</dt>
-        <dd className="dd">
-          <p className="p">
+        <dt className="template-1-dt">Pasatiempos</dt>
+        <dd className="template-1-dd">
+          <p className="template-1-p">
             Diseñar planos 3D en SketchUp
             <br />
             Juntarme con amigos
@@ -126,10 +127,10 @@ export const Template1 = ({ styleScale = "1" }) => {
           </p>
         </dd>
 
-        <dd className="clear dd"></dd>
+        <dd className="template-1-clear template-1-dd"></dd>
       </dl>
 
-      <div className="clear"></div>
+      <div className="template-1-clear"></div>
     </div>
   );
 };

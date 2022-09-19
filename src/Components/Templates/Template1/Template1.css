@@ -1,4 +1,4 @@
-.clear {
+.template-1-clear {
   clear: both;
 }
 
@@ -16,7 +16,7 @@
   height: 200px;
 }
 
-.h1 {
+.template-1-h1 {
   margin: 0 0 16px 0;
   padding: 0 0 16px 0;
   font-size: 42px;
@@ -25,33 +25,34 @@
   border-bottom: 1px solid #999;
 }
 
-.h2 {
+.template-1-h2 {
   font-size: 20px;
   margin: 0 0 6px 0;
   position: relative;
 }
 
-.p {
+.template-1-p {
   margin: 0 0 24px 0;
 }
 
-.a {
+.template-1-a {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
-#objective {
+.template-1-objective {
   width: 560px;
   float: left;
 }
 
-#objective p {
+.template-1-objective-p {
   font-family: Georgia, Serif;
   font-style: italic;
   font-size: 18px;
+  margin: 0 0 24px 0;
 }
 
-.dt {
+.template-1-dt {
   font-style: italic;
   font-weight: bold;
   font-size: 18px;
@@ -63,13 +64,15 @@
   border-right: 1px solid #999;
 }
 
-.dd {
+
+.template-1-dd {
   width: 600px;
   float: right;
 }
 
-.dd.clear {
+.template-1-dd .template-1-dd-clear {
   float: none;
   margin: 0;
   height: 15px;
 }
+
