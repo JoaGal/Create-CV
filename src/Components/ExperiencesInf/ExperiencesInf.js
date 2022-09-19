@@ -62,7 +62,7 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
     }
   };
 
-  console.log(allInformation.experiences.titles)
+  console.log(allInformation)
 
   const changeSectionName = (name) => {
     setReference(name);

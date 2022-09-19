@@ -26,6 +26,13 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
         briefcase: "",
       },
       experiences: {
+        titles: {
+          title0: "Work experience",
+          title1: "Profile",
+          title2: "Skill",
+          title3: "Languages",
+          title4: "Studies and certifications",
+        },
         workExperience: {
           workstation: "",
           city: "",
