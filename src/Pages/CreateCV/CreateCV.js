@@ -25,7 +25,37 @@ export const CreateCV = () => {
       linkedin: "",
       briefcase: "",
     },
-    experiences: {},
+    experiences: {
+      workExperience: {
+        workstation: "",
+        city: "",
+        employer: "",
+        startWork: "",
+        finishWork: "",
+        descriptionWork: "",
+      },
+      profile: {
+        title: "",
+        descriptionProfile: "",
+      },
+      skill: {
+        title: "",
+        skill: "",
+        skillLevel: "",
+      },
+      lenguages: {
+        title: "",
+        lenguage: "",
+        lenguageLevel: "",
+      },
+      studies: {
+        title: "",
+        study: "",
+        startPeriod: "",
+        processPeriod: "",
+        descriptionStudy: "",
+      },
+    },
   });
 
   useEffect(() => {
@@ -119,8 +149,12 @@ export const CreateCV = () => {
           <p className="createCV-p">Template</p>
         </div>
       </div>
-      {reference === 0 && <PersonalInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />}
-      {reference === 1 && <ExperiencesInf />}
+      {reference === 0 && (
+        <PersonalInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
+      )}
+      {reference === 1 && (
+        <ExperiencesInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
+      )}
       {reference === 2 && <TemplatesInf allInformation={allInformation} />}
       <button className="createCV-button" onClick={nextStep}>
         Next step

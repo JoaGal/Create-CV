@@ -13,6 +13,7 @@ import { WorkExperience } from "./WorkExperience/WorkExperience";
 import { SkillExperience } from "./SkillExperience/SkillExperience";
 import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
+import PropTypes from "prop-types";
 
 const title = [
   "Work experience",
@@ -22,7 +23,7 @@ const title = [
   "Studies and certifications",
 ];
 
-export const ExperiencesInf = () => {
+export const ExperiencesInf = ({allInformation, setAllInformation}) => {
   const [editSectionName, setEditSectionName] = useState(false);
   const [reference, setReference] = useState(0);
   const [reference2, setReference2] = useState();
@@ -74,7 +75,7 @@ export const ExperiencesInf = () => {
   };
 
   return (
-    <>
+    <div>
       {editSectionName && (
         <div
           className="experiencesInf-container"
@@ -111,7 +112,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 0 && <WorkExperience />}
+        {reference2 === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="1" onClick={openInfo}>
@@ -128,7 +129,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 1 && <ProfileExperience />}
+        {reference2 === 1 && <ProfileExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="2" onClick={openInfo}>
@@ -145,7 +146,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 2 && <SkillExperience />}
+        {reference2 === 2 && <SkillExperience llInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="3" onClick={openInfo}>
@@ -162,7 +163,7 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config 3" />
           </button>
         </div>
-        {reference2 === 3 && <LenguageExperience/>}
+        {reference2 === 3 && <LenguageExperience llInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="4" onClick={openInfo}>
@@ -179,8 +180,13 @@ export const ExperiencesInf = () => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 4 && <StudiesExperience/>}
+        {reference2 === 4 && <StudiesExperience llInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
-    </>
+    </div>
   );
+};
+
+ExperiencesInf.propTypes = {
+  allInformation: PropTypes.object,
+  setAllInformation: PropTypes.func,
 };

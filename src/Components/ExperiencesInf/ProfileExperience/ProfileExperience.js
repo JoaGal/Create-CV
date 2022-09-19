@@ -6,7 +6,7 @@ export const ProfileExperience = () => {
     <div className="profileExperience-box">
       <hr />
       <p className="profileExperience-p">Description of you</p>
-      <textarea className="profileExperience-textarea" name="description-profile"></textarea>
+      <textarea className="profileExperience-textarea" name="descriptionProfile"></textarea>
       <button className="profileExperience-button">Save</button>
     </div>
   );

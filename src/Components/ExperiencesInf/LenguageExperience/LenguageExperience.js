@@ -1,7 +1,19 @@
 import React from "react";
 import "./LenguageExperience.css";
+import PropTypes from "prop-types";
 
-export const LenguageExperience = () => {
+export const LenguageExperience = ({ allInformation, setAllInformation }) => {
+
+  const handleChange = (e) => {
+    setAllInformation({
+      ...allInformation,
+      lenguages: {
+        ...allInformation.experiences.LenguageExperience,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
   return (
     <div className="lenguageExperience-box">
       <hr />
@@ -12,6 +24,8 @@ export const LenguageExperience = () => {
             type="text"
             className="lenguageExperience-input"
             name="lenguage"
+            value={allInformation?.experiences?.LenguageExperience?.lenguage}
+            onChange={handleChange}
           />
         </div>
         <div className="lenguageExperience-double2">
@@ -19,7 +33,9 @@ export const LenguageExperience = () => {
           <select
             type="text"
             className="lenguageExperience-select"
-            name="lenguage-level"
+            name="lenguageLevel"
+            value={allInformation?.experiences?.LenguageExperience?.lenguageLevel}
+            onChange={handleChange}
           >
             <option>---</option>
             <option>C1-C2</option>
@@ -34,4 +50,9 @@ export const LenguageExperience = () => {
       <button className="lenguageExperience-button">Save</button>
     </div>
   );
+};
+
+LenguageExperience.propTypes = {
+  allInformation: PropTypes.object.isRequired,
+  setAllInformation: PropTypes.func.isRequired,
 };
