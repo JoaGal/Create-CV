@@ -9,6 +9,7 @@ export const Template1 = ({ styleScale = "1" }) => {
       document.title = "Resume";
       setTimeout(() => {
         window.print();
+        window.close();
       }, 1000);
     }
   }, []);
@@ -135,4 +136,5 @@ export const Template1 = ({ styleScale = "1" }) => {
 
 Template1.propTypes = {
   styleScale: PropTypes.string,
+  allInformation: PropTypes.object,
 };

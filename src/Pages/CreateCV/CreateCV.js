@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
 import { RiPencilFill } from "react-icons/ri";
 import { PersonalInf } from "../../Components/PersonalInf/PersonalInf";
 import { ExperiencesInf } from "../../Components/ExperiencesInf/ExperiencesInf";
 import { TemplatesInf } from "../../Components/Templates/TemplatesInf";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import "./CreateCV.css";
 
 export const CreateCV = () => {
   const [reference, setReference] = useState(0);
-  const [allInformation, setAllInformation] = useState({
+  const [allInformation, setAllInformation] = useLocalStorage("allInformation", {
     personal: {
       name: "",
       lastname: "",
@@ -58,29 +59,19 @@ export const CreateCV = () => {
     },
   });
 
-  useEffect(() => {
-    if (allInformation.personal.name !== "") {
-      localStorage.setItem("allInformation", JSON.stringify(allInformation));
-    } else {
-      const allInformation = JSON.parse(localStorage.getItem("allInformation"));
-      setAllInformation(allInformation);
-    }
-  }, [reference])
-  
-
   const checkInputs = () => {
-    if (allInformation.personal.name.length <= 10) {
-      if (allInformation.personal.lastname.length <= 11) {
-        if (allInformation.personal.email.length <= 12) {
-          if (allInformation.personal.phone.length <= 13) {
-            if (allInformation.personal.address.length <= 14) {
-              if (allInformation.personal.country.length <= 15) {
-                if (allInformation.personal.city.length <= 16) {
-                  if (allInformation.personal.maritalStatus.length <= 15) {
-                    if (allInformation.personal.postalCode.length <= 15) {
-                      if (allInformation.personal.gender.length <= 15) {
-                        if (allInformation.personal.linkedin.length <= 35) {
-                          if (allInformation.personal.briefcase.length <= 35) {
+    if (allInformation.personal.name.length <= 50) {
+      if (allInformation.personal.lastname.length <= 51) {
+        if (allInformation.personal.email.length <= 52) {
+          if (allInformation.personal.phone.length <= 53) {
+            if (allInformation.personal.address.length <= 54) {
+              if (allInformation.personal.country.length <= 55) {
+                if (allInformation.personal.city.length <= 56) {
+                  if (allInformation.personal.maritalStatus.length <= 57) {
+                    if (allInformation.personal.postalCode.length <= 58) {
+                      if (allInformation.personal.gender.length <= 59) {
+                        if (allInformation.personal.linkedin.length <= 60) {
+                          if (allInformation.personal.briefcase.length <= 61) {
                             return true;
                           }
                         }
@@ -105,7 +96,6 @@ export const CreateCV = () => {
         setReference(0);
       }
     } else {
-
       console.log("checkInputs false");
     }
   };
@@ -158,7 +148,7 @@ export const CreateCV = () => {
       {reference === 1 && (
         <ExperiencesInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
       )}
-      {reference === 2 && <TemplatesInf allInformation={allInformation} />}
+      {reference === 2 && <TemplatesInf />}
       <button className="createCV-button" onClick={nextStep}>
         Next step
       </button>
