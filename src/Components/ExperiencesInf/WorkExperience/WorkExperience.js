@@ -2,6 +2,7 @@ import React from "react";
 import "./WorkExperience.css";
 
 export const WorkExperience = () => {
+
   return (
     <div className="workExperience-box">
       <hr />
@@ -27,16 +28,16 @@ export const WorkExperience = () => {
           <input
             type="date"
             className="workExperience-input"
-            name="workstation"
+            name="startWork"
           />
         </div>
         <div className="workExperience-double2">
           <p className="workExperience-p">Finish date</p>
-          <input type="date" className="workExperience-input" name="city" />
+          <input type="date" className="workExperience-input" name="finishWork" />
         </div>
       </div>
       <p className="workExperience-p">Description</p>
-      <textarea type="text" className="workExperience-textarea" name="description-work" />
+      <textarea type="text" className="workExperience-textarea" name="descriptionWork" />
       <button className="workExperience-button">Save</button>
     </div>
   );

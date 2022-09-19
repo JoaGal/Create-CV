@@ -25,7 +25,20 @@ export const CreateCV = () => {
       linkedin: "",
       briefcase: "",
     },
-    experiences: {},
+    experiences: {
+      workExperience: {
+        title: "",
+        workstation: "",
+        city: "",
+        employer: "",
+        startWork: "",
+        finishWork: "",
+        descriptionWork: "",
+      },
+      profile: {
+        
+      }
+    },
   });
 
   const checkInputs = () => {
