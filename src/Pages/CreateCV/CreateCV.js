@@ -104,8 +104,10 @@ export const CreateCV = () => {
       } else {
         setReference(0);
       }
+    } else {
+
+      console.log("checkInputs false");
     }
-    console.log("checkInputs false");
   };
 
   const navegateIcon = (number) => {
