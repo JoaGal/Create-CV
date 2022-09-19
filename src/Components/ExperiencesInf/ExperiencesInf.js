@@ -15,15 +15,7 @@ import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 import PropTypes from "prop-types";
 
-const title = [
-  "Work experience",
-  "Profile",
-  "Skill",
-  "Languages",
-  "Studies and certifications",
-];
-
-export const ExperiencesInf = ({allInformation, setAllInformation}) => {
+export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
   const [editSectionName, setEditSectionName] = useState(false);
   const [reference, setReference] = useState(0);
   const [reference2, setReference2] = useState();
@@ -34,6 +26,7 @@ export const ExperiencesInf = ({allInformation, setAllInformation}) => {
       setEditSectionName(false);
     }
   };
+
 
   const openInfo = (e) => {
     if (e.target.id.includes("0")) {
@@ -69,9 +62,21 @@ export const ExperiencesInf = ({allInformation, setAllInformation}) => {
     }
   };
 
-  const changeSectionName = (number) => {
-    setReference(number);
+  console.log(allInformation.experiences.titles)
+
+  const changeSectionName = (name) => {
+    setReference(name);
     setEditSectionName(true);
+  };
+
+  const changeTitle = (e) => {
+    setAllInformation({
+      ...allInformation,
+      experiences: {
+        ...allInformation.experiences.titles[reference],
+        [e.target.name]: e.target.value,
+      },
+    });
   };
 
   return (
@@ -85,8 +90,9 @@ export const ExperiencesInf = ({allInformation, setAllInformation}) => {
             <input
               type="text"
               className="experiencesInf-input-change changeSectionName"
-              name="change"
-              placeholder={title[reference]}
+              name={reference}
+              placeholder={"tumama"}
+              onChange={changeTitle}
             />
           </div>
           <button
@@ -101,86 +107,111 @@ export const ExperiencesInf = ({allInformation, setAllInformation}) => {
         <div className="experiencesInf-box-box" id="0" onClick={openInfo}>
           <h3 className="experiencesInf-h3" id="0">
             <BsFillBriefcaseFill className="experiencesInf-ico" />
-            {title[0]}
+            {allInformation?.experiences?.titles?.title0}
           </h3>
           <button
             onClick={() => {
-              changeSectionName(0);
+              changeSectionName("title0");
             }}
             className="experiencesInf-button-change"
           >
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 0 && (
+          <WorkExperience
+            allInformation={allInformation}
+            setAllInformation={setAllInformation}
+          />
+        )}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="1" onClick={openInfo}>
           <h3 className="experiencesInf-h3" id="1">
             <BsPersonSquare className="experiencesInf-ico" />
-            {title[1]}
+            {allInformation?.experiences?.titles?.title1}
           </h3>
           <button
             onClick={() => {
-              changeSectionName(1);
+              changeSectionName("title1");
             }}
             className="experiencesInf-button-change"
           >
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 1 && <ProfileExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 1 && (
+          <ProfileExperience
+            allInformation={allInformation}
+            setAllInformation={setAllInformation}
+          />
+        )}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="2" onClick={openInfo}>
           <h3 className="experiencesInf-h3" id="2">
             <BsFillMouse2Fill className="experiencesInf-ico" />
-            {title[2]}
+            {allInformation?.experiences?.titles?.title2}
           </h3>
           <button
             onClick={() => {
-              changeSectionName(2);
+              changeSectionName("title2");
             }}
             className="experiencesInf-button-change"
           >
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 2 && <SkillExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 2 && (
+          <SkillExperience
+            allInformation={allInformation}
+            setAllInformation={setAllInformation}
+          />
+        )}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="3" onClick={openInfo}>
           <h3 className="experiencesInf-h3" id="3">
             <BiWorld className="experiencesInf-ico" />
-            {title[3]}
+            {allInformation?.experiences?.titles?.title3}
           </h3>
           <button
             onClick={() => {
-              changeSectionName(3);
+              changeSectionName("title3");
             }}
             className="experiencesInf-button-change"
           >
             <FaWrench className="experiencesInf-ico-config 3" />
           </button>
         </div>
-        {reference2 === 3 && <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 3 && (
+          <LenguageExperience
+            allInformation={allInformation}
+            setAllInformation={setAllInformation}
+          />
+        )}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="4" onClick={openInfo}>
           <h3 className="experiencesInf-h3" id="4">
             <GiGraduateCap className="experiencesInf-ico" />
-            {title[4]}
+            {allInformation?.experiences?.titles?.title4}
           </h3>
           <button
             onClick={() => {
-              changeSectionName(4);
+              changeSectionName("title4");
             }}
             className="experiencesInf-button-change"
           >
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 4 && <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 4 && (
+          <StudiesExperience
+            allInformation={allInformation}
+            setAllInformation={setAllInformation}
+          />
+        )}
       </div>
     </div>
   );

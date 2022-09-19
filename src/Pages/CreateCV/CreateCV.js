@@ -27,8 +27,14 @@ export const CreateCV = () => {
       briefcase: "",
     },
     experiences: {
+      titles:{
+       title0: "Work experience",
+       title1: "Profile",
+       title2: "Skill",
+       title3: "Languages",
+       title4: "Studies and certifications",
+      },
       workExperience: {
-        title: "",
         workstation: "",
         city: "",
         employer: "",
@@ -37,21 +43,17 @@ export const CreateCV = () => {
         descriptionWork: "",
       },
       profile: {
-        title: "",
         descriptionProfile: "",
       },
       skill: {
-        title: "",
         skill: "",
         skillLevel: "",
       },
       lenguages: {
-        title: "",
         lenguage: "",
         lenguageLevel: "",
       },
       studies: {
-        title: "",
         study: "",
         startPeriod: "",
         processPeriod: "",
