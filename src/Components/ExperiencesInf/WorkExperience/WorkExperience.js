@@ -8,8 +8,11 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
     setAllInformation({
       ...allInformation,
       experiences: {
-        ...allInformation.experiences.workExperience,
-        [e.target.name]: e.target.value,
+        ...allInformation.experiences,
+        workExperience:{
+          ...allInformation.experiences.workExperience,
+          [e.target.name]: e.target.value,
+        }
       },
     });
   };

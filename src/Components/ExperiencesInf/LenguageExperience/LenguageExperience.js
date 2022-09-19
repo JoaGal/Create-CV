@@ -7,9 +7,12 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
-      lenguages: {
-        ...allInformation.experiences.lenguages,
-        [e.target.name]: e.target.value,
+      experiences: {
+        ...allInformation.experiences,
+        lenguages:{
+          ...allInformation.experiences.lenguages,
+          [e.target.name]: e.target.value,
+        }
       },
     });
   };
@@ -24,7 +27,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
             type="text"
             className="lenguageExperience-input"
             name="lenguage"
-            value={allInformation?.experiences?.LenguageExperience?.lenguage}
+            value={allInformation?.experiences?.lenguages.lenguage}
             onChange={handleChange}
           />
         </div>
@@ -34,7 +37,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
             type="text"
             className="lenguageExperience-select"
             name="lenguageLevel"
-            value={allInformation?.experiences?.LenguageExperience?.lenguageLevel}
+            value={allInformation?.experiences?.lenguages.lenguageLevel}
             onChange={handleChange}
           >
             <option>---</option>

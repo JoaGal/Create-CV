@@ -7,9 +7,12 @@ export const ProfileExperience = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
-      profile: {
-        ...allInformation.experiences.profile,
-        [e.target.name]: e.target.value,
+      experiences: {
+        ...allInformation.experiences,
+        profile:{
+          ...allInformation.experiences.profile,
+          [e.target.name]: e.target.value,
+        }
       },
     });
   };

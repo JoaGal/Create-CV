@@ -6,9 +6,12 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
-      studies: {
-        ...allInformation.experiences.studies,
-        [e.target.name]: e.target.value,
+      experiences: {
+        ...allInformation.experiences,
+        studies:{
+          ...allInformation.experiences.studies,
+          [e.target.name]: e.target.value,
+        }
       },
     });
   };

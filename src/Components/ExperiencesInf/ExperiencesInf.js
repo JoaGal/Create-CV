@@ -27,42 +27,15 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
     }
   };
 
-
-  const openInfo = (e) => {
-    if (e.target.id.includes("0")) {
-      if (reference2 !== 0) {
-        setReference2(0);
-      } else {
-        setReference2(null);
-      }
-    } else if (e.target.id.includes("1")) {
-      if (reference2 !== 1) {
-        setReference2(1);
-      } else {
-        setReference2(null);
-      }
-    } else if (e.target.id.includes("2")) {
-      if (reference2 !== 2) {
-        setReference2(2);
-      } else {
-        setReference2(null);
-      }
-    } else if (e.target.id.includes("3")) {
-      if (reference2 !== 3) {
-        setReference2(3);
-      } else {
-        setReference2(null);
-      }
-    } else if (e.target.id.includes("4")) {
-      if (reference2 !== 4) {
-        setReference2(4);
-      } else {
-        setReference2(null);
-      }
+  const openInfo = (number) => {
+    if (reference2 !== number) {
+      setReference2(number);
+    } else {
+      setReference2(null);
     }
   };
 
-  console.log(allInformation)
+  console.log(allInformation);
 
   const changeSectionName = (name) => {
     setReference(name);
@@ -73,7 +46,7 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
     setAllInformation({
       ...allInformation,
       experiences: {
-        ...allInformation.experiences.titles[reference],
+        ...allInformation.experiences,
         [e.target.name]: e.target.value,
       },
     });
@@ -91,7 +64,7 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
               type="text"
               className="experiencesInf-input-change changeSectionName"
               name={reference}
-              placeholder={"tumama"}
+              placeholder={allInformation?.experiences[reference]}
               onChange={changeTitle}
             />
           </div>
@@ -104,10 +77,10 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
         </div>
       )}
       <div className="experiencesInf-box">
-        <div className="experiencesInf-box-box" id="0" onClick={openInfo}>
-          <h3 className="experiencesInf-h3" id="0">
+        <div className="experiencesInf-box-box" onClick={() => openInfo(0)}>
+          <h3 className="experiencesInf-h3">
             <BsFillBriefcaseFill className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles?.title0}
+            {allInformation?.experiences?.title0}
           </h3>
           <button
             onClick={() => {
@@ -126,10 +99,10 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
         )}
       </div>
       <div className="experiencesInf-box">
-        <div className="experiencesInf-box-box" id="1" onClick={openInfo}>
-          <h3 className="experiencesInf-h3" id="1">
+        <div className="experiencesInf-box-box" onClick={() => openInfo(1)}>
+          <h3 className="experiencesInf-h3">
             <BsPersonSquare className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles?.title1}
+            {allInformation?.experiences?.title1}
           </h3>
           <button
             onClick={() => {
@@ -148,10 +121,10 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
         )}
       </div>
       <div className="experiencesInf-box">
-        <div className="experiencesInf-box-box" id="2" onClick={openInfo}>
-          <h3 className="experiencesInf-h3" id="2">
+        <div className="experiencesInf-box-box" onClick={() => openInfo(2)}>
+          <h3 className="experiencesInf-h3">
             <BsFillMouse2Fill className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles?.title2}
+            {allInformation?.experiences?.title2}
           </h3>
           <button
             onClick={() => {
@@ -170,10 +143,10 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
         )}
       </div>
       <div className="experiencesInf-box">
-        <div className="experiencesInf-box-box" id="3" onClick={openInfo}>
-          <h3 className="experiencesInf-h3" id="3">
+        <div className="experiencesInf-box-box" onClick={() => openInfo(3)}>
+          <h3 className="experiencesInf-h3">
             <BiWorld className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles?.title3}
+            {allInformation?.experiences?.title3}
           </h3>
           <button
             onClick={() => {
@@ -192,10 +165,10 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
         )}
       </div>
       <div className="experiencesInf-box">
-        <div className="experiencesInf-box-box" id="4" onClick={openInfo}>
-          <h3 className="experiencesInf-h3" id="4">
+        <div className="experiencesInf-box-box" onClick={() => openInfo(4)}>
+          <h3 className="experiencesInf-h3">
             <GiGraduateCap className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles?.title4}
+            {allInformation?.experiences?.title4}
           </h3>
           <button
             onClick={() => {

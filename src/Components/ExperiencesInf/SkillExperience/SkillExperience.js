@@ -7,9 +7,12 @@ export const SkillExperience = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
-      skill: {
-        ...allInformation.experiences.skill,
-        [e.target.name]: e.target.value,
+      experiences: {
+        ...allInformation.experiences,
+        skill:{
+          ...allInformation.experiences.skill,
+          [e.target.name]: e.target.value,
+        }
       },
     });
   };

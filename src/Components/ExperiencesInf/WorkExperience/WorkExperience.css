@@ -29,7 +29,6 @@
     height: 2.5rem;
     border-radius: 0.2rem;
     padding: 0.5rem;
-    margin-top: 0.4rem;
     font-size: 1.1rem;
     outline: none;
     border: 0.13rem solid #ccc;
@@ -42,7 +41,6 @@
 
 .workExperience-textarea {
     width: 100%;
-    margin-top: 0.4rem;
     border: 0.13rem solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
