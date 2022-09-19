@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import "./PersonalInf.css";
 import { AiFillCamera } from "react-icons/ai";
 import { MdAddCircleOutline } from "react-icons/md";
 import { AiOutlineMinusCircle } from "react-icons/ai";
+import PropTypes from "prop-types";
+import "./PersonalInf.css";
 
 export const PersonalInf = ({ allInformation, setAllInformation, nextStep }) => {
   const [moreInfo, setMoreInfo] = useState(false);
@@ -106,4 +107,10 @@ export const PersonalInf = ({ allInformation, setAllInformation, nextStep }) => 
       </button>
     </form>
   );
+};
+
+PersonalInf.propTypes = {
+  allInformation: PropTypes.object.isRequired,
+  setAllInformation: PropTypes.func.isRequired,
+  nextStep: PropTypes.func.isRequired,
 };

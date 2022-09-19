@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import "./Template1.css";
 
 export const Template1 = ({ styleScale = "1", allInformation = {} }) => {
@@ -129,4 +130,9 @@ export const Template1 = ({ styleScale = "1", allInformation = {} }) => {
       <div className="clear"></div>
     </div>
   );
+};
+
+Template1.propTypes = {
+  styleScale: PropTypes.string,
+  allInformation: PropTypes.object,
 };
