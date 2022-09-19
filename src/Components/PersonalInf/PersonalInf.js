@@ -93,7 +93,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
           Add photo
         </button>
         <div className="w-68">
-          <div className="personalInf-item w-100">
+          <div className="personalInf-item w-100 mb-1">
             <label className="personalInf-label" htmlFor="name">
               Name
             </label>

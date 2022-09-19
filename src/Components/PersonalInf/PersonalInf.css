@@ -141,6 +141,10 @@
   margin-bottom: 0.5rem;
 }
 
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
 .w-68 {
   width: 68%;
 }
