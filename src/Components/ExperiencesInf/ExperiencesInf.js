@@ -12,7 +12,6 @@ import { ProfileExperience } from "./ProfileExperience/ProfileExperience";
 import { WorkExperience } from "./WorkExperience/WorkExperience";
 import { SkillExperience } from "./SkillExperience/SkillExperience";
 import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
-import { FaRegWindowClose } from "react-icons/fa";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 
 const title = [
