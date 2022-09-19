@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
 import { RiPencilFill } from "react-icons/ri";
@@ -27,6 +27,11 @@ export const CreateCV = () => {
     },
     experiences: {},
   });
+
+  useEffect(() => {
+    console.log(allInformation);
+  }, [])
+  
 
   const checkInputs = () => {
     if (allInformation.personal.name.length <= 10) {
