@@ -227,15 +227,6 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
           )}
         </div>
 
-        <button className="personalInf-button-more" type="button" onClick={() => setMoreInfo(!moreInfo)}>
-          {moreInfo ? (
-            <AiOutlineMinusCircle className="personalInf-ico-button" />
-          ) : (
-            <MdAddCircleOutline className="personalInf-ico-button" />
-          )}
-          Additional Information
-        </button>
-
         {moreInfo && (
           <>
             <div className="personalInf-item">
@@ -373,6 +364,15 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
             </div>
           </>
         )}
+
+        <button className="personalInf-button-more" type="button" onClick={() => setMoreInfo(!moreInfo)}>
+          {moreInfo ? (
+            <AiOutlineMinusCircle className="personalInf-ico-button" />
+          ) : (
+            <MdAddCircleOutline className="personalInf-ico-button" />
+          )}
+          Additional Information
+        </button>
       </div>
     </form>
   );
