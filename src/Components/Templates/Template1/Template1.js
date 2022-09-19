@@ -2,11 +2,8 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Template1.css";
 
-export const Template1 = ({ styleScale = "1", allInformation = {} }) => {
-  const allInformationHasNoInfo = Object.keys(allInformation).length === 0;
-  if (allInformationHasNoInfo) {
-    allInformation = JSON.parse(localStorage.getItem("allInformation"));
-  }
+export const Template1 = ({ styleScale = "1" }) => {
+  const allInformation = JSON.parse(localStorage.getItem("allInformation"));
   useEffect(() => {
     if (window.location.href.includes("template1")) {
       document.title = "Resume";
@@ -138,5 +135,4 @@ export const Template1 = ({ styleScale = "1", allInformation = {} }) => {
 
 Template1.propTypes = {
   styleScale: PropTypes.string,
-  allInformation: PropTypes.object,
 };

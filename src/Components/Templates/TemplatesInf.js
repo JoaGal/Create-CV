@@ -5,7 +5,7 @@ import { Template3 } from "./Template3/Template3";
 import PropTypes from "prop-types";
 import "./TemplatesInf.css";
 
-export const TemplatesInf = ({ allInformation = {} }) => {
+export const TemplatesInf = () => {
   const [templateOpen, setTemplateOpen] = useState("/noTemplate");
   const [scale, setScale] = useState(0.7);
 
@@ -31,19 +31,15 @@ export const TemplatesInf = ({ allInformation = {} }) => {
     }
   };
 
-  const saveInfoInLocalStorage = () => {
-    localStorage.setItem("allInformation", JSON.stringify(allInformation));
-  }
-
   return (
     <div className={`templatesInf-container ${templateOpen !== "/noTemplate" && "o-hidden"}`}>
       {templateOpen !== "/noTemplate" && (
         <div className="templatesInf-template-open" onClick={closeTemplate}>
           <button className="templatesInf-button-close-template">x</button>
-          {templateOpen === "/template1" && <Template1 styleScale={scale} allInformation={allInformation} />}
+          {templateOpen === "/template1" && <Template1 styleScale={scale} />}
           {templateOpen === "/template2" && <Template2 styleScale={scale} />}
           {templateOpen === "/template3" && <Template3 styleScale={scale} />}
-          <a className="templatesInf-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer" onClick={saveInfoInLocalStorage}>
+          <a className="templatesInf-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
             Select this resume
           </a>
         </div>
@@ -52,7 +48,7 @@ export const TemplatesInf = ({ allInformation = {} }) => {
         <div className="templatesInf-grid-item">
           <h1 className="templatesInf-grid-item-title">Template 1</h1>
           <div className="templatesInf-grid-item-iframe" onClick={() => setTemplateOpen("/template1")}>
-            <Template1 styleScale="0.24" allInformation={allInformation} />
+            <Template1 styleScale="0.24" />
           </div>
         </div>
         <div className="templatesInf-grid-item">

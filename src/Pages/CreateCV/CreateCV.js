@@ -29,8 +29,13 @@ export const CreateCV = () => {
   });
 
   useEffect(() => {
-    console.log(allInformation);
-  }, [])
+    if (allInformation.personal.name !== "") {
+      localStorage.setItem("allInformation", JSON.stringify(allInformation));
+    } else {
+      const allInformation = JSON.parse(localStorage.getItem("allInformation"));
+      setAllInformation(allInformation);
+    }
+  }, [reference])
   
 
   const checkInputs = () => {

@@ -13,7 +13,6 @@ import { Template3 } from "./Components/Templates/Template3/Template3";
 
 export const App = () => {
   const urlPage = window.location.pathname;
-  console.log('urlPage', urlPage);
 
   return (
     <BrowserRouter>
