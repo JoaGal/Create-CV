@@ -27,7 +27,6 @@ export const CreateCV = () => {
     },
     experiences: {
       workExperience: {
-        title: "",
         workstation: "",
         city: "",
         employer: "",
@@ -36,15 +35,32 @@ export const CreateCV = () => {
         descriptionWork: "",
       },
       profile: {
-        
-      }
+        title: "",
+        descriptionProfile: "",
+      },
+      skill: {
+        title: "",
+        skill: "",
+        skillLevel: "",
+      },
+      lenguages: {
+        title: "",
+        lenguage: "",
+        lenguageLevel: "",
+      },
+      studies: {
+        title: "",
+        study: "",
+        startPeriod: "",
+        processPeriod: "",
+        descriptionStudy: "",
+      },
     },
   });
 
   useEffect(() => {
     console.log(allInformation);
-  }, [])
-  
+  }, []);
 
   const checkInputs = () => {
     if (allInformation.personal.name.length <= 10) {
@@ -101,7 +117,9 @@ export const CreateCV = () => {
       <div className="createCV-level">
         <div className="createCV-level-box">
           <BsFillPersonFill
-            className={`createCV-icon ${reference === 0 && "createCV-icon-active"}`}
+            className={`createCV-icon ${
+              reference === 0 && "createCV-icon-active"
+            }`}
             onClick={() => {
               navegateIcon(0);
             }}
@@ -110,7 +128,9 @@ export const CreateCV = () => {
         </div>
         <div className="createCV-level-box" id="createCV-level-box-mid">
           <FiFileText
-            className={`createCV-icon ${reference === 1 && "createCV-icon-active"}`}
+            className={`createCV-icon ${
+              reference === 1 && "createCV-icon-active"
+            }`}
             onClick={() => {
               navegateIcon(1);
             }}
@@ -119,7 +139,9 @@ export const CreateCV = () => {
         </div>
         <div className="createCV-level-box">
           <RiPencilFill
-            className={`createCV-icon ${reference === 2 && "createCV-icon-active"}`}
+            className={`createCV-icon ${
+              reference === 2 && "createCV-icon-active"
+            }`}
             onClick={() => {
               navegateIcon(2);
             }}
@@ -127,8 +149,14 @@ export const CreateCV = () => {
           <p className="createCV-p">Template</p>
         </div>
       </div>
-      {reference === 0 && <PersonalInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />}
-      {reference === 1 && <ExperiencesInf />}
+      {reference === 0 && (
+        <PersonalInf
+          allInformation={allInformation}
+          setAllInformation={setAllInformation}
+          nextStep={nextStep}
+        />
+      )}
+      {reference === 1 && <ExperiencesInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep}/>}
       {reference === 2 && <TemplatesInf allInformation={allInformation} />}
       <button className="createCV-button" onClick={nextStep}>
         Next step

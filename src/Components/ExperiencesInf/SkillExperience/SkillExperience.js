@@ -15,7 +15,7 @@ export const SkillExperience = () => {
           <select
             type="text"
             className="skillExperience-select"
-            name="skill-level"
+            name="skillLevel"
           >
             <option>---</option>
             <option>Expert</option>
