@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import "./Template1.css";
 
 export const Template1 = ({ styleScale = "1", allInformation = {} }) => {
+  const allInformationHasNoInfo = Object.keys(allInformation).length === 0;
+  if (allInformationHasNoInfo) {
+    allInformation = JSON.parse(localStorage.getItem("allInformation"));
+  }
   useEffect(() => {
     if (window.location.href.includes("template1")) {
       document.title = "Resume";
@@ -26,19 +30,19 @@ export const Template1 = ({ styleScale = "1", allInformation = {} }) => {
 
       <div id="contact-info" className="vcard">
         <h1 className="h1">
-          {allInformation.personal.name} {allInformation.personal.lastname}
+          {allInformation?.personal?.name} {allInformation?.personal?.lastname}
         </h1>
 
         <p className="p">
           CUIL: 20-43343429-4
           <br />
-          Phone: {allInformation.personal.phone}
+          Phone: {allInformation?.personal?.phone}
           <br />
-          Address: {allInformation.personal.address}
+          Address: {allInformation?.personal?.address}
           <br />
           Email:
-          <a className="email a" href={`mailto:${allInformation.personal.email}`}>
-            {allInformation.personal.email}
+          <a className="email a" href={`mailto:${allInformation?.personal?.email}`}>
+            {allInformation?.personal?.email}
           </a>
           <br />
           Github:

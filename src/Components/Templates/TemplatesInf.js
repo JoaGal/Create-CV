@@ -12,15 +12,15 @@ export const TemplatesInf = ({ allInformation = {} }) => {
   useEffect(() => {
     let scale = 0.7;
     if (window.innerWidth < 500) {
-      scale = 0.35;
+      scale = "0.35";
     } else if (window.innerWidth < 800) {
-      scale = 0.5;
+      scale = "0.5";
     } else if (window.innerWidth < 1000) {
-      scale = 0.6;
+      scale = " 0.6";
     } else if (window.innerWidth < 1200) {
-      scale = 0.7;
+      scale = "0.7";
     } else {
-      scale = 0.8;
+      scale = "0.8";
     }
     setScale(scale);
   }, [templateOpen]);
@@ -31,6 +31,10 @@ export const TemplatesInf = ({ allInformation = {} }) => {
     }
   };
 
+  const saveInfoInLocalStorage = () => {
+    localStorage.setItem("allInformation", JSON.stringify(allInformation));
+  }
+
   return (
     <div className={`templatesInf-container ${templateOpen !== "/noTemplate" && "o-hidden"}`}>
       {templateOpen !== "/noTemplate" && (
@@ -39,7 +43,7 @@ export const TemplatesInf = ({ allInformation = {} }) => {
           {templateOpen === "/template1" && <Template1 styleScale={scale} allInformation={allInformation} />}
           {templateOpen === "/template2" && <Template2 styleScale={scale} />}
           {templateOpen === "/template3" && <Template3 styleScale={scale} />}
-          <a className="templatesInf-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
+          <a className="templatesInf-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer" onClick={saveInfoInLocalStorage}>
             Select this resume
           </a>
         </div>
