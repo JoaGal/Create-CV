@@ -1,14 +1,32 @@
 import React from "react";
 import "./SkillExperience.css";
+import PropTypes from "prop-types";
 
-export const SkillExperience = () => {
+export const SkillExperience = ({ allInformation, setAllInformation }) => {
+  
+  const handleChange = (e) => {
+    setAllInformation({
+      ...allInformation,
+      skill: {
+        ...allInformation.experiences.skill,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
   return (
     <div className="skillExperience-box">
       <hr />
       <div className="skillExperience-box1">
         <div className="skillExperience-double1">
           <p className="skillExperience-p">Skill</p>
-          <input type="text" className="skillExperience-input" name="skill" />
+          <input
+            type="text"
+            className="skillExperience-input"
+            name="skill"
+            value={allInformation?.experiences?.skill?.skill}
+            onChange={handleChange}
+          />
         </div>
         <div className="skillExperience-double2">
           <p className="skillExperience-p">Level</p>
@@ -16,6 +34,8 @@ export const SkillExperience = () => {
             type="text"
             className="skillExperience-select"
             name="skillLevel"
+            value={allInformation?.experiences?.skill?.skillLevel}
+            onChange={handleChange}
           >
             <option>---</option>
             <option>Expert</option>
@@ -29,4 +49,9 @@ export const SkillExperience = () => {
       <button className="skillExperience-button">Save</button>
     </div>
   );
+};
+
+SkillExperience.propTypes = {
+  allInformation: PropTypes.object,
+  setAllInformation: PropTypes.func.isRequired,
 };

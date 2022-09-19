@@ -146,7 +146,7 @@ export const ExperiencesInf = ({allInformation, setAllInformation}) => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 2 && <SkillExperience llInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 2 && <SkillExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="3" onClick={openInfo}>
@@ -163,7 +163,7 @@ export const ExperiencesInf = ({allInformation, setAllInformation}) => {
             <FaWrench className="experiencesInf-ico-config 3" />
           </button>
         </div>
-        {reference2 === 3 && <LenguageExperience llInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 3 && <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" id="4" onClick={openInfo}>
@@ -180,7 +180,7 @@ export const ExperiencesInf = ({allInformation, setAllInformation}) => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 4 && <StudiesExperience llInformation={allInformation} setAllInformation={setAllInformation}/>}
+        {reference2 === 4 && <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation}/>}
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
     setAllInformation({
       ...allInformation,
       lenguages: {
-        ...allInformation.experiences.LenguageExperience,
+        ...allInformation.experiences.lenguages,
         [e.target.name]: e.target.value,
       },
     });
