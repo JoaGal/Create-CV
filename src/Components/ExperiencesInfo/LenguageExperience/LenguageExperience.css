@@ -13,10 +13,6 @@
     padding-right: 1.4rem;
 }
 
-.lenguageExperience-double{
-    width: 50%;
-}
-
 .lenguageExperience-p{
     font-size: 1rem;
     text-align: left;
@@ -75,5 +71,8 @@
 @media screen and (max-width: 768px){
     .lenguageExperience-double1{
         padding-right: 0.5rem;
+    }
+    .lenguageExperience-select{
+        width: 10rem;
     }
 }

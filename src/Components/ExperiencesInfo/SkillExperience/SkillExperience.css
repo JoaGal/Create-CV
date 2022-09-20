@@ -13,10 +13,6 @@
     padding-right: 1.4rem;
 }
 
-.skillExperience-double{
-    width: 50%;
-}
-
 .skillExperience-p{
     font-size: 1rem;
     text-align: left;
@@ -75,5 +71,8 @@
 @media screen and (max-width: 768px){
     .skillExperience-double1{
         padding-right: 0.5rem;
+    }
+    .skillExperience-select{
+        width: 10rem;
     }
 }
