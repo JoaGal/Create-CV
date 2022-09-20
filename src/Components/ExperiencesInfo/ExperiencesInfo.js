@@ -13,28 +13,25 @@ import "./ExperiencesInfo.css";
 
 export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   const [editSectionName, setEditSectionName] = useState(false);
-  const [reference, setReference] = useState(0);
-  const [reference2, setReference2] = useState();
+  const [title, setTitle] = useState(0);
+  const [openBox, setOpenBox] = useState();
 
   const closeEditSectionName = (e) => {
-    console.log(e);
     if (!e.target.className.includes("changeSectionName")) {
       setEditSectionName(false);
     }
   };
 
   const openInfo = (number) => {
-    if (reference2 !== number) {
-      setReference2(number);
+    if (openBox !== number) {
+      setOpenBox(number);
     } else {
-      setReference2(null);
+      setOpenBox(null);
     }
   };
 
-  console.log(allInformation);
-
   const changeSectionName = (name) => {
-    setReference(name);
+    setTitle(name);
     setEditSectionName(true);
   };
 
@@ -59,8 +56,8 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <input
               type="text"
               className="experiencesInf-input-change changeSectionName"
-              name={reference}
-              placeholder={allInformation?.experiences.titles[reference]}
+              name={title}
+              placeholder={allInformation?.experiences.titles[title]}
               onChange={changeTitle}
             />
           </div>
@@ -84,7 +81,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
+        {openBox === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(1)}>
@@ -101,9 +98,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 1 && (
-          <ProfileExperience allInformation={allInformation} setAllInformation={setAllInformation} />
-        )}
+        {openBox === 1 && <ProfileExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(2)}>
@@ -120,7 +115,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 2 && <SkillExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
+        {openBox === 2 && <SkillExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(3)}>
@@ -137,9 +132,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config 3" />
           </button>
         </div>
-        {reference2 === 3 && (
-          <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation} />
-        )}
+        {openBox === 3 && <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(4)}>
@@ -156,9 +149,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 4 && (
-          <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation} />
-        )}
+        {openBox === 4 && <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
     </div>
   );
