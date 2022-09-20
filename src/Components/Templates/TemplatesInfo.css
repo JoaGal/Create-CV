@@ -47,7 +47,7 @@
   padding: 0 10px;
 }
 
-.templatesInf-button-select-resume {
+.template-button-select-resume {
   position: absolute;
   bottom: 50px;
   background-color: #0a6aa1;
@@ -60,7 +60,7 @@
   padding: 16px;
 }
 
-.templatesInf-button-select-resume:hover {
+.template-button-select-resume:hover {
   background-color: #0584ce;
 }
 

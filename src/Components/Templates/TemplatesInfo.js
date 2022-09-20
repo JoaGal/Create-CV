@@ -38,7 +38,7 @@ export const TemplatesInfo = () => {
         {templateOpen === "/template1" && <Template1 styleScale={scale} />}
         {templateOpen === "/template2" && <Template2 styleScale={scale} />}
         {templateOpen === "/template3" && <Template3 styleScale={scale} />}
-        <a className="templatesInf-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
+        <a className="template-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
           Select this resume
         </a>
       </div>
