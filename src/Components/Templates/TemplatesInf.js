@@ -14,12 +14,10 @@ export const TemplatesInf = () => {
       scale = "0.35";
     } else if (window.innerWidth < 800) {
       scale = "0.5";
-    } else if (window.innerWidth < 1000) {
-      scale = " 0.6";
-    } else if (window.innerWidth < 1200) {
-      scale = "0.7";
+    } else if (window.innerWidth < 1450) {
+      scale = "0.6";
     } else {
-      scale = "0.8";
+      scale = "0.7";
     }
     setScale(scale);
   }, [templateOpen]);
