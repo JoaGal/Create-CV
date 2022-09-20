@@ -17,6 +17,20 @@ export const ProfileExperience = ({ allInformation, setAllInformation }) => {
     });
   };
 
+  const deleteThisInput = (e) => {
+    e.preventDefault();
+    setAllInformation({
+      ...allInformation,
+      experiences: {
+        ...allInformation.experiences,
+        profile:{
+          ...allInformation.experiences.profile,
+          [e.target.name]: "",
+        }
+      },
+    });
+  };
+
   return (
     <div className="profileExperience-box">
       <hr />
@@ -26,7 +40,17 @@ export const ProfileExperience = ({ allInformation, setAllInformation }) => {
         name="descriptionProfile"
         value={allInformation?.experiences?.profile?.descriptionProfile}
         onChange={handleChange}
-      ></textarea>
+      />
+      {allInformation.experiences.profile.descriptionProfile !== "" && (
+              <button
+                className="workExperience-button-delete-input"
+                type="button"
+                name="descriptionProfile"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
       <button className="profileExperience-button">Save</button>
     </div>
   );

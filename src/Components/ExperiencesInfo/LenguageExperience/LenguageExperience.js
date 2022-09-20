@@ -17,6 +17,20 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
     });
   };
 
+  const deleteThisInput = (e) => {
+    e.preventDefault();
+    setAllInformation({
+      ...allInformation,
+      experiences: {
+        ...allInformation.experiences,
+        lenguages:{
+          ...allInformation.experiences.lenguages,
+          [e.target.name]: "",
+        }
+      },
+    });
+  };
+
   return (
     <div className="lenguageExperience-box">
       <hr />
@@ -30,6 +44,16 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
             value={allInformation?.experiences?.lenguages.lenguage}
             onChange={handleChange}
           />
+          {allInformation.experiences.lenguages.lenguage !== "" && (
+              <button
+                className="workExperience-button-delete-input"
+                type="button"
+                name="lenguage"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
         </div>
         <div className="lenguageExperience-double2">
           <p className="lenguageExperience-p">Level</p>
@@ -40,6 +64,16 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
             value={allInformation?.experiences?.lenguages.lenguageLevel}
             onChange={handleChange}
           >
+            {allInformation.experiences.lenguages.lenguageLevel !== "" && (
+              <button
+                className="workExperience-button-delete-input"
+                type="button"
+                name="lenguageLevel"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
             <option>---</option>
             <option>C1-C2</option>
             <option>B2</option>
