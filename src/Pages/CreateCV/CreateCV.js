@@ -9,7 +9,7 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 import "./CreateCV.css";
 
 export const CreateCV = () => {
-  const [reference, setReference] = useState(0);
+  const [openComponent, setOpenComponent] = useState(0);
   const [allInformation, setAllInformation] = useLocalStorage("allInformation", {
     personal: {
       name: "",
@@ -93,33 +93,33 @@ export const CreateCV = () => {
 
   const nextStep = () => {
     if (checkInputs()) {
-      if (reference < 2) {
-        setReference(reference + 1);
+      if (openComponent < 2) {
+        setOpenComponent(openComponent + 1);
       } else {
-        setReference(0);
+        setOpenComponent(0);
       }
     } else {
-      console.log("checkInputs false");
+      alert("Please fill all the inputs");
     }
   };
 
   const navegateIcon = (number) => {
-    if (checkInputs() && reference !== number) {
-      setReference(number);
+    if (checkInputs() && openComponent !== number) {
+      setOpenComponent(number);
     }
   };
 
   return (
     <div className="createCV-screen">
       <h2 className="createCV-title">
-        {reference === 0 && "Personal information"}
-        {reference === 1 && "My experiences"}
-        {reference === 2 && "Choose template"}
+        {openComponent === 0 && "Personal information"}
+        {openComponent === 1 && "My experiences"}
+        {openComponent === 2 && "Choose template"}
       </h2>
       <div className="createCV-level">
         <div className="createCV-level-box">
           <BsFillPersonFill
-            className={`createCV-icon ${reference === 0 && "createCV-icon-active"}`}
+            className={`createCV-icon ${openComponent === 0 && "createCV-icon-active"}`}
             onClick={() => {
               navegateIcon(0);
             }}
@@ -128,7 +128,7 @@ export const CreateCV = () => {
         </div>
         <div className="createCV-level-box" id="createCV-level-box-mid">
           <FiFileText
-            className={`createCV-icon ${reference === 1 && "createCV-icon-active"}`}
+            className={`createCV-icon ${openComponent === 1 && "createCV-icon-active"}`}
             onClick={() => {
               navegateIcon(1);
             }}
@@ -137,7 +137,7 @@ export const CreateCV = () => {
         </div>
         <div className="createCV-level-box">
           <RiPencilFill
-            className={`createCV-icon ${reference === 2 && "createCV-icon-active"}`}
+            className={`createCV-icon ${openComponent === 2 && "createCV-icon-active"}`}
             onClick={() => {
               navegateIcon(2);
             }}
@@ -145,16 +145,18 @@ export const CreateCV = () => {
           <p className="createCV-p">Template</p>
         </div>
       </div>
-      {reference === 0 && (
+      {openComponent === 0 && (
         <PersonalInfo allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
       )}
-      {reference === 1 && (
+      {openComponent === 1 && (
         <ExperiencesInfo allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
       )}
-      {reference === 2 && <TemplatesInfo />}
-      <button className="createCV-button" onClick={nextStep}>
-        Next step
-      </button>
+      {openComponent === 2 && <TemplatesInfo />}
+      {openComponent !== 2 && (
+        <button className="createCV-button" onClick={nextStep}>
+          Next step
+        </button>
+      )}
     </div>
   );
 };
