@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
 import { RiPencilFill } from "react-icons/ri";
-import { PersonalInf } from "../../Components/PersonalInf/PersonalInf";
-import { ExperiencesInf } from "../../Components/ExperiencesInf/ExperiencesInf";
-import { TemplatesInf } from "../../Components/Templates/TemplatesInf";
+import { PersonalInfo } from "../../Components/PersonalInfo/PersonalInfo";
+import { ExperiencesInfo } from "../../Components/ExperiencesInfo/ExperiencesInfo";
+import { TemplatesInfo } from "../../Components/Templates/TemplatesInfo";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import "./CreateCV.css";
 
@@ -27,11 +27,13 @@ export const CreateCV = () => {
       briefcase: "",
     },
     experiences: {
+      titles: {
         title0: "Work experience",
         title1: "Profile",
         title2: "Skill",
         title3: "Languages",
         title4: "Studies and certifications",
+      },
       workExperience: {
         workstation: "",
         city: "",
@@ -144,12 +146,12 @@ export const CreateCV = () => {
         </div>
       </div>
       {reference === 0 && (
-        <PersonalInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
+        <PersonalInfo allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
       )}
       {reference === 1 && (
-        <ExperiencesInf allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
+        <ExperiencesInfo allInformation={allInformation} setAllInformation={setAllInformation} nextStep={nextStep} />
       )}
-      {reference === 2 && <TemplatesInf />}
+      {reference === 2 && <TemplatesInfo />}
       <button className="createCV-button" onClick={nextStep}>
         Next step
       </button>

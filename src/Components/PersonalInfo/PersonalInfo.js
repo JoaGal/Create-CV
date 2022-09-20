@@ -3,9 +3,9 @@ import { AiFillCamera } from "react-icons/ai";
 import { MdAddCircleOutline } from "react-icons/md";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import PropTypes from "prop-types";
-import "./PersonalInf.css";
+import "./PersonalInfo.css";
 
-export const PersonalInf = ({ allInformation, setAllInformation }) => {
+export const PersonalInfo = ({ allInformation, setAllInformation }) => {
   const [moreInfo, setMoreInfo] = useState(false);
 
   const deleteFormInfo = () => {
@@ -26,11 +26,13 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
         briefcase: "",
       },
       experiences: {
-        title0: "Work experience",
-        title1: "Profile",
-        title2: "Skill",
-        title3: "Languages",
-        title4: "Studies and certifications",
+        titles: {
+          title0: "Work experience",
+          title1: "Profile",
+          title2: "Skill",
+          title3: "Languages",
+          title4: "Studies and certifications",
+        },
         workExperience: {
           workstation: "",
           city: "",
@@ -90,11 +92,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
     <form className="personalInf-box">
       <div className="personalInf-box-flex">
         <h3 className="personalInf-title">Personal Information</h3>
-        <button
-          className="personalInf-button-delete-form"
-          type="button"
-          onClick={deleteFormInfo}
-        >
+        <button className="personalInf-button-delete-form" type="button" onClick={deleteFormInfo}>
           Delete Form
         </button>
         <button className="personalInf-button-img">
@@ -115,12 +113,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
               onChange={handleChange}
             />
             {allInformation.personal.name !== "" && (
-              <button
-                className="personalInf-button-delete-input"
-                type="button"
-                name="name"
-                onClick={deleteThisInput}
-              >
+              <button className="personalInf-button-delete-input" type="button" name="name" onClick={deleteThisInput}>
                 x
               </button>
             )}
@@ -163,12 +156,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.email !== "" && (
-            <button
-              className="personalInf-button-delete-input"
-              type="button"
-              name="email"
-              onClick={deleteThisInput}
-            >
+            <button className="personalInf-button-delete-input" type="button" name="email" onClick={deleteThisInput}>
               x
             </button>
           )}
@@ -186,12 +174,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.phone !== "" && (
-            <button
-              className="personalInf-button-delete-input"
-              type="button"
-              name="phone"
-              onClick={deleteThisInput}
-            >
+            <button className="personalInf-button-delete-input" type="button" name="phone" onClick={deleteThisInput}>
               x
             </button>
           )}
@@ -209,12 +192,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.address !== "" && (
-            <button
-              className="personalInf-button-delete-input"
-              type="button"
-              name="address"
-              onClick={deleteThisInput}
-            >
+            <button className="personalInf-button-delete-input" type="button" name="address" onClick={deleteThisInput}>
               x
             </button>
           )}
@@ -232,12 +210,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.country !== "" && (
-            <button
-              className="personalInf-button-delete-input"
-              type="button"
-              name="country"
-              onClick={deleteThisInput}
-            >
+            <button className="personalInf-button-delete-input" type="button" name="country" onClick={deleteThisInput}>
               x
             </button>
           )}
@@ -255,12 +228,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.city !== "" && (
-            <button
-              className="personalInf-button-delete-input"
-              type="button"
-              name="city"
-              onClick={deleteThisInput}
-            >
+            <button className="personalInf-button-delete-input" type="button" name="city" onClick={deleteThisInput}>
               x
             </button>
           )}
@@ -281,12 +249,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
                 onChange={handleChange}
               />
               {allInformation.personal.date !== "" && (
-                <button
-                  className="personalInf-button-delete-input"
-                  type="button"
-                  name="date"
-                  onClick={deleteThisInput}
-                >
+                <button className="personalInf-button-delete-input" type="button" name="date" onClick={deleteThisInput}>
                   x
                 </button>
               )}
@@ -409,11 +372,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
           </>
         )}
 
-        <button
-          className="personalInf-button-more"
-          type="button"
-          onClick={() => setMoreInfo(!moreInfo)}
-        >
+        <button className="personalInf-button-more" type="button" onClick={() => setMoreInfo(!moreInfo)}>
           {moreInfo ? (
             <AiOutlineMinusCircle className="personalInf-ico-button" />
           ) : (
@@ -426,7 +385,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
   );
 };
 
-PersonalInf.propTypes = {
+PersonalInfo.propTypes = {
   allInformation: PropTypes.object,
   setAllInformation: PropTypes.func,
 };

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import "./ExperiencesInf.css";
-import {
-  BsPersonSquare,
-  BsFillBriefcaseFill,
-  BsFillMouse2Fill,
-} from "react-icons/bs";
+import { BsPersonSquare, BsFillBriefcaseFill, BsFillMouse2Fill } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import { GiGraduateCap } from "react-icons/gi";
 import { FaWrench } from "react-icons/fa";
@@ -14,8 +9,9 @@ import { SkillExperience } from "./SkillExperience/SkillExperience";
 import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 import PropTypes from "prop-types";
+import "./ExperiencesInfo.css";
 
-export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
+export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   const [editSectionName, setEditSectionName] = useState(false);
   const [reference, setReference] = useState(0);
   const [reference2, setReference2] = useState();
@@ -47,7 +43,10 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        [e.target.name]: e.target.value,
+        titles: {
+          ...allInformation.experiences.titles,
+          [e.target.name]: e.target.value,
+        },
       },
     });
   };
@@ -55,23 +54,17 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
   return (
     <div>
       {editSectionName && (
-        <div
-          className="experiencesInf-container"
-          onClick={closeEditSectionName}
-        >
+        <div className="experiencesInf-container" onClick={closeEditSectionName}>
           <div className="experiencesInf-box-open changeSectionName">
             <input
               type="text"
               className="experiencesInf-input-change changeSectionName"
               name={reference}
-              placeholder={allInformation?.experiences[reference]}
+              placeholder={allInformation?.experiences.titles[reference]}
               onChange={changeTitle}
             />
           </div>
-          <button
-            className="experiencesInf-button-fixed"
-            onClick={closeEditSectionName}
-          >
+          <button className="experiencesInf-button-fixed" onClick={closeEditSectionName}>
             X
           </button>
         </div>
@@ -80,7 +73,7 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
         <div className="experiencesInf-box-box" onClick={() => openInfo(0)}>
           <h3 className="experiencesInf-h3">
             <BsFillBriefcaseFill className="experiencesInf-ico" />
-            {allInformation?.experiences?.title0}
+            {allInformation?.experiences?.titles.title0}
           </h3>
           <button
             onClick={() => {
@@ -91,18 +84,13 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {reference2 === 0 && (
-          <WorkExperience
-            allInformation={allInformation}
-            setAllInformation={setAllInformation}
-          />
-        )}
+        {reference2 === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(1)}>
           <h3 className="experiencesInf-h3">
             <BsPersonSquare className="experiencesInf-ico" />
-            {allInformation?.experiences?.title1}
+            {allInformation?.experiences?.titles.title1}
           </h3>
           <button
             onClick={() => {
@@ -114,17 +102,14 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {reference2 === 1 && (
-          <ProfileExperience
-            allInformation={allInformation}
-            setAllInformation={setAllInformation}
-          />
+          <ProfileExperience allInformation={allInformation} setAllInformation={setAllInformation} />
         )}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(2)}>
           <h3 className="experiencesInf-h3">
             <BsFillMouse2Fill className="experiencesInf-ico" />
-            {allInformation?.experiences?.title2}
+            {allInformation?.experiences?.titles.title2}
           </h3>
           <button
             onClick={() => {
@@ -135,18 +120,13 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {reference2 === 2 && (
-          <SkillExperience
-            allInformation={allInformation}
-            setAllInformation={setAllInformation}
-          />
-        )}
+        {reference2 === 2 && <SkillExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(3)}>
           <h3 className="experiencesInf-h3">
             <BiWorld className="experiencesInf-ico" />
-            {allInformation?.experiences?.title3}
+            {allInformation?.experiences?.titles.title3}
           </h3>
           <button
             onClick={() => {
@@ -158,17 +138,14 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {reference2 === 3 && (
-          <LenguageExperience
-            allInformation={allInformation}
-            setAllInformation={setAllInformation}
-          />
+          <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation} />
         )}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(4)}>
           <h3 className="experiencesInf-h3">
             <GiGraduateCap className="experiencesInf-ico" />
-            {allInformation?.experiences?.title4}
+            {allInformation?.experiences?.titles.title4}
           </h3>
           <button
             onClick={() => {
@@ -180,17 +157,14 @@ export const ExperiencesInf = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {reference2 === 4 && (
-          <StudiesExperience
-            allInformation={allInformation}
-            setAllInformation={setAllInformation}
-          />
+          <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation} />
         )}
       </div>
     </div>
   );
 };
 
-ExperiencesInf.propTypes = {
+ExperiencesInfo.propTypes = {
   allInformation: PropTypes.object,
   setAllInformation: PropTypes.func,
 };
