@@ -57,7 +57,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
               type="text"
               className="experiencesInf-input-change changeSectionName"
               name={title}
-              placeholder={allInformation?.experiences.titles[title]}
+              placeholder={allInformation?.experiences?.titles[title]}
               onChange={changeTitle}
             />
           </div>
@@ -70,7 +70,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
         <div className="experiencesInf-box-box" onClick={() => openInfo(0)}>
           <h3 className="experiencesInf-h3">
             <BsFillBriefcaseFill className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles.title0}
+            {allInformation?.experiences?.titles?.title0}
           </h3>
           <button
             onClick={() => {
@@ -87,7 +87,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
         <div className="experiencesInf-box-box" onClick={() => openInfo(1)}>
           <h3 className="experiencesInf-h3">
             <BsPersonSquare className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles.title1}
+            {allInformation?.experiences?.titles?.title1}
           </h3>
           <button
             onClick={() => {
@@ -104,7 +104,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
         <div className="experiencesInf-box-box" onClick={() => openInfo(2)}>
           <h3 className="experiencesInf-h3">
             <BsFillMouse2Fill className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles.title2}
+            {allInformation?.experiences?.titles?.title2}
           </h3>
           <button
             onClick={() => {
@@ -121,7 +121,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
         <div className="experiencesInf-box-box" onClick={() => openInfo(3)}>
           <h3 className="experiencesInf-h3">
             <BiWorld className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles.title3}
+            {allInformation?.experiences?.titles?.title3}
           </h3>
           <button
             onClick={() => {
@@ -138,7 +138,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
         <div className="experiencesInf-box-box" onClick={() => openInfo(4)}>
           <h3 className="experiencesInf-h3">
             <GiGraduateCap className="experiencesInf-ico" />
-            {allInformation?.experiences?.titles.title4}
+            {allInformation?.experiences?.titles?.title4}
           </h3>
           <button
             onClick={() => {
