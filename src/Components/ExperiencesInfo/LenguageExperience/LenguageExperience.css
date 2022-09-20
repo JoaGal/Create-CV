@@ -10,7 +10,7 @@
 
 .lenguageExperience-double1{
     width: 100%;
-    margin-right: 1.4rem;
+    padding-right: 1.4rem;
 }
 
 .lenguageExperience-double{
@@ -70,4 +70,10 @@
 
 .lenguageExperience-button:hover{
     background-color: #0584ce;
+}
+
+@media screen and (max-width: 768px){
+    .lenguageExperience-double1{
+        padding-right: 0.5rem;
+    }
 }

@@ -17,6 +17,20 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
     });
   };
 
+  // const deleteThisInput = (e) => {
+  //   e.preventDefault();
+  //   setAllInformation({
+  //     ...allInformation,
+  //     experiences: {
+  //       ...allInformation.experiences,
+  //       workExperience:{
+  //         ...allInformation.experiences.workExperience,
+  //         [e.target.name]: "",
+  //       }
+  //     },
+  //   });
+  // };
+
   return (
     <form className="workExperience-box">
       <hr />
@@ -30,6 +44,16 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
             value={allInformation?.experiences?.workExperience?.workstation}
             onChange={handleChange}
           />
+          {/* {allInformation.experiences.workExperience.workstation !== "" && (
+              <button
+                className="personalInf-button-delete-input"
+                type="button"
+                name="workstation"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )} */}
         </div>
         <div className="workExperience-double2">
           <p className="workExperience-p">City/Town</p>

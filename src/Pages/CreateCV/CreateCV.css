@@ -78,6 +78,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .createCV-screen{
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
   #createCV-level-box-mid {
     margin-left: 5rem;
     margin-right: 5rem;

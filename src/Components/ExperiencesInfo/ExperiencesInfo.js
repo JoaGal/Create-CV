@@ -49,7 +49,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   };
 
   return (
-    <div>
+    <>
       {editSectionName && (
         <div className="experiencesInf-container" onClick={closeEditSectionName}>
           <div className="experiencesInf-box-open changeSectionName">
@@ -151,7 +151,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
         </div>
         {openBox === 4 && <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
       </div>
-    </div>
+    </>
   );
 };
 
