@@ -17,6 +17,20 @@ export const SkillExperience = ({ allInformation, setAllInformation }) => {
     });
   };
 
+  const deleteThisInput = (e) => {
+    e.preventDefault();
+    setAllInformation({
+      ...allInformation,
+      experiences: {
+        ...allInformation.experiences,
+        skill:{
+          ...allInformation.experiences.skill,
+          [e.target.name]: "",
+        }
+      },
+    });
+  };
+
   return (
     <div className="skillExperience-box">
       <hr />
@@ -30,6 +44,16 @@ export const SkillExperience = ({ allInformation, setAllInformation }) => {
             value={allInformation?.experiences?.skill?.skill}
             onChange={handleChange}
           />
+          {allInformation.experiences.skill.skill !== "" && (
+              <button
+                className="workExperience-button-delete-input"
+                type="button"
+                name="skill"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
         </div>
         <div className="skillExperience-double2">
           <p className="skillExperience-p">Level</p>

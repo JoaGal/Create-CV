@@ -1,4 +1,4 @@
-.workExperience-box{
+.workExperience-box {
     display: block;
     margin-top: 1.5rem;
 }
@@ -8,23 +8,23 @@
     width: 100%;
 }
 
-.workExperience-double1{
+.workExperience-double1 {
     width: 50%;
     padding-right: 1.4rem;
 }
 
-.workExperience-double2{
+.workExperience-double2 {
     width: 50%;
 }
 
-.workExperience-p{
+.workExperience-p {
     font-size: 1rem;
     text-align: left;
     margin-top: 1.4rem;
     color: #333333;
 }
 
-.workExperience-input{
+.workExperience-input {
     width: 100%;
     height: 2.5rem;
     border-radius: 0.2rem;
@@ -55,7 +55,7 @@
     background-color: #0583cc1a;
 }
 
-.workExperience-button{
+.workExperience-button {
     width: 7rem;
     height: 2rem;
     color: #fff;
@@ -69,12 +69,31 @@
     margin-top: 1.4rem;
 }
 
-.workExperience-button:hover{
+.workExperience-button:hover {
     background-color: #0584ce;
 }
 
-@media screen and (max-width: 768px){
-    .workExperience-double1{
+.workExperience-button-delete-input {
+    position: absolute;
+    margin-left: -1.5rem;
+    margin-top: 0.3rem;
+    border: none;
+    background-color: transparent;
+    color: #333333;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.workExperience-button-delete-input:hover {
+    color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .workExperience-double1 {
         padding-right: 0.5rem;
     }
 }

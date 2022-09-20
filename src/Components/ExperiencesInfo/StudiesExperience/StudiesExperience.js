@@ -16,6 +16,20 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
     });
   };
 
+  const deleteThisInput = (e) => {
+    e.preventDefault();
+    setAllInformation({
+      ...allInformation,
+      experiences: {
+        ...allInformation.experiences,
+        studies:{
+          ...allInformation.experiences.studies,
+          [e.target.name]: "",
+        }
+      },
+    });
+  };
+
   return (
     <div className="studiesExperience-box">
       <hr />
@@ -27,6 +41,16 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
         value={allInformation?.experiences?.studies?.study}
         onChange={handleChange}
       />
+      {allInformation.experiences.studies.study !== "" && (
+              <button
+                className="workExperience-button-delete-input"
+                type="button"
+                name="study"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
       <div className="studiesExperience-box1">
         <div className="studiesExperience-double1">
           <p className="studiesExperience-p">Start period</p>
@@ -61,6 +85,16 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
         value={allInformation?.experiences?.studies?.descriptionStudy}
         onChange={handleChange}
       />
+      {allInformation.experiences.studies.descriptionStudy !== "" && (
+              <button
+                className="workExperience-button-delete-input"
+                type="button"
+                name="descriptionStudy"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
       <button className="workExperience-button">Save</button>
     </div>
   );
