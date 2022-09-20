@@ -2,7 +2,7 @@ import React from "react";
 import "./StudiesExperience.css";
 import PropTypes from "prop-types";
 
-export const StudiesExperience = ({ allInformation, setAllInformation }) => {
+export const StudiesExperience = ({ allInformation, setAllInformation, editSectionName }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
@@ -41,7 +41,7 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
         value={allInformation?.experiences?.studies?.study}
         onChange={handleChange}
       />
-      {allInformation.experiences.studies.study !== "" && (
+      {allInformation.experiences.studies.study !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -85,7 +85,7 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
         value={allInformation?.experiences?.studies?.descriptionStudy}
         onChange={handleChange}
       />
-      {allInformation.experiences.studies.descriptionStudy !== "" && (
+      {allInformation.experiences.studies.descriptionStudy !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -103,4 +103,5 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
 StudiesExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
+  editSectionName: PropTypes.object.isRequired,
 };

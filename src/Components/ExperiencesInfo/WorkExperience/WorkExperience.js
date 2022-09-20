@@ -2,17 +2,16 @@ import React from "react";
 import "./WorkExperience.css";
 import PropTypes from "prop-types";
 
-export const WorkExperience = ({ allInformation, setAllInformation}) => {
-
+export const WorkExperience = ({ allInformation, setAllInformation, editSectionName }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        workExperience:{
+        workExperience: {
           ...allInformation.experiences.workExperience,
           [e.target.name]: e.target.value,
-        }
+        },
       },
     });
   };
@@ -23,10 +22,10 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        workExperience:{
+        workExperience: {
           ...allInformation.experiences.workExperience,
           [e.target.name]: "",
-        }
+        },
       },
     });
   };
@@ -44,7 +43,8 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
             value={allInformation?.experiences?.workExperience?.workstation}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience.workstation !== "" && (
+          {allInformation.experiences.workExperience.workstation !== "" &&
+            !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -64,7 +64,8 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
             value={allInformation?.experiences?.workExperience?.city}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience.city !== "" && (
+          {allInformation.experiences.workExperience.city !== "" &&
+            !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -84,16 +85,17 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
         value={allInformation?.experiences?.workExperience?.employer}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience.employer !== "" && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="employer"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+      {allInformation.experiences.workExperience.employer !== "" &&
+        !editSectionName && (
+          <button
+            className="workExperience-button-delete-input"
+            type="button"
+            name="employer"
+            onClick={deleteThisInput}
+          >
+            x
+          </button>
+        )}
       <div className="workExperience-box1">
         <div className="workExperience-double1">
           <p className="workExperience-p">Start date</p>
@@ -124,16 +126,17 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
         value={allInformation?.experiences?.workExperience?.descriptionWork}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience.descriptionWork !== "" && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="descriptionWork"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+      {allInformation.experiences.workExperience.descriptionWork !== "" &&
+        !editSectionName && (
+          <button
+            className="workExperience-button-delete-input"
+            type="button"
+            name="descriptionWork"
+            onClick={deleteThisInput}
+          >
+            x
+          </button>
+        )}
       <button className="workExperience-button">Save</button>
     </form>
   );
@@ -142,4 +145,5 @@ export const WorkExperience = ({ allInformation, setAllInformation}) => {
 WorkExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
+  editSectionName: PropTypes.object.isRequired,
 };

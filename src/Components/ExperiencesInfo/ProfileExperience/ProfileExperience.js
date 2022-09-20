@@ -2,7 +2,7 @@ import React from "react";
 import "./ProfileExperience.css";
 import PropTypes from "prop-types";
 
-export const ProfileExperience = ({ allInformation, setAllInformation }) => {
+export const ProfileExperience = ({ allInformation, setAllInformation, editSectionName }) => {
 
   const handleChange = (e) => {
     setAllInformation({
@@ -41,7 +41,7 @@ export const ProfileExperience = ({ allInformation, setAllInformation }) => {
         value={allInformation?.experiences?.profile?.descriptionProfile}
         onChange={handleChange}
       />
-      {allInformation.experiences.profile.descriptionProfile !== "" && (
+      {allInformation.experiences.profile.descriptionProfile !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -59,4 +59,5 @@ export const ProfileExperience = ({ allInformation, setAllInformation }) => {
 ProfileExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
+  editSectionName: PropTypes.object.isRequired,
 };

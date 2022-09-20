@@ -2,7 +2,7 @@ import React from "react";
 import "./LenguageExperience.css";
 import PropTypes from "prop-types";
 
-export const LenguageExperience = ({ allInformation, setAllInformation }) => {
+export const LenguageExperience = ({ allInformation, setAllInformation, editSectionName }) => {
 
   const handleChange = (e) => {
     setAllInformation({
@@ -44,7 +44,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
             value={allInformation?.experiences?.lenguages.lenguage}
             onChange={handleChange}
           />
-          {allInformation.experiences.lenguages.lenguage !== "" && (
+          {allInformation.experiences.lenguages.lenguage !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -64,7 +64,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
             value={allInformation?.experiences?.lenguages.lenguageLevel}
             onChange={handleChange}
           >
-            {allInformation.experiences.lenguages.lenguageLevel !== "" && (
+            {allInformation.experiences.lenguages.lenguageLevel !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -92,4 +92,5 @@ export const LenguageExperience = ({ allInformation, setAllInformation }) => {
 LenguageExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
+  editSectionName: PropTypes.object.isRequired,
 };

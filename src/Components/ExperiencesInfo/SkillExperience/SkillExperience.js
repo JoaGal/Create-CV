@@ -2,7 +2,7 @@ import React from "react";
 import "./SkillExperience.css";
 import PropTypes from "prop-types";
 
-export const SkillExperience = ({ allInformation, setAllInformation }) => {
+export const SkillExperience = ({ allInformation, setAllInformation, editSectionName }) => {
   
   const handleChange = (e) => {
     setAllInformation({
@@ -44,7 +44,7 @@ export const SkillExperience = ({ allInformation, setAllInformation }) => {
             value={allInformation?.experiences?.skill?.skill}
             onChange={handleChange}
           />
-          {allInformation.experiences.skill.skill !== "" && (
+          {allInformation.experiences.skill.skill !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -81,4 +81,5 @@ export const SkillExperience = ({ allInformation, setAllInformation }) => {
 SkillExperience.propTypes = {
   allInformation: PropTypes.object,
   setAllInformation: PropTypes.func.isRequired,
+  editSectionName: PropTypes.object.isRequired,
 };

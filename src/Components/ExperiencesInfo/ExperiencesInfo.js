@@ -81,7 +81,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {openBox === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
+        {openBox === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(1)}>
@@ -98,7 +98,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {openBox === 1 && <ProfileExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
+        {openBox === 1 && <ProfileExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(2)}>
@@ -115,7 +115,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config " />
           </button>
         </div>
-        {openBox === 2 && <SkillExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
+        {openBox === 2 && <SkillExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(3)}>
@@ -132,7 +132,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config 3" />
           </button>
         </div>
-        {openBox === 3 && <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
+        {openBox === 3 && <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(4)}>
@@ -149,7 +149,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             <FaWrench className="experiencesInf-ico-config" />
           </button>
         </div>
-        {openBox === 4 && <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation} />}
+        {openBox === 4 && <StudiesExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
       </div>
     </>
   );
