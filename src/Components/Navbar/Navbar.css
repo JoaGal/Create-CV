@@ -23,7 +23,7 @@
   width: 80px;
 }
 
-.navItems {
+.nav-items {
   max-width: 1200px;
   margin: 0 auto;
   width: 90%;
@@ -41,23 +41,21 @@
 }
 
 .nav-link {
-  display: inline-block;
+  display: block;
+  color: #96bbd1;
   font-family: "RobotoMono Regular";
-  padding: 1rem 2rem;
   font-size: 1.5rem;
-  color: #fff;
   outline: none;
+  padding: 1rem 2rem;
   transition: 0.3s ease color;
 }
 
 .nav-link:hover {
-  color: #96bbd1;
+  color: #ffffff;
 }
 
-/* test */
-
 .active {
-  color: #96bbd1;
+  color: #ffffff;
 }
 
 .mobile-menu-icon {
@@ -82,7 +80,7 @@
     display: block;
   }
 
-  .navItems {
+  .nav-items {
     --top: 1rem;
     transition: 0.3s ease transform;
     background-color: #056eac;

@@ -17,7 +17,7 @@ export const Navbar = () => {
         <div className="mobile-menu-icon" onClick={() => setShowNav(!showNav)} role="button">
           {showNav ? <MdMenuOpen size={48} fill="white" /> : <MdMenu size={48} fill="white" />}
         </div>
-        <ul className={!showNav ? "navItems hide-item" : "navItems"}>
+        <ul className={!showNav ? "nav-items hide-item" : "nav-items"}>
           <li className="nav-li">
             <NavLink className="nav-link" to="/" onClick={() => setShowNav(false)} role="button">
               Home

@@ -30,17 +30,19 @@ export const TemplatesInfo = () => {
 
   return (
     <div className={`templatesInf-container ${templateOpen !== "/noTemplate" && "o-hidden"}`}>
-      {templateOpen !== "/noTemplate" && (
-        <div className="templatesInf-template-open" onClick={closeTemplate}>
-          <button className="templatesInf-button-close-template">x</button>
-          {templateOpen === "/template1" && <Template1 styleScale={scale} />}
-          {templateOpen === "/template2" && <Template2 styleScale={scale} />}
-          {templateOpen === "/template3" && <Template3 styleScale={scale} />}
-          <a className="templatesInf-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
-            Select this resume
-          </a>
-        </div>
-      )}
+      <div
+        className={`templatesInf-template-open ${templateOpen === "/noTemplate" && "templatesInf-template-hidden"}`}
+        onClick={closeTemplate}
+      >
+        <button className="templatesInf-button-close-template">x</button>
+        {templateOpen === "/template1" && <Template1 styleScale={scale} />}
+        {templateOpen === "/template2" && <Template2 styleScale={scale} />}
+        {templateOpen === "/template3" && <Template3 styleScale={scale} />}
+        <a className="templatesInf-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
+          Select this resume
+        </a>
+      </div>
+
       <div className="templatesInf-grid">
         <div className="templatesInf-grid-item">
           <h1 className="templatesInf-grid-item-title">Template 1</h1>

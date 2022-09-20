@@ -88,6 +88,10 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
     });
   };
 
+  const handleAdditionalInfo = () => {
+    setMoreInfo(!moreInfo);
+  };
+
   return (
     <form className="personalInf-box">
       <div className="personalInf-box-flex">
@@ -372,7 +376,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           </>
         )}
 
-        <button className="personalInf-button-more" type="button" onClick={() => setMoreInfo(!moreInfo)}>
+        <button className="personalInf-button-more" type="button" onClick={handleAdditionalInfo}>
           {moreInfo ? (
             <AiOutlineMinusCircle className="personalInf-ico-button" />
           ) : (
