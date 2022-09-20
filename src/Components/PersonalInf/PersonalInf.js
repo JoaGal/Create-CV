@@ -95,7 +95,7 @@ export const PersonalInf = ({ allInformation, setAllInformation }) => {
           type="button"
           onClick={deleteFormInfo}
         >
-          delete form
+          Delete Form
         </button>
         <button className="personalInf-button-img">
           <AiFillCamera size="48" />
