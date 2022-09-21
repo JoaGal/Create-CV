@@ -59,21 +59,17 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           descriptionWork: "",
         },
         profile: {
-          title: "",
           descriptionProfile: "",
         },
         skill: {
-          title: "",
           skill: "",
-          skillLevel: "",
+          descriptionSkill: "",
         },
         lenguages: {
-          title: "",
           lenguage: "",
           lenguageLevel: "",
         },
         studies: {
-          title: "",
           study: "",
           startPeriod: "",
           processPeriod: "",

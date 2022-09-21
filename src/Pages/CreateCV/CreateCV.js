@@ -64,7 +64,7 @@ export const CreateCV = () => {
       },
       skill: {
         skill: "",
-        skillLevel: "",
+        descriptionSkill: "",
       },
       lenguages: {
         lenguage: "",

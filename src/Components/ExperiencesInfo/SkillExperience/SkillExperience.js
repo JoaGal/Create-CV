@@ -3,7 +3,7 @@ import "./SkillExperience.css";
 import PropTypes from "prop-types";
 
 export const SkillExperience = ({ allInformation, setAllInformation, editSectionName }) => {
-  
+
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
@@ -34,9 +34,7 @@ export const SkillExperience = ({ allInformation, setAllInformation, editSection
   return (
     <div className="skillExperience-box">
       <hr />
-      <div className="skillExperience-box1">
-        <div className="skillExperience-double1">
-          <p className="skillExperience-p">Skill</p>
+      <p className="skillExperience-p">Skills</p>
           <input
             type="text"
             className="skillExperience-input"
@@ -54,32 +52,29 @@ export const SkillExperience = ({ allInformation, setAllInformation, editSection
                 x
               </button>
             )}
-        </div>
-        <div className="skillExperience-double2">
-          <p className="skillExperience-p">Level</p>
-          <select
-            type="text"
-            className="skillExperience-select"
-            name="skillLevel"
-            value={allInformation?.experiences?.skill?.skillLevel}
-            onChange={handleChange}
-          >
-            <option>---</option>
-            <option>Expert</option>
-            <option>Advanced</option>
-            <option>Medium</option>
-            <option>Basic</option>
-            <option>Beginner</option>
-          </select>
-        </div>
-      </div>
-      <button className="skillExperience-button">Save</button>
+      <p className="skillExperience-p">Description of you</p>
+      <textarea
+        className="skillExperience-textarea"
+        name="descriptionSkill"
+        value={allInformation?.experiences?.skill?.descriptionSkill}
+        onChange={handleChange}
+      />
+      {allInformation.experiences.skill.descriptionSkill !== "" && !editSectionName && (
+              <button
+                className="workExperience-button-delete-input"
+                type="button"
+                name="descriptionSkill"
+                onClick={deleteThisInput}
+              >
+                x
+              </button>
+            )}
     </div>
   );
 };
 
 SkillExperience.propTypes = {
-  allInformation: PropTypes.object,
+  allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
   editSectionName: PropTypes.object.isRequired,
 };
