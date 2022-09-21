@@ -178,7 +178,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               </button>
             )}
           </div>
-          <div className="personalInf-item w-100" style={{ display: "flex" }}>
+          <div className="personalInf-item w-100">
             <label className="personalInf-label" htmlFor="lastname">
               Lastname
             </label>
