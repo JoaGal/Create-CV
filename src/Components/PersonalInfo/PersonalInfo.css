@@ -26,10 +26,10 @@
 }
 
 .personalInf-button-delete-form {
-  background-color: #fff;
-  border: 1px solid #ff0000;
+  background-color: #df0000;
+  border: none;
   border-radius: 5px;
-  color: #ff0000;
+  color: #fff;
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 600;
@@ -42,7 +42,6 @@
 
 .personalInf-button-delete-form:hover {
   background-color: #ff0000;
-  color: #fff;
 }
 
 .personalInf-button-img {
