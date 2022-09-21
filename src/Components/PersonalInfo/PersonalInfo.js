@@ -358,8 +358,8 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
                 <option value="single">Single</option>
                 <option value="married">Married</option>
                 <option value="separated">Separated</option>
-                <option value="divorced">Divorced</option>
                 <option value="widowed">Widowed</option>
+                <option value="divorced">Divorced</option>
               </select>
             </div>
             <div className="personalInf-item">
