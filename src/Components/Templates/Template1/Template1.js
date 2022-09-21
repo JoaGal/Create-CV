@@ -21,7 +21,7 @@ export const Template1 = ({ styleScale = "1" }) => {
     >
       <img
         className="template-1-img"
-        src="https://avatars.githubusercontent.com/u/88043910?v=4"
+        src={allInformation?.personal?.image}
         alt="Foto de perfil"
         id="pic"
       />

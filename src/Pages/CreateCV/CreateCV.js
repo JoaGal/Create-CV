@@ -12,6 +12,7 @@ export const CreateCV = () => {
   const [openComponent, setOpenComponent] = useState(0);
   const [allInformation, setAllInformation] = useLocalStorage("allInformation", {
     personal: {
+      image: "",
       name: "",
       lastname: "",
       email: "",

@@ -8,9 +8,24 @@ import "./PersonalInfo.css";
 export const PersonalInfo = ({ allInformation, setAllInformation }) => {
   const [moreInfo, setMoreInfo] = useState(false);
 
+  const saveImageInLocalStorageFileBase64 = (e) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload = () => {
+      setAllInformation({
+        ...allInformation,
+        personal: {
+          ...allInformation.personal,
+          image: reader.result,
+        },
+      });
+    };
+  }
+
   const deleteFormInfo = () => {
     setAllInformation({
       personal: {
+        image: "",
         name: "",
         lastname: "",
         email: "",
@@ -107,10 +122,18 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
         <button className="personalInf-button-delete-form" type="button" onClick={deleteFormInfo}>
           Delete Form
         </button>
-        <button className="personalInf-button-img">
-          <AiFillCamera size="48" />
-          Add photo
-        </button>
+
+        <label className="personalInf-button-img" htmlFor="file">
+          {!allInformation.personal.image && (
+            <>
+              <AiFillCamera size="48" />
+              Add photo
+            </>
+          )}
+          <input className="personalInf-input-file" type="file" name="file" id="file" onChange={saveImageInLocalStorageFileBase64} />
+          <img className="personalInf-img" src={allInformation.personal.image} />
+        </label>
+
         <div className="w-68">
           <div className="personalInf-item w-100 mb-1">
             <label className="personalInf-label" htmlFor="name">

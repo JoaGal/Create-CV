@@ -6,3 +6,10 @@
   width: 21cm;
   height: 29.7cm;
 }
+
+.template-3-img {
+  float: right;
+  margin: 0;
+  height: 12rem;
+  width: 12rem;
+}
