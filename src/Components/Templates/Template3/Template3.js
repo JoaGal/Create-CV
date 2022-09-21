@@ -22,7 +22,7 @@ export const Template3 = ({ styleScale = "1" }) => {
       <img
         className="template-3-img"
         src={allInformation?.personal?.image}
-        alt="Foto de perfil"
+        alt="Profile picture"
         id="pic"
       />
       <p>

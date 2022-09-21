@@ -137,7 +137,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             id="file"
             onChange={saveImageInLocalStorageFileBase64}
           />
-          <img className="personalInf-img" src={allInformation.personal.image} />
+          <img className="personalInf-img" alt="Profile picture" src={allInformation.personal.image} />
         </label>
 
         <div className="w-68">
