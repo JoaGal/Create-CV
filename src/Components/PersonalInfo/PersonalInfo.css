@@ -54,8 +54,9 @@
   display: flex;
   flex-direction: column;
   font-size: 0.7rem;
-  justify-content: center;
   height: 12rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
   outline: none;
   text-align: center;
   width: 12rem;
@@ -68,6 +69,7 @@
 .personalInf-img {
   border-radius: 0.2rem;
   height: 11.9rem;
+  object-fit: fill;
   position: absolute;
   width: 11.9rem;
 }

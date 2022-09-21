@@ -9,17 +9,19 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
   const [moreInfo, setMoreInfo] = useState(false);
 
   const saveImageInLocalStorageFileBase64 = (e) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(e.target.files[0]);
-    reader.onload = () => {
-      setAllInformation({
-        ...allInformation,
-        personal: {
-          ...allInformation.personal,
-          image: reader.result,
-        },
-      });
-    };
+    if (e.target.files[0].type.includes("image/")) {
+      const reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0]);
+      reader.onload = () => {
+        setAllInformation({
+          ...allInformation,
+          personal: {
+            ...allInformation.personal,
+            image: reader.result,
+          },
+        });
+      };
+    }
   };
 
   const deleteFormInfo = () => {
