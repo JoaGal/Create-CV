@@ -24,6 +24,8 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
     }
   };
 
+  console.log(allInformation);
+
   const openInfo = (number) => {
     if (openBox !== number) {
       setOpenBox(number);
@@ -39,6 +41,23 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   const closeMoreInf = () => {
     if (moreInf > 0) { 
       setMoreInf(moreInf - 1)
+      if (moreInf === 1) {
+        setAllInformation({
+          ...allInformation,
+          experiences: {
+            ...allInformation.experiences,
+            workExperience2: {
+              ...allInformation.experiences.workExperience2,
+              workstation: "",
+              city: "",
+              employer: "",
+              startWork: "",
+              finishWork: "",
+              descriptionWork: "",
+            },
+          },
+        })
+      }
     }
   };
 
