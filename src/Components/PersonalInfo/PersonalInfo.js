@@ -333,7 +333,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               />
               {allInformation.personal.date !== "" && (
                 <button
-                  className="personalInf-button-delete-input"
+                  className="personalInf-button-delete-input mr-1_5"
                   type="button"
                   tabIndex="-1"
                   name="date"
