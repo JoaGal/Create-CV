@@ -53,6 +53,11 @@
 .createCV-p {
   color: #a6a6a6;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.createCV-p-active {
+  color: #0584ce;
 }
 
 .createCV-button {

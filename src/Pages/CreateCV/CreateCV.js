@@ -135,7 +135,7 @@ export const CreateCV = () => {
               navegateIcon(0);
             }}
           />
-          <p className="createCV-p">Personal</p>
+          <p className={`createCV-p ${openComponent === 0 && "createCV-p-active"}`}>Personal</p>
         </div>
         <div className="createCV-level-box" id="createCV-level-box-mid">
           <FiFileText
@@ -144,7 +144,7 @@ export const CreateCV = () => {
               navegateIcon(1);
             }}
           />
-          <p className="createCV-p">Experiences</p>
+          <p className={`createCV-p ${openComponent === 1 && "createCV-p-active"}`}>Experiences</p>
         </div>
         <div className="createCV-level-box">
           <RiPencilFill
@@ -153,7 +153,7 @@ export const CreateCV = () => {
               navegateIcon(2);
             }}
           />
-          <p className="createCV-p">Template</p>
+          <p className={`createCV-p ${openComponent === 3 && "createCV-p-active"}`}>Template</p>
         </div>
       </div>
       {openComponent === 0 && (
