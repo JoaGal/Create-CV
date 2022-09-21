@@ -102,6 +102,7 @@ export const CreateCV = () => {
 
   const nextStep = () => {
     if (checkInputs()) {
+      window.scrollTo(0, 0);
       if (openComponent < 2) {
         setOpenComponent(openComponent + 1);
       } else {
@@ -114,6 +115,7 @@ export const CreateCV = () => {
 
   const navegateIcon = (number) => {
     if (checkInputs() && openComponent !== number) {
+      window.scrollTo(0, 0);
       setOpenComponent(number);
     }
   };
