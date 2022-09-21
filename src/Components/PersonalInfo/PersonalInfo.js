@@ -41,6 +41,14 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           finishWork: "",
           descriptionWork: "",
         },
+        workExperience2: {
+          workstation: "",
+          city: "",
+          employer: "",
+          startWork: "",
+          finishWork: "",
+          descriptionWork: "",
+        },
         profile: {
           title: "",
           descriptionProfile: "",

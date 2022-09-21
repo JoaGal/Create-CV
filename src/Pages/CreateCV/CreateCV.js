@@ -42,6 +42,14 @@ export const CreateCV = () => {
         finishWork: "",
         descriptionWork: "",
       },
+      workExperience2: {
+        workstation: "",
+        city: "",
+        employer: "",
+        startWork: "",
+        finishWork: "",
+        descriptionWork: "",
+      },
       profile: {
         descriptionProfile: "",
       },

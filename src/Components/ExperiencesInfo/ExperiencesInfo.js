@@ -10,11 +10,13 @@ import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 import PropTypes from "prop-types";
 import "./ExperiencesInfo.css";
+import { WorkExperience2 } from "./WorkExperience2/WorkExperience2";
 
 export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   const [editSectionName, setEditSectionName] = useState(false);
   const [title, setTitle] = useState(0);
   const [openBox, setOpenBox] = useState();
+  const [moreInf, setMoreInf] = useState(0);
 
   const closeEditSectionName = (e) => {
     if (!e.target.className.includes("changeSectionName")) {
@@ -27,6 +29,16 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
       setOpenBox(number);
     } else {
       setOpenBox(null);
+    }
+  };
+
+  const openMoreInf = () => {
+    setMoreInf(moreInf + 1)
+  };
+
+  const closeMoreInf = () => {
+    if (moreInf > 0) { 
+      setMoreInf(moreInf - 1)
     }
   };
 
@@ -82,6 +94,9 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {openBox === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {moreInf > 0 && <WorkExperience2 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {openBox === 0 && <button className="ExperienceInf-more-button" onClick={openMoreInf}>Other Work</button>}
+        {moreInf > 0 && <button className="ExperienceInf-closemore-button" onClick={closeMoreInf}>Delete Work</button>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(1)}>

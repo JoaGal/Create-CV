@@ -1,15 +1,14 @@
 import React from "react";
-import "./WorkExperience.css";
 import PropTypes from "prop-types";
 
-export const WorkExperience = ({ allInformation, setAllInformation, editSectionName }) => {
+export const WorkExperience2 = ({ allInformation, setAllInformation, editSectionName }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        workExperience: {
-          ...allInformation.experiences.workExperience,
+        workExperience2: {
+          ...allInformation.experiences.workExperience2,
           [e.target.name]: e.target.value,
         },
       },
@@ -22,8 +21,8 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        workExperience: {
-          ...allInformation.experiences.workExperience,
+        workExperience2: {
+          ...allInformation.experiences.workExperience2,
           [e.target.name]: "",
         },
       },
@@ -40,10 +39,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="text"
             className="workExperience-input"
             name="workstation"
-            value={allInformation?.experiences?.workExperience?.workstation}
+            value={allInformation?.experiences?.workExperience2?.workstation}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience.workstation !== "" &&
+          {allInformation.experiences.workExperience2.workstation !== "" &&
             !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
@@ -61,10 +60,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="text"
             className="workExperience-input"
             name="city"
-            value={allInformation?.experiences?.workExperience?.city}
+            value={allInformation?.experiences?.workExperience2?.city}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience.city !== "" &&
+          {allInformation.experiences.workExperience2.city !== "" &&
             !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
@@ -82,10 +81,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
         type="text"
         className="workExperience-input"
         name="employer"
-        value={allInformation?.experiences?.workExperience?.employer}
+        value={allInformation?.experiences?.workExperience2?.employer}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience.employer !== "" &&
+      {allInformation.experiences.workExperience2.employer !== "" &&
         !editSectionName && (
           <button
             className="workExperience-button-delete-input"
@@ -103,7 +102,7 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="date"
             className="workExperience-input"
             name="startWork"
-            value={allInformation?.experiences?.workExperience?.startWork}
+            value={allInformation?.experiences?.workExperience2?.startWork}
             onChange={handleChange}
           />
         </div>
@@ -113,7 +112,7 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="date"
             className="workExperience-input"
             name="finishWork"
-            value={allInformation?.experiences?.workExperience?.finishWork}
+            value={allInformation?.experiences?.workExperience2?.finishWork}
             onChange={handleChange}
           />
         </div>
@@ -123,10 +122,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
         type="text"
         className="workExperience-textarea"
         name="descriptionWork"
-        value={allInformation?.experiences?.workExperience?.descriptionWork}
+        value={allInformation?.experiences?.workExperience2?.descriptionWork}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience.descriptionWork !== "" &&
+      {allInformation.experiences.workExperience2.descriptionWork !== "" &&
         !editSectionName && (
           <button
             className="workExperience-button-delete-input"
@@ -141,7 +140,7 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
   );
 };
 
-WorkExperience.propTypes = {
+WorkExperience2.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
   editSectionName: PropTypes.object.isRequired,
