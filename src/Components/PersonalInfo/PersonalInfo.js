@@ -8,22 +8,6 @@ import "./PersonalInfo.css";
 export const PersonalInfo = ({ allInformation, setAllInformation }) => {
   const [moreInfo, setMoreInfo] = useState(false);
 
-  const saveImageInLocalStorageFileBase64 = (e) => {
-    if (e.target.files[0].type.includes("image/")) {
-      const reader = new FileReader();
-      reader.readAsDataURL(e.target.files[0]);
-      reader.onload = () => {
-        setAllInformation({
-          ...allInformation,
-          personal: {
-            ...allInformation.personal,
-            image: reader.result,
-          },
-        });
-      };
-    }
-  };
-
   const deleteFormInfo = () => {
     setAllInformation({
       personal: {
@@ -91,13 +75,31 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
     });
   };
 
-  const handleChange = (e) => {
-    e.preventDefault();
+  const saveImageInLocalStorageFileBase64 = (e) => {
+    if (e.target.files[0].type.includes("image/")) {
+      const reader = new FileReader();
+      reader.readAsDataURL(e.target.files[0]);
+      reader.onload = () => {
+        setAllInformation({
+          ...allInformation,
+          personal: {
+            ...allInformation.personal,
+            image: reader.result,
+          },
+        });
+      };
+    }
+  };
+
+  const handleChange = ({ target: { value, name } }) => {
+    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
+      value = value.toUpperCase();
+    }
     setAllInformation({
       ...allInformation,
       personal: {
         ...allInformation.personal,
-        [e.target.name]: e.target.value,
+        [name]: value,
       },
     });
   };
@@ -345,25 +347,20 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               <label className="personalInf-label" htmlFor="maritalStatus">
                 MaritalStatus
               </label>
-              <input
+              <select
                 className="personalInf-input"
-                type="text"
                 name="maritalStatus"
                 id="maritalStatus"
                 value={allInformation.personal.maritalStatus}
                 onChange={handleChange}
-              />
-              {allInformation.personal.maritalStatus !== "" && (
-                <button
-                  className="personalInf-button-delete-input"
-                  type="button"
-                  tabIndex="-1"
-                  name="maritalStatus"
-                  onClick={deleteThisInput}
-                >
-                  x
-                </button>
-              )}
+              >
+                {allInformation.personal.maritalStatus === "" && <option value=""></option>}
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="separated">Separated</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+              </select>
             </div>
             <div className="personalInf-item">
               <label className="personalInf-label" htmlFor="postalCode">
@@ -393,25 +390,19 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               <label className="personalInf-label" htmlFor="gender">
                 Gender
               </label>
-              <input
+              <select
                 className="personalInf-input"
-                type="text"
                 name="gender"
                 id="gender"
                 value={allInformation.personal.gender}
                 onChange={handleChange}
-              />
-              {allInformation.personal.gender !== "" && (
-                <button
-                  className="personalInf-button-delete-input"
-                  type="button"
-                  tabIndex="-1"
-                  name="gender"
-                  onClick={deleteThisInput}
-                >
-                  x
-                </button>
-              )}
+              >
+                {allInformation.personal.gender === "" && <option value=""></option>}
+                <option value="Man">Man</option>
+                <option value="Woman">Woman</option>
+                <option value="transgender">Transgender</option>
+                <option value="non-binary/non-conforming">Non-binary/non-conforming</option>
+              </select>
             </div>
             <div className="personalInf-item">
               <label className="personalInf-label" htmlFor="linkedin">
