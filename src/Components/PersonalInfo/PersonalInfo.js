@@ -124,11 +124,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
         </button>
 
         <label className="personalInf-button-img" htmlFor="file">
-          {!allInformation.personal.image && (
+          {!allInformation.personal.image ? (
             <>
               <AiFillCamera size="48" />
               Add photo
             </>
+          ) : (
+            <img className="personalInf-img" alt="Profile picture" src={allInformation.personal.image} />
           )}
           <input
             className="personalInf-input-file"
@@ -137,7 +139,6 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             id="file"
             onChange={saveImageInLocalStorageFileBase64}
           />
-          <img className="personalInf-img" alt="Profile picture" src={allInformation.personal.image} />
         </label>
 
         <div className="w-68">
