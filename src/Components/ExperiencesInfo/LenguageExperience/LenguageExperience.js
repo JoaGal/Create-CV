@@ -74,7 +74,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
                 x
               </button>
             )}
-            <option>---</option>
+            <option></option>
             <option>A0</option>
             <option>A1-A2</option>
             <option>A2-B1</option>
