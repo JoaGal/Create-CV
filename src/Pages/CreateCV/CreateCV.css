@@ -66,9 +66,11 @@
   height: 3rem;
   letter-spacing: 0.1rem;
   margin: 1.4rem;
+  max-width: 20rem;
+  min-width: 12rem;
   outline: none;
   transition: background-color 0.3s ease;
-  width: 20rem;
+  width: 40%;
 }
 
 .createCV-button:hover {
@@ -82,8 +84,8 @@
   }
   
   #createCV-level-box-mid {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .createCV-icon {
