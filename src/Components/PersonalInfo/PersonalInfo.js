@@ -20,7 +20,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
         },
       });
     };
-  }
+  };
 
   const deleteFormInfo = () => {
     setAllInformation({
@@ -130,7 +130,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               Add photo
             </>
           )}
-          <input className="personalInf-input-file" type="file" name="file" id="file" onChange={saveImageInLocalStorageFileBase64} />
+          <input
+            className="personalInf-input-file"
+            type="file"
+            name="file"
+            id="file"
+            onChange={saveImageInLocalStorageFileBase64}
+          />
           <img className="personalInf-img" src={allInformation.personal.image} />
         </label>
 
@@ -148,7 +154,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               onChange={handleChange}
             />
             {allInformation.personal.name !== "" && (
-              <button className="personalInf-button-delete-input" type="button" name="name" onClick={deleteThisInput}>
+              <button
+                className="personalInf-button-delete-input"
+                type="button"
+                tabIndex="-1"
+                name="name"
+                onClick={deleteThisInput}
+              >
                 x
               </button>
             )}
@@ -169,6 +181,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               <button
                 className="personalInf-button-delete-input"
                 type="button"
+                tabIndex="-1"
                 name="lastname"
                 onClick={deleteThisInput}
               >
@@ -191,7 +204,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.email !== "" && (
-            <button className="personalInf-button-delete-input" type="button" name="email" onClick={deleteThisInput}>
+            <button
+              className="personalInf-button-delete-input"
+              type="button"
+              tabIndex="-1"
+              name="email"
+              onClick={deleteThisInput}
+            >
               x
             </button>
           )}
@@ -209,7 +228,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.phone !== "" && (
-            <button className="personalInf-button-delete-input" type="button" name="phone" onClick={deleteThisInput}>
+            <button
+              className="personalInf-button-delete-input"
+              type="button"
+              tabIndex="-1"
+              name="phone"
+              onClick={deleteThisInput}
+            >
               x
             </button>
           )}
@@ -227,7 +252,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.address !== "" && (
-            <button className="personalInf-button-delete-input" type="button" name="address" onClick={deleteThisInput}>
+            <button
+              className="personalInf-button-delete-input"
+              type="button"
+              tabIndex="-1"
+              name="address"
+              onClick={deleteThisInput}
+            >
               x
             </button>
           )}
@@ -245,7 +276,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.country !== "" && (
-            <button className="personalInf-button-delete-input" type="button" name="country" onClick={deleteThisInput}>
+            <button
+              className="personalInf-button-delete-input"
+              type="button"
+              tabIndex="-1"
+              name="country"
+              onClick={deleteThisInput}
+            >
               x
             </button>
           )}
@@ -263,7 +300,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             onChange={handleChange}
           />
           {allInformation.personal.city !== "" && (
-            <button className="personalInf-button-delete-input" type="button" name="city" onClick={deleteThisInput}>
+            <button
+              className="personalInf-button-delete-input"
+              type="button"
+              tabIndex="-1"
+              name="city"
+              onClick={deleteThisInput}
+            >
               x
             </button>
           )}
@@ -284,7 +327,13 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
                 onChange={handleChange}
               />
               {allInformation.personal.date !== "" && (
-                <button className="personalInf-button-delete-input" type="button" name="date" onClick={deleteThisInput}>
+                <button
+                  className="personalInf-button-delete-input"
+                  type="button"
+                  tabIndex="-1"
+                  name="date"
+                  onClick={deleteThisInput}
+                >
                   x
                 </button>
               )}
@@ -305,6 +354,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
                 <button
                   className="personalInf-button-delete-input"
                   type="button"
+                  tabIndex="-1"
                   name="maritalStatus"
                   onClick={deleteThisInput}
                 >
@@ -328,6 +378,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
                 <button
                   className="personalInf-button-delete-input"
                   type="button"
+                  tabIndex="-1"
                   name="postalCode"
                   onClick={deleteThisInput}
                 >
@@ -351,6 +402,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
                 <button
                   className="personalInf-button-delete-input"
                   type="button"
+                  tabIndex="-1"
                   name="gender"
                   onClick={deleteThisInput}
                 >
@@ -374,6 +426,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
                 <button
                   className="personalInf-button-delete-input"
                   type="button"
+                  tabIndex="-1"
                   name="linkedin"
                   onClick={deleteThisInput}
                 >
@@ -397,6 +450,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
                 <button
                   className="personalInf-button-delete-input"
                   type="button"
+                  tabIndex="-1"
                   name="briefcase"
                   onClick={deleteThisInput}
                 >
