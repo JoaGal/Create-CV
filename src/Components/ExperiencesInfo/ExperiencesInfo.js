@@ -11,6 +11,7 @@ import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 import PropTypes from "prop-types";
 import "./ExperiencesInfo.css";
 import { WorkExperience2 } from "./WorkExperience2/WorkExperience2";
+import { WorkExperience3 } from "./WorkExperience3/WorkExperience3";
 
 export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   const [editSectionName, setEditSectionName] = useState(false);
@@ -33,14 +34,52 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   };
 
   const openMoreInf = () => {
-    setMoreInf(moreInf + 1)
+    if (moreInf < 2) {
+      setMoreInf(moreInf + 1) 
+    }
   };
 
   const closeMoreInf = () => {
     if (moreInf > 0) { 
       setMoreInf(moreInf - 1)
+      if (moreInf === 1) {
+        setAllInformation({
+          ...allInformation,
+          experiences: {
+            ...allInformation.experiences,
+            workExperience2: {
+              ...allInformation.experiences.workExperience2,
+              workstation: "",
+              city: "",
+              employer: "",
+              startWork: "",
+              finishWork: "",
+              descriptionWork: "",
+            },
+          },
+        })
+      }
+      else if (moreInf === 2) {
+        setAllInformation({
+          ...allInformation,
+          experiences: {
+            ...allInformation.experiences,
+            workExperience3: {
+              ...allInformation.experiences.workExperience3,
+              workstation: "",
+              city: "",
+              employer: "",
+              startWork: "",
+              finishWork: "",
+              descriptionWork: "",
+            },
+          },
+        })
+      }
     }
   };
+
+  console.log(allInformation)
 
   const changeSectionName = (name) => {
     setTitle(name);
@@ -95,6 +134,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
         </div>
         {openBox === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
         {moreInf > 0 && <WorkExperience2 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {moreInf > 1 && <WorkExperience3 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
         {openBox === 0 && <button className="ExperienceInf-more-button" onClick={openMoreInf}>Other Work</button>}
         {moreInf > 0 && <button className="ExperienceInf-closemore-button" onClick={closeMoreInf}>Delete Work</button>}
       </div>
