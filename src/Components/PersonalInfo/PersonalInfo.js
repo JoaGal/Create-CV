@@ -50,6 +50,14 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           finishWork: "",
           descriptionWork: "",
         },
+        workExperience3: {
+          workstation: "",
+          city: "",
+          employer: "",
+          startWork: "",
+          finishWork: "",
+          descriptionWork: "",
+        },
         profile: {
           title: "",
           descriptionProfile: "",
