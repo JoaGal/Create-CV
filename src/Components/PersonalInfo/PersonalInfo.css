@@ -108,7 +108,7 @@
 }
 
 .personalInf-input:focus {
-  background: linear-gradient(to left, #eee 2.25rem, #ccc 2.25rem, #ccc 2.4rem, #0583cc1a 2.4rem);
+  background: linear-gradient(to left, #eee 2.25rem, #0584ce 2.25rem, #0584ce 2.4rem, #0583cc1a 2.4rem);
   border-color: #0584ce;
   background-color: #0583cc1a;
 }
