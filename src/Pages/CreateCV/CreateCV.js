@@ -79,50 +79,13 @@ export const CreateCV = () => {
     },
   });
 
-  const checkInputs = () => {
-    if (allInformation.personal.name.length <= 50) {
-      if (allInformation.personal.lastname.length <= 51) {
-        if (allInformation.personal.email.length <= 52) {
-          if (allInformation.personal.phone.length <= 53) {
-            if (allInformation.personal.address.length <= 54) {
-              if (allInformation.personal.country.length <= 55) {
-                if (allInformation.personal.city.length <= 56) {
-                  if (allInformation.personal.maritalStatus.length <= 57) {
-                    if (allInformation.personal.postalCode.length <= 58) {
-                      if (allInformation.personal.gender.length <= 59) {
-                        if (allInformation.personal.linkedin.length <= 60) {
-                          if (allInformation.personal.briefcase.length <= 61) {
-                            return true;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    return false;
-  };
-
   const nextStep = () => {
-    if (checkInputs()) {
-      window.scrollTo(0, 0);
-      if (openComponent < 2) {
-        setOpenComponent(openComponent + 1);
-      } else {
-        setOpenComponent(0);
-      }
-    } else {
-      alert("Please fill all the inputs");
-    }
+    window.scrollTo(0, 0);
+    setOpenComponent(openComponent + 1);
   };
 
   const navegateIcon = (number) => {
-    if (checkInputs() && openComponent !== number) {
+    if (openComponent !== number) {
       window.scrollTo(0, 0);
       setOpenComponent(number);
     }

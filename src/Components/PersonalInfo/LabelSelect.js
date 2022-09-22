@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const LabelSelect = ({ id, options, allInformation, handleChange }) => {
+export const LabelSelect = ({ id, options, allInformation, handleChange, deleteThisInput }) => {
   return (
     <div className="personalInf-item">
       <label className="personalInf-label" htmlFor={id}>
         {id[0].toUpperCase() + id.slice(1)}
       </label>
       <select
-        className="personalInf-input"
+        className="personalInf-select"
         name={id}
         id={id}
         value={allInformation.personal[id]}
@@ -21,6 +21,17 @@ export const LabelSelect = ({ id, options, allInformation, handleChange }) => {
           </option>
         ))}
       </select>
+      {allInformation.personal[id] !== "" && (
+        <button
+          className="personalInf-button-delete-input"
+          type="button"
+          tabIndex="-1"
+          name={id}
+          onClick={deleteThisInput}
+        >
+          x
+        </button>
+      )}
     </div>
   );
 };
@@ -30,4 +41,5 @@ LabelSelect.propTypes = {
   options: PropTypes.array.isRequired,
   allInformation: PropTypes.object.isRequired,
   handleChange: PropTypes.func.isRequired,
+  deleteThisInput: PropTypes.func.isRequired,
 };

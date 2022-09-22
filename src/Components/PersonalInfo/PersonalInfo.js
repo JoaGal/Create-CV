@@ -218,7 +218,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               />
               {allInformation.personal.date !== "" && (
                 <button
-                  className="personalInf-button-delete-input mr-1_5"
+                  className="personalInf-button-delete-input"
                   type="button"
                   tabIndex="-1"
                   name="date"
@@ -233,6 +233,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               options={["single", "married", "separated", "widowed", "divorced"]}
               allInformation={allInformation}
               handleChange={handleChange}
+              deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="postalCode"
@@ -245,6 +246,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               options={["Man", "Woman", "transgender", "non-binary/non-conforming"]}
               allInformation={allInformation}
               handleChange={handleChange}
+              deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="linkedin"
