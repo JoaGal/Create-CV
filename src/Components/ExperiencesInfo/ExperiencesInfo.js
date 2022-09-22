@@ -78,7 +78,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
       setMoreInf2(moreInf2 - 1);
     }
     let allInfo = allInformation.experiences[experience];
-    Object.keys(allInformation.experiences[experience]).forEach((key) => {
+    Object.keys(allInfo).forEach((key) => {
       allInfo[key] = "";
     });
     setAllInformation({
