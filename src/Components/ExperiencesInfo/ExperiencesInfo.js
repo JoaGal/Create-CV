@@ -85,7 +85,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        [experience]: allInformation.experiences[experience],
+        [experience]: allInfo,
       },
     });
   };
