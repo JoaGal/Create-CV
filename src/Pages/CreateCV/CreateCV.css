@@ -56,6 +56,10 @@
   transition: all 0.3s ease;
 }
 
+.createCV-icon:hover ~ .createCV-p {
+  color: #0584ce;
+}
+
 .createCV-p-active {
   color: #0584ce;
 }
@@ -83,11 +87,11 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .createCV-screen{
+  .createCV-screen {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-  
+
   #createCV-level-box-mid {
     margin-left: 3rem;
     margin-right: 3rem;

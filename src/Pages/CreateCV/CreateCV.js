@@ -132,7 +132,7 @@ export const CreateCV = () => {
               navegateIcon(2);
             }}
           />
-          <p className={`createCV-p ${openComponent === 3 && "createCV-p-active"}`}>Template</p>
+          <p className={`createCV-p ${openComponent === 2 && "createCV-p-active"}`}>Template</p>
         </div>
       </div>
       {openComponent === 0 && (
