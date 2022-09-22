@@ -70,6 +70,14 @@ export const CreateCV = () => {
         lenguage: "",
         lenguageLevel: "",
       },
+      lenguages2: {
+        lenguage: "",
+        lenguageLevel: "",
+      },
+      lenguages3: {
+        lenguage: "",
+        lenguageLevel: "",
+      },
       studies: {
         study: "",
         startPeriod: "",

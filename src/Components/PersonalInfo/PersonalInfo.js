@@ -71,6 +71,14 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           lenguage: "",
           lenguageLevel: "",
         },
+        lenguages2: {
+          lenguage: "",
+          lenguageLevel: "",
+        },
+        lenguages3: {
+          lenguage: "",
+          lenguageLevel: "",
+        },
         studies: {
           study: "",
           startPeriod: "",
@@ -218,7 +226,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               />
               {allInformation.personal.date !== "" && (
                 <button
-                  className="personalInf-button-delete-input"
+                  className="personalInf-button-delete-input mr-1_5"
                   type="button"
                   tabIndex="-1"
                   name="date"
@@ -233,7 +241,6 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               options={["single", "married", "separated", "widowed", "divorced"]}
               allInformation={allInformation}
               handleChange={handleChange}
-              deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="postalCode"
@@ -246,7 +253,6 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               options={["Man", "Woman", "transgender", "non-binary/non-conforming"]}
               allInformation={allInformation}
               handleChange={handleChange}
-              deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="linkedin"
