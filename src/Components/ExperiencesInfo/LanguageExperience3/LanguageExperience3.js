@@ -3,14 +3,14 @@ import { LabelInputButton } from "../../Reusable/LabelInputButton";
 import { LabelSelect } from "../../Reusable/LabelSelect";
 import PropTypes from "prop-types";
 
-export const LenguageExperience2 = ({ allInformation, setAllInformation }) => {
+export const LanguageExperience3 = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        lenguages2: {
-          ...allInformation.experiences.lenguages2,
+        languages3: {
+          ...allInformation.experiences.languages3,
           [e.target.name]: e.target.value,
         },
       },
@@ -23,8 +23,8 @@ export const LenguageExperience2 = ({ allInformation, setAllInformation }) => {
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        lenguages2: {
-          ...allInformation.experiences.lenguages2,
+        languages3: {
+          ...allInformation.experiences.languages3,
           [e.target.name]: "",
         },
       },
@@ -32,19 +32,19 @@ export const LenguageExperience2 = ({ allInformation, setAllInformation }) => {
   };
 
   return (
-    <div className="lenguageExperience-box">
+    <div className="languageExperience-box">
       <hr />
-      <div className="lenguageExperience-box1">
+      <div className="languageExperience-box1">
         <LabelInputButton
-          id="lenguage"
-          pathInObject={allInformation.experiences.lenguages2.lenguage}
+          id="language"
+          pathInObject={allInformation.experiences.languages3.language}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
         <LabelSelect
-          id="lenguageLevel"
+          id="languageLevel"
           options={["A1", "A2", "B1", "B2", "C1", "C2"]}
-          pathInObject={allInformation.experiences.lenguages2.lenguageLevel}
+          pathInObject={allInformation.experiences.languages3.languageLevel}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
@@ -53,7 +53,7 @@ export const LenguageExperience2 = ({ allInformation, setAllInformation }) => {
   );
 };
 
-LenguageExperience2.propTypes = {
+LanguageExperience3.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
 };

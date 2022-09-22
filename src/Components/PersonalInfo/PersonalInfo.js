@@ -67,17 +67,17 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           skill: "",
           descriptionSkill: "",
         },
-        lenguages1: {
-          lenguage: "",
-          lenguageLevel: "",
+        languages1: {
+          language: "",
+          languageLevel: "",
         },
-        lenguages2: {
-          lenguage: "",
-          lenguageLevel: "",
+        languages2: {
+          language: "",
+          languageLevel: "",
         },
-        lenguages3: {
-          lenguage: "",
-          lenguageLevel: "",
+        languages3: {
+          language: "",
+          languageLevel: "",
         },
         studies: {
           study: "",
