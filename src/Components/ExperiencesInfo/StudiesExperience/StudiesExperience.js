@@ -95,7 +95,6 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
                 x
               </button>
             )}
-      <button className="workExperience-button">Save</button>
     </div>
   );
 };
