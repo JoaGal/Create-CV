@@ -51,7 +51,6 @@ export const ProfileExperience = ({ allInformation, setAllInformation, editSecti
                 x
               </button>
             )}
-      <button className="profileExperience-button">Save</button>
     </div>
   );
 };
