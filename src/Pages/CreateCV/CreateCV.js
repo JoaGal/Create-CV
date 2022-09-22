@@ -14,7 +14,7 @@ export const CreateCV = () => {
     personal: {
       image: "",
       name: "",
-      lastname: "",
+      lastName: "",
       email: "",
       phone: "",
       address: "",

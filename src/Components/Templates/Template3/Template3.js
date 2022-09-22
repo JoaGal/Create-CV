@@ -26,7 +26,7 @@ export const Template3 = ({ styleScale = "1" }) => {
         id="pic"
       />
       <p>
-        {allInformation?.personal?.name} {allInformation?.personal?.lastname}
+        {allInformation?.personal?.name} {allInformation?.personal?.lastName}
         {allInformation?.personal?.email} {allInformation?.personal?.phone}
         {allInformation?.personal?.address} {allInformation?.personal?.country}
         {allInformation?.personal?.city} {allInformation?.personal?.date}

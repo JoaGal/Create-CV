@@ -15,7 +15,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
       personal: {
         image: "",
         name: "",
-        lastname: "",
+        lastName: "",
         email: "",
         phone: "",
         address: "",
@@ -172,9 +172,9 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
             deleteThisInput={deleteThisInput}
           />
           <LabelInputButton
-            id="lastname"
+            id="lastName"
             extraClass="w-100"
-            pathInObject={allInformation.personal.lastname}
+            pathInObject={allInformation.personal.lastName}
             handleChange={handleChange}
             deleteThisInput={deleteThisInput}
           />
