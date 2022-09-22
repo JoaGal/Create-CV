@@ -1,8 +1,9 @@
 import React from "react";
 import "./ProfileExperience.css";
 import PropTypes from "prop-types";
+import { LabelTextareaButton } from "../../Reusable/LabelTextareaButton";
 
-export const ProfileExperience = ({ allInformation, setAllInformation, editSectionName }) => {
+export const ProfileExperience = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
@@ -33,23 +34,13 @@ export const ProfileExperience = ({ allInformation, setAllInformation, editSecti
   return (
     <div className="profileExperience-box">
       <hr />
-      <p className="profileExperience-p">Description of you</p>
-      <textarea
-        className="profileExperience-textarea"
-        name="descriptionProfile"
-        value={allInformation?.experiences?.profile?.descriptionProfile}
-        onChange={handleChange}
+      <LabelTextareaButton
+        id="descriptionProfile"
+        extraClass="w-100"
+        pathInObject={allInformation.experiences.profile.descriptionProfile}
+        handleChange={handleChange}
+        deleteThisInput={deleteThisInput}
       />
-      {allInformation.experiences.profile.descriptionProfile !== "" && !editSectionName && (
-        <button
-          className="workExperience-button-delete-input"
-          type="button"
-          name="descriptionProfile"
-          onClick={deleteThisInput}
-        >
-          x
-        </button>
-      )}
     </div>
   );
 };
@@ -57,5 +48,4 @@ export const ProfileExperience = ({ allInformation, setAllInformation, editSecti
 ProfileExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.bool.isRequired,
 };

@@ -1,24 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Reusable.css";
 
-export const LabelInputButton = ({ id, extraClass, allInformation, handleChange, deleteThisInput }) => {
+export const LabelInputButton = ({ id, extraClass, type, pathInObject, handleChange, deleteThisInput }) => {
   return (
-    <div className={`personalInf-item ${extraClass}`}>
-      <label className="personalInf-label" htmlFor={id}>
+    <div className={`reusable-item ${extraClass}`}>
+      <label className="reusable-label" htmlFor={id}>
         {id[0].toUpperCase() + id.slice(1)}
       </label>
       <input
-        className="personalInf-input"
-        type="text"
+        className="reusable-input"
+        type={type || "text"}
         maxLength="80"
         name={id}
         id={id}
-        value={allInformation.personal[id]}
+        value={pathInObject}
         onChange={handleChange}
       />
-      {allInformation.personal[id] !== "" && (
+      {pathInObject !== "" && (
         <button
-          className="personalInf-button-delete-input"
+          className="reusable-button-delete-input"
           type="button"
           tabIndex="-1"
           name={id}
@@ -34,7 +35,8 @@ export const LabelInputButton = ({ id, extraClass, allInformation, handleChange,
 LabelInputButton.propTypes = {
   id: PropTypes.string.isRequired,
   extraClass: PropTypes.string,
-  allInformation: PropTypes.object.isRequired,
+  type: PropTypes.string,
+  pathInObject: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   deleteThisInput: PropTypes.func.isRequired,
 };

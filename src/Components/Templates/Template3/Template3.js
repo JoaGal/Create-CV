@@ -36,7 +36,7 @@ export const Template3 = ({ styleScale = "1" }) => {
       </p>
 
       <p>
-        {allInformation?.experiences?.workExperience?.workstation}
+        {allInformation?.experiences?.workExperience1?.descriptionWork}
         {allInformation?.experiences?.workExperience?.city}
         {allInformation?.experiences?.workExperience?.employer}
         {allInformation?.experiences?.workExperience?.startWork}
