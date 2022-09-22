@@ -1,8 +1,8 @@
 import React from "react";
-import "./LenguageExperience.css";
-import PropTypes from "prop-types";
 import { LabelInputButton } from "../../Reusable/LabelInputButton";
 import { LabelSelect } from "../../Reusable/LabelSelect";
+import PropTypes from "prop-types";
+import "./LenguageExperience.css";
 
 export const LenguageExperience = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {

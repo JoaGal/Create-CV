@@ -1,7 +1,9 @@
 import React from "react";
+import { LabelInputButton } from "../../Reusable/LabelInputButton";
+import { LabelSelect } from "../../Reusable/LabelSelect";
 import PropTypes from "prop-types";
 
-export const LenguageExperience3 = ({ allInformation, setAllInformation, editSectionName }) => {
+export const LenguageExperience3 = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
@@ -33,55 +35,19 @@ export const LenguageExperience3 = ({ allInformation, setAllInformation, editSec
     <div className="lenguageExperience-box">
       <hr />
       <div className="lenguageExperience-box1">
-        <div className="lenguageExperience-double1">
-          <p className="lenguageExperience-p">Lenguage</p>
-          <input
-            type="text"
-            className="lenguageExperience-input"
-            name="lenguage"
-            value={allInformation?.experiences?.lenguages3?.lenguage}
-            onChange={handleChange}
-          />
-          {allInformation.experiences.lenguages3?.lenguage !== "" && !editSectionName && (
-            <button
-              className="workExperience-button-delete-input"
-              type="button"
-              name="lenguage"
-              onClick={deleteThisInput}
-            >
-              x
-            </button>
-          )}
-        </div>
-        <div className="lenguageExperience-double2">
-          <p className="lenguageExperience-p">Level</p>
-          <select
-            type="text"
-            className="lenguageExperience-select"
-            name="lenguageLevel"
-            value={allInformation?.experiences?.lenguages3?.lenguageLevel}
-            onChange={handleChange}
-          >
-            {allInformation.experiences.lenguages3?.lenguageLevel !== "" && !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="lenguageLevel"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
-            <option></option>
-            <option>A1</option>
-            <option>A2</option>
-            <option>B1</option>
-            <option>B1</option>
-            <option>B2</option>
-            <option>C1</option>
-            <option>C2</option>
-          </select>
-        </div>
+        <LabelInputButton
+          id="lenguage"
+          pathInObject={allInformation.experiences.lenguages3.lenguage}
+          handleChange={handleChange}
+          deleteThisInput={deleteThisInput}
+        />
+        <LabelSelect
+          id="lenguageLevel"
+          options={["A1", "A2", "B1", "B2", "C1", "C2"]}
+          pathInObject={allInformation.experiences.lenguages3.lenguageLevel}
+          handleChange={handleChange}
+          deleteThisInput={deleteThisInput}
+        />
       </div>
     </div>
   );
@@ -90,5 +56,4 @@ export const LenguageExperience3 = ({ allInformation, setAllInformation, editSec
 LenguageExperience3.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.bool.isRequired,
 };
