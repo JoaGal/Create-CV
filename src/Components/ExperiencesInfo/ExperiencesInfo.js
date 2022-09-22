@@ -113,8 +113,6 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
     }
   };
 
-  console.log(allInformation)
-
   const changeSectionName = (name) => {
     setTitle(name);
     setEditSectionName(true);
