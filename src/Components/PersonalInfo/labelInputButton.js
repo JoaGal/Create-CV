@@ -10,6 +10,7 @@ export const LabelInputButton = ({ id, extraClass, allInformation, handleChange,
       <input
         className="personalInf-input"
         type="text"
+        maxLength="80"
         name={id}
         id={id}
         value={allInformation.personal[id]}

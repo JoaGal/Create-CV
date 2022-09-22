@@ -9,23 +9,11 @@ a {
   text-decoration: none;
 }
 
-/* ::-webkit-scrollbar {
-  width: 10px;
-  background: linear-gradient(#0584ce 80px, 80px, #f5f5f5);
+select {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  --tw-text-opacity: 1;
-  background: rgb(220 220 220 / var(--tw-text-opacity));
-  border-radius: 10px;
-  border: 2px solid black;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(200 200 200 / var(--tw-text-opacity));
-}
- */
