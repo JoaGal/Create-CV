@@ -20,6 +20,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   const [title, setTitle] = useState(0);
   const [openBox, setOpenBox] = useState();
   const [moreInf, setMoreInf] = useState(0);
+  const [moreInf2, setMoreInf2] = useState(0);
 
   const closeEditSectionName = (e) => {
     if (!e.target.className.includes("changeSectionName")) {
@@ -36,13 +37,15 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   };
 
   const openMoreInf = () => {
-    if (moreInf < 2) {
+    if (moreInf < 2 && openBox === 0) {
       setMoreInf(moreInf + 1) 
+    }else if (moreInf2 < 2 && openBox === 3) {
+      setMoreInf2(moreInf2 + 1) 
     }
   };
 
   const closeMoreInf = () => {
-    if (moreInf > 0) { 
+    if (moreInf > 0 && openBox === 0) { 
       setMoreInf(moreInf - 1)
       if (moreInf === 1) {
         setAllInformation({
@@ -64,9 +67,9 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
       else if (moreInf === 2) {
         setAllInformation({
           ...allInformation,
-          experiences2: {
+          experiences: {
             ...allInformation.experiences,
-            workExperience2: {
+            workExperience3: {
               ...allInformation.experiences.workExperience3,
               workstation: "",
               city: "",
@@ -74,6 +77,35 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
               startWork: "",
               finishWork: "",
               descriptionWork: "",
+            },
+          },
+        })
+      }
+    }
+    if (moreInf2 > 0 && openBox === 3) {
+      setMoreInf2(moreInf2 - 1)
+      if (moreInf2 === 1) {
+        setAllInformation({
+          ...allInformation,
+          experiences: {
+            ...allInformation.experiences,
+            lenguages2: {
+              ...allInformation.experiences.lenguages2,
+              lenguage: "",
+              lenguageLevel: "",
+            },
+          },
+        })
+      }
+      else if (moreInf2 === 2) {
+        setAllInformation({
+          ...allInformation,
+          experiences: {
+            ...allInformation.experiences,
+            lenguages3: {
+              ...allInformation.experiences.lenguages3,
+              lenguage: "",
+              lenguageLevel: "",
             },
           },
         })
@@ -135,10 +167,10 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {openBox === 0 && <WorkExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
-        {moreInf > 0 && <WorkExperience2 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
-        {moreInf > 1 && <WorkExperience3 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {moreInf > 0 && openBox === 0 && <WorkExperience2 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {moreInf > 1 && openBox === 0 && <WorkExperience3 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
         {openBox === 0 && <button className="ExperienceInf-more-button" onClick={openMoreInf}>Other Work</button>}
-        {moreInf > 0 && <button className="ExperienceInf-closemore-button" onClick={closeMoreInf}>Delete Work</button>}
+        {moreInf > 0 && openBox === 0 && <button className="ExperienceInf-closemore-button" onClick={closeMoreInf}>Delete Work</button>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(1)}>
@@ -190,8 +222,10 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {openBox === 3 && <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
-        {openBox === 3 && <LenguageExperience2 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
-        {openBox === 3 && <LenguageExperience3 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {moreInf2 > 0 && openBox === 3 && <LenguageExperience2 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {moreInf2 > 1 && openBox === 3 && <LenguageExperience3 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {openBox === 3 && <button className="ExperienceInf-more-button" onClick={openMoreInf}>Other Work</button>}
+        {moreInf2 > 0 && openBox === 3 && <button className="ExperienceInf-closemore-button" onClick={closeMoreInf}>Delete Work</button>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(4)}>
