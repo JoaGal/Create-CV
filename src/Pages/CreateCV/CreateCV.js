@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
 import { RiPencilFill } from "react-icons/ri";
@@ -86,6 +86,10 @@ export const CreateCV = () => {
       },
     },
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const nextStep = () => {
     window.scrollTo(0, 0);
