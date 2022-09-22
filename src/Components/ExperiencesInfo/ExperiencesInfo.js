@@ -7,6 +7,8 @@ import { ProfileExperience } from "./ProfileExperience/ProfileExperience";
 import { WorkExperience } from "./WorkExperience/WorkExperience";
 import { SkillExperience } from "./SkillExperience/SkillExperience";
 import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
+import { LenguageExperience2 } from "./LenguageExperience2/LenguageExperience2";
+import { LenguageExperience3 } from "./LenguageExperience3/LenguageExperience3";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 import PropTypes from "prop-types";
 import "./ExperiencesInfo.css";
@@ -62,9 +64,9 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
       else if (moreInf === 2) {
         setAllInformation({
           ...allInformation,
-          experiences: {
+          experiences2: {
             ...allInformation.experiences,
-            workExperience3: {
+            workExperience2: {
               ...allInformation.experiences.workExperience3,
               workstation: "",
               city: "",
@@ -188,6 +190,8 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {openBox === 3 && <LenguageExperience allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {openBox === 3 && <LenguageExperience2 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
+        {openBox === 3 && <LenguageExperience3 allInformation={allInformation} setAllInformation={setAllInformation} editSectionName={editSectionName}/>}
       </div>
       <div className="experiencesInf-box">
         <div className="experiencesInf-box-box" onClick={() => openInfo(4)}>

@@ -41,7 +41,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
             type="text"
             className="lenguageExperience-input"
             name="lenguage"
-            value={allInformation?.experiences?.lenguages.lenguage}
+            value={allInformation?.experiences?.lenguages?.lenguage}
             onChange={handleChange}
           />
           {allInformation.experiences.lenguages.lenguage !== "" && !editSectionName && (
@@ -61,7 +61,7 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
             type="text"
             className="lenguageExperience-select"
             name="lenguageLevel"
-            value={allInformation?.experiences?.lenguages.lenguageLevel}
+            value={allInformation?.experiences?.lenguages?.lenguageLevel}
             onChange={handleChange}
           >
             {allInformation.experiences.lenguages.lenguageLevel !== "" && !editSectionName && (
@@ -85,7 +85,6 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
           </select>
         </div>
       </div>
-      <button className="lenguageExperience-button">Save</button>
     </div>
   );
 };
