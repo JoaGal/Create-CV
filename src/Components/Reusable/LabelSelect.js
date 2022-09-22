@@ -6,15 +6,13 @@ export const LabelSelect = ({ id, options, pathInObject, handleChange, deleteThi
   return (
     <div className="reusable-item">
       <label className="reusable-label" htmlFor={id}>
-        {id[0].toUpperCase() + id.slice(1)}
+        {id[0].toUpperCase() +
+          id
+            .slice(1)
+            .replace(/([A-Z])/g, " $1")
+            .trim()}
       </label>
-      <select
-        className="reusable-select"
-        name={id}
-        id={id}
-        value={pathInObject}
-        onChange={handleChange}
-      >
+      <select className="reusable-select" name={id} id={id} value={pathInObject} onChange={handleChange}>
         {pathInObject === "" && <option value=""></option>}
         {options.map((option) => (
           <option key={option} value={option}>

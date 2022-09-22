@@ -6,7 +6,11 @@ export const LabelTextareaButton = ({ id, extraClass, pathInObject, handleChange
   return (
     <div className={`reusable-item ${extraClass}`}>
       <label className="reusable-label" htmlFor={id}>
-        {id[0].toUpperCase() + id.slice(1)}
+        {id[0].toUpperCase() +
+          id
+            .slice(1)
+            .replace(/([A-Z])/g, " $1")
+            .trim()}
       </label>
       <textarea className="reusable-textarea" name={id} id={id} value={pathInObject} onChange={handleChange} />
       {pathInObject !== "" && (

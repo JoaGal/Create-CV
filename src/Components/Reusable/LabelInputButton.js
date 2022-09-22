@@ -6,7 +6,11 @@ export const LabelInputButton = ({ id, extraClass, type, pathInObject, handleCha
   return (
     <div className={`reusable-item ${extraClass}`}>
       <label className="reusable-label" htmlFor={id}>
-        {id[0].toUpperCase() + id.slice(1)}
+        {id[0].toUpperCase() +
+          id
+            .slice(1)
+            .replace(/([A-Z])/g, " $1")
+            .trim()}
       </label>
       <input
         className="reusable-input"
