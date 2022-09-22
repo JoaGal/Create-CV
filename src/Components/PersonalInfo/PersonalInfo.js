@@ -241,6 +241,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               options={["single", "married", "separated", "widowed", "divorced"]}
               allInformation={allInformation}
               handleChange={handleChange}
+              deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="postalCode"
@@ -253,6 +254,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               options={["Man", "Woman", "transgender", "non-binary/non-conforming"]}
               allInformation={allInformation}
               handleChange={handleChange}
+              deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="linkedin"
