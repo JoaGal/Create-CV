@@ -8,8 +8,8 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        workExperience: {
-          ...allInformation.experiences.workExperience,
+        workExperience1: {
+          ...allInformation.experiences.workExperience1,
           [e.target.name]: e.target.value,
         },
       },
@@ -22,8 +22,8 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        workExperience: {
-          ...allInformation.experiences.workExperience,
+        workExperience1: {
+          ...allInformation.experiences.workExperience1,
           [e.target.name]: "",
         },
       },
@@ -40,10 +40,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="text"
             className="workExperience-input"
             name="workstation"
-            value={allInformation?.experiences?.workExperience?.workstation}
+            value={allInformation?.experiences?.workExperience1?.workstation}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience.workstation !== "" &&
+          {allInformation.experiences.workExperience1.workstation !== "" &&
             !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
@@ -61,10 +61,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="text"
             className="workExperience-input"
             name="city"
-            value={allInformation?.experiences?.workExperience?.city}
+            value={allInformation?.experiences?.workExperience1?.city}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience.city !== "" &&
+          {allInformation.experiences.workExperience1.city !== "" &&
             !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
@@ -82,10 +82,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
         type="text"
         className="workExperience-input"
         name="employer"
-        value={allInformation?.experiences?.workExperience?.employer}
+        value={allInformation?.experiences?.workExperience1?.employer}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience.employer !== "" &&
+      {allInformation.experiences.workExperience1.employer !== "" &&
         !editSectionName && (
           <button
             className="workExperience-button-delete-input"
@@ -103,7 +103,7 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="date"
             className="workExperience-input"
             name="startWork"
-            value={allInformation?.experiences?.workExperience?.startWork}
+            value={allInformation?.experiences?.workExperience1?.startWork}
             onChange={handleChange}
           />
         </div>
@@ -113,7 +113,7 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
             type="date"
             className="workExperience-input"
             name="finishWork"
-            value={allInformation?.experiences?.workExperience?.finishWork}
+            value={allInformation?.experiences?.workExperience1?.finishWork}
             onChange={handleChange}
           />
         </div>
@@ -123,10 +123,10 @@ export const WorkExperience = ({ allInformation, setAllInformation, editSectionN
         type="text"
         className="workExperience-textarea"
         name="descriptionWork"
-        value={allInformation?.experiences?.workExperience?.descriptionWork}
+        value={allInformation?.experiences?.workExperience1?.descriptionWork}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience.descriptionWork !== "" &&
+      {allInformation.experiences.workExperience1.descriptionWork !== "" &&
         !editSectionName && (
           <button
             className="workExperience-button-delete-input"

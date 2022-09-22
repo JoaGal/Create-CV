@@ -35,7 +35,7 @@ export const CreateCV = () => {
         title3: "Languages",
         title4: "Studies and certifications",
       },
-      workExperience: {
+      workExperience1: {
         workstation: "",
         city: "",
         employer: "",
@@ -66,7 +66,7 @@ export const CreateCV = () => {
         skill: "",
         descriptionSkill: "",
       },
-      lenguages: {
+      lenguages1: {
         lenguage: "",
         lenguageLevel: "",
       },

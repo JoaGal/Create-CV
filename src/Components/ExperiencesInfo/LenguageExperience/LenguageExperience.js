@@ -9,8 +9,8 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        lenguages:{
-          ...allInformation.experiences.lenguages,
+        lenguages1:{
+          ...allInformation.experiences.lenguages1,
           [e.target.name]: e.target.value,
         }
       },
@@ -23,8 +23,8 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        lenguages:{
-          ...allInformation.experiences.lenguages,
+        lenguages1:{
+          ...allInformation.experiences.lenguages1,
           [e.target.name]: "",
         }
       },
@@ -41,10 +41,10 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
             type="text"
             className="lenguageExperience-input"
             name="lenguage"
-            value={allInformation?.experiences?.lenguages?.lenguage}
+            value={allInformation?.experiences?.lenguages1.lenguage}
             onChange={handleChange}
           />
-          {allInformation.experiences.lenguages.lenguage !== "" && !editSectionName && (
+          {allInformation.experiences.lenguages1.lenguage !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
@@ -61,10 +61,10 @@ export const LenguageExperience = ({ allInformation, setAllInformation, editSect
             type="text"
             className="lenguageExperience-select"
             name="lenguageLevel"
-            value={allInformation?.experiences?.lenguages?.lenguageLevel}
+            value={allInformation?.experiences?.lenguages1?.lenguageLevel}
             onChange={handleChange}
           >
-            {allInformation.experiences.lenguages.lenguageLevel !== "" && !editSectionName && (
+            {allInformation.experiences.lenguages1.lenguageLevel !== "" && !editSectionName && (
               <button
                 className="workExperience-button-delete-input"
                 type="button"
