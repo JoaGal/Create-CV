@@ -1,77 +1,77 @@
-.studiesExperience-box{
-    display: block;
-    margin-top: 1.5rem;
+.studiesExperience-box {
+  display: block;
+  margin-top: 1.5rem;
 }
 
-.studiesExperience-p{
-    font-size: 1rem;
-    text-align: left;
-    margin-top: 1.4rem;
-    color: #333333;
+.studiesExperience-p {
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 1.4rem;
+  color: #333333;
 }
 
-.studiesExperience-input{
-    width: 100%;
-    height: 2.5rem;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    outline: none;
-    border: 0.13rem solid #ccc;
+.studiesExperience-input {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  outline: none;
+  border: 0.13rem solid #ccc;
 }
 
 .studiesExperience-input:focus {
-    border-color: #0584ce;
-    background-color: #0583cc1a;
+  border-color: #0584ce;
+  background-color: #0583cc1a;
 }
 
 .studiesExperience-box1 {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-.studiesExperience-double1{
-    width: 50%;
-    padding-right: 1.4rem;
+.studiesExperience-double1 {
+  width: 50%;
+  padding-right: 1.4rem;
 }
 
-.studiesExperience-double2{
-    width: 50%;
+.studiesExperience-double2 {
+  width: 50%;
 }
 
-.studiesExperience-select{
-    width: 100%;
-    height: 2.5rem;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    outline: none;
-    border: 0.13rem solid #ccc;
+.studiesExperience-select {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  outline: none;
+  border: 0.13rem solid #ccc;
 }
 
 .studiesExperience-select:focus {
-    border-color: #0584ce;
-    background-color: #0583cc1a;
+  border-color: #0584ce;
+  background-color: #0583cc1a;
 }
 
 .studiesExperience-textarea {
-    width: 100%;
-    border: 0.13rem solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    height: 8rem;
-    padding: 0.5rem;
-    resize: none;
-    outline: none;
+  width: 100%;
+  border: 0.13rem solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  height: 8rem;
+  padding: 0.5rem;
+  resize: none;
+  outline: none;
 }
 
 .studiesExperience-textarea:focus {
-    border-color: #0584ce;
-    background-color: #0583cc1a;
+  border-color: #0584ce;
+  background-color: #0583cc1a;
 }
 
-@media screen and (max-width: 768px){
-    .studiesExperience-double1{
-        padding-right: 0.5rem;
-    }
+@media screen and (max-width: 768px) {
+  .studiesExperience-double1 {
+    padding-right: 0.5rem;
+  }
 }

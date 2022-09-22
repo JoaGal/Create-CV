@@ -42,17 +42,16 @@ export const WorkExperience3 = ({ allInformation, setAllInformation, editSection
             value={allInformation?.experiences?.workExperience3?.workstation}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience3.workstation !== "" &&
-            !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="workstation"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+          {allInformation.experiences.workExperience3.workstation !== "" && !editSectionName && (
+            <button
+              className="workExperience-button-delete-input"
+              type="button"
+              name="workstation"
+              onClick={deleteThisInput}
+            >
+              x
+            </button>
+          )}
         </div>
         <div className="workExperience-double2">
           <p className="workExperience-p">City/Town</p>
@@ -63,17 +62,11 @@ export const WorkExperience3 = ({ allInformation, setAllInformation, editSection
             value={allInformation?.experiences?.workExperience3?.city}
             onChange={handleChange}
           />
-          {allInformation.experiences.workExperience3.city !== "" &&
-            !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="city"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+          {allInformation.experiences.workExperience3.city !== "" && !editSectionName && (
+            <button className="workExperience-button-delete-input" type="button" name="city" onClick={deleteThisInput}>
+              x
+            </button>
+          )}
         </div>
       </div>
       <p className="workExperience-p">Employer</p>
@@ -84,17 +77,11 @@ export const WorkExperience3 = ({ allInformation, setAllInformation, editSection
         value={allInformation?.experiences?.workExperience3?.employer}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience3.employer !== "" &&
-        !editSectionName && (
-          <button
-            className="workExperience-button-delete-input"
-            type="button"
-            name="employer"
-            onClick={deleteThisInput}
-          >
-            x
-          </button>
-        )}
+      {allInformation.experiences.workExperience3.employer !== "" && !editSectionName && (
+        <button className="workExperience-button-delete-input" type="button" name="employer" onClick={deleteThisInput}>
+          x
+        </button>
+      )}
       <div className="workExperience-box1">
         <div className="workExperience-double1">
           <p className="workExperience-p">Start date</p>
@@ -125,17 +112,16 @@ export const WorkExperience3 = ({ allInformation, setAllInformation, editSection
         value={allInformation?.experiences?.workExperience3?.descriptionWork}
         onChange={handleChange}
       />
-      {allInformation.experiences.workExperience3.descriptionWork !== "" &&
-        !editSectionName && (
-          <button
-            className="workExperience-button-delete-input"
-            type="button"
-            name="descriptionWork"
-            onClick={deleteThisInput}
-          >
-            x
-          </button>
-        )}
+      {allInformation.experiences.workExperience3.descriptionWork !== "" && !editSectionName && (
+        <button
+          className="workExperience-button-delete-input"
+          type="button"
+          name="descriptionWork"
+          onClick={deleteThisInput}
+        >
+          x
+        </button>
+      )}
     </form>
   );
 };
@@ -143,5 +129,5 @@ export const WorkExperience3 = ({ allInformation, setAllInformation, editSection
 WorkExperience3.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.object.isRequired,
+  editSectionName: PropTypes.bool.isRequired,
 };

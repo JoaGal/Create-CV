@@ -8,10 +8,10 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        studies:{
+        studies: {
           ...allInformation.experiences.studies,
           [e.target.name]: e.target.value,
-        }
+        },
       },
     });
   };
@@ -22,10 +22,10 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        studies:{
+        studies: {
           ...allInformation.experiences.studies,
           [e.target.name]: "",
-        }
+        },
       },
     });
   };
@@ -42,15 +42,10 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
         onChange={handleChange}
       />
       {allInformation.experiences.studies.study !== "" && !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="study"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+        <button className="workExperience-button-delete-input" type="button" name="study" onClick={deleteThisInput}>
+          x
+        </button>
+      )}
       <div className="studiesExperience-box1">
         <div className="studiesExperience-double1">
           <p className="studiesExperience-p">Start period</p>
@@ -86,15 +81,15 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
         onChange={handleChange}
       />
       {allInformation.experiences.studies.descriptionStudy !== "" && !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="descriptionStudy"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+        <button
+          className="workExperience-button-delete-input"
+          type="button"
+          name="descriptionStudy"
+          onClick={deleteThisInput}
+        >
+          x
+        </button>
+      )}
     </div>
   );
 };
@@ -102,5 +97,5 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
 StudiesExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.object.isRequired,
+  editSectionName: PropTypes.bool.isRequired,
 };

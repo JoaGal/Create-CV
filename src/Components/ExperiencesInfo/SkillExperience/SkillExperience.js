@@ -3,16 +3,15 @@ import "./SkillExperience.css";
 import PropTypes from "prop-types";
 
 export const SkillExperience = ({ allInformation, setAllInformation, editSectionName }) => {
-
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        skill:{
+        skill: {
           ...allInformation.experiences.skill,
           [e.target.name]: e.target.value,
-        }
+        },
       },
     });
   };
@@ -23,10 +22,10 @@ export const SkillExperience = ({ allInformation, setAllInformation, editSection
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        skill:{
+        skill: {
           ...allInformation.experiences.skill,
           [e.target.name]: "",
-        }
+        },
       },
     });
   };
@@ -35,23 +34,18 @@ export const SkillExperience = ({ allInformation, setAllInformation, editSection
     <div className="skillExperience-box">
       <hr />
       <p className="skillExperience-p">Skills</p>
-          <input
-            type="text"
-            className="skillExperience-input"
-            name="skill"
-            value={allInformation?.experiences?.skill?.skill}
-            onChange={handleChange}
-          />
-          {allInformation.experiences.skill.skill !== "" && !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="skill"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+      <input
+        type="text"
+        className="skillExperience-input"
+        name="skill"
+        value={allInformation?.experiences?.skill?.skill}
+        onChange={handleChange}
+      />
+      {allInformation.experiences.skill.skill !== "" && !editSectionName && (
+        <button className="workExperience-button-delete-input" type="button" name="skill" onClick={deleteThisInput}>
+          x
+        </button>
+      )}
       <p className="skillExperience-p">Description of you</p>
       <textarea
         className="skillExperience-textarea"
@@ -60,15 +54,15 @@ export const SkillExperience = ({ allInformation, setAllInformation, editSection
         onChange={handleChange}
       />
       {allInformation.experiences.skill.descriptionSkill !== "" && !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="descriptionSkill"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+        <button
+          className="workExperience-button-delete-input"
+          type="button"
+          name="descriptionSkill"
+          onClick={deleteThisInput}
+        >
+          x
+        </button>
+      )}
     </div>
   );
 };
@@ -76,5 +70,5 @@ export const SkillExperience = ({ allInformation, setAllInformation, editSection
 SkillExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.object.isRequired,
+  editSectionName: PropTypes.bool.isRequired,
 };

@@ -2,16 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const LenguageExperience3 = ({ allInformation, setAllInformation, editSectionName }) => {
-
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        lenguages3:{
+        lenguages3: {
           ...allInformation.experiences.lenguages3,
           [e.target.name]: e.target.value,
-        }
+        },
       },
     });
   };
@@ -22,10 +21,10 @@ export const LenguageExperience3 = ({ allInformation, setAllInformation, editSec
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        lenguages3:{
+        lenguages3: {
           ...allInformation.experiences.lenguages3,
           [e.target.name]: "",
-        }
+        },
       },
     });
   };
@@ -44,15 +43,15 @@ export const LenguageExperience3 = ({ allInformation, setAllInformation, editSec
             onChange={handleChange}
           />
           {allInformation.experiences.lenguages3?.lenguage !== "" && !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="lenguage"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+            <button
+              className="workExperience-button-delete-input"
+              type="button"
+              name="lenguage"
+              onClick={deleteThisInput}
+            >
+              x
+            </button>
+          )}
         </div>
         <div className="lenguageExperience-double2">
           <p className="lenguageExperience-p">Level</p>
@@ -91,5 +90,5 @@ export const LenguageExperience3 = ({ allInformation, setAllInformation, editSec
 LenguageExperience3.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.object.isRequired,
+  editSectionName: PropTypes.bool.isRequired,
 };

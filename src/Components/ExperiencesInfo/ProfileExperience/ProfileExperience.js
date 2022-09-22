@@ -3,16 +3,15 @@ import "./ProfileExperience.css";
 import PropTypes from "prop-types";
 
 export const ProfileExperience = ({ allInformation, setAllInformation, editSectionName }) => {
-
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        profile:{
+        profile: {
           ...allInformation.experiences.profile,
           [e.target.name]: e.target.value,
-        }
+        },
       },
     });
   };
@@ -23,10 +22,10 @@ export const ProfileExperience = ({ allInformation, setAllInformation, editSecti
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        profile:{
+        profile: {
           ...allInformation.experiences.profile,
           [e.target.name]: "",
-        }
+        },
       },
     });
   };
@@ -42,15 +41,15 @@ export const ProfileExperience = ({ allInformation, setAllInformation, editSecti
         onChange={handleChange}
       />
       {allInformation.experiences.profile.descriptionProfile !== "" && !editSectionName && (
-              <button
-                className="workExperience-button-delete-input"
-                type="button"
-                name="descriptionProfile"
-                onClick={deleteThisInput}
-              >
-                x
-              </button>
-            )}
+        <button
+          className="workExperience-button-delete-input"
+          type="button"
+          name="descriptionProfile"
+          onClick={deleteThisInput}
+        >
+          x
+        </button>
+      )}
     </div>
   );
 };
@@ -58,5 +57,5 @@ export const ProfileExperience = ({ allInformation, setAllInformation, editSecti
 ProfileExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.object.isRequired,
+  editSectionName: PropTypes.bool.isRequired,
 };

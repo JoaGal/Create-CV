@@ -109,7 +109,7 @@
   margin-top: 1.4rem;
 }
 
-.ExperienceInf-more-button:hover{
+.ExperienceInf-more-button:hover {
   background-color: #0584ce;
 }
 
@@ -128,10 +128,9 @@
   margin-left: 1.4rem;
 }
 
-.ExperienceInf-closemore-button:hover{
+.ExperienceInf-closemore-button:hover {
   background-color: #ff0000;
 }
-
 
 @media screen and (max-width: 768px) {
   .experiencesInf-box {
