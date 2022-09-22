@@ -226,7 +226,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
               />
               {allInformation.personal.date !== "" && (
                 <button
-                  className="personalInf-button-delete-input mr-1_5"
+                  className="personalInf-button-delete-input"
                   type="button"
                   tabIndex="-1"
                   name="date"
