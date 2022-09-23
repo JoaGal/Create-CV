@@ -26,7 +26,7 @@ export const Template3 = ({ styleScale = "1" }) => {
         id="pic"
       />
       <p>
-        {allInformation?.personal?.name} {allInformation?.personal.lastname}
+        {allInformation?.personal?.name} {allInformation?.personal?.lastName}
         {allInformation?.personal?.email} {allInformation?.personal?.phone}
         {allInformation?.personal?.address} {allInformation?.personal?.country}
         {allInformation?.personal?.city} {allInformation?.personal?.date}
@@ -36,24 +36,48 @@ export const Template3 = ({ styleScale = "1" }) => {
       </p>
 
       <p>
-        {allInformation?.experiences?.workExperience?.workstation}
-        {allInformation?.experiences?.workExperience?.city}
-        {allInformation?.experiences?.workExperience?.employer}
-        {allInformation?.experiences?.workExperience?.startWork}
-        {allInformation?.experiences?.workExperience?.finishWork}
-        {allInformation?.experiences?.workExperience?.descriptionWork}
+        {allInformation?.experiences?.workExperience1?.workstation}
+        {allInformation?.experiences?.workExperience1?.city}
+        {allInformation?.experiences?.workExperience1?.employer}
+        {allInformation?.experiences?.workExperience1?.startWork}
+        {allInformation?.experiences?.workExperience1?.finishWork}
+        {allInformation?.experiences?.workExperience1?.descriptionWork}
+      </p>
+      <p>
+        {allInformation?.experiences?.workExperience2?.workstation}
+        {allInformation?.experiences?.workExperience2?.city}
+        {allInformation?.experiences?.workExperience2?.employer}
+        {allInformation?.experiences?.workExperience2?.startWork}
+        {allInformation?.experiences?.workExperience2?.finishWork}
+        {allInformation?.experiences?.workExperience2?.descriptionWork}
+      </p>
+      <p>
+        {allInformation?.experiences?.workExperience3?.workstation}
+        {allInformation?.experiences?.workExperience3?.city}
+        {allInformation?.experiences?.workExperience3?.employer}
+        {allInformation?.experiences?.workExperience3?.startWork}
+        {allInformation?.experiences?.workExperience3?.finishWork}
+        {allInformation?.experiences?.workExperience3?.descriptionWork}
       </p>
 
       <p>{allInformation?.experiences?.profile?.descriptionProfile}</p>
 
       <p>
         {allInformation?.experiences?.skill?.skill}
-        {allInformation?.experiences?.skill?.skillLevel}
+        {allInformation?.experiences?.skill?.descriptionSkill}
       </p>
 
       <p>
-        {allInformation?.experiences?.lenguages?.lenguage}
-        {allInformation?.experiences?.lenguages?.lenguageLevel}
+        {allInformation?.experiences?.languages1?.language}
+        {allInformation?.experiences?.languages1?.languageLevel}
+      </p>
+      <p>
+        {allInformation?.experiences?.languages2?.language}
+        {allInformation?.experiences?.languages2?.languageLevel}
+      </p>
+      <p>
+        {allInformation?.experiences?.languages3?.language}
+        {allInformation?.experiences?.languages3?.languageLevel}
       </p>
 
       <p>

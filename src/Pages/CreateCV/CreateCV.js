@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FiFileText } from "react-icons/fi";
 import { RiPencilFill } from "react-icons/ri";
@@ -14,7 +14,7 @@ export const CreateCV = () => {
     personal: {
       image: "",
       name: "",
-      lastname: "",
+      lastName: "",
       email: "",
       phone: "",
       address: "",
@@ -66,17 +66,17 @@ export const CreateCV = () => {
         skill: "",
         descriptionSkill: "",
       },
-      lenguages1: {
-        lenguage: "",
-        lenguageLevel: "",
+      languages1: {
+        language: "",
+        languageLevel: "",
       },
-      lenguages2: {
-        lenguage: "",
-        lenguageLevel: "",
+      languages2: {
+        language: "",
+        languageLevel: "",
       },
-      lenguages3: {
-        lenguage: "",
-        lenguageLevel: "",
+      languages3: {
+        language: "",
+        languageLevel: "",
       },
       studies: {
         study: "",
@@ -86,6 +86,10 @@ export const CreateCV = () => {
       },
     },
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const nextStep = () => {
     window.scrollTo(0, 0);

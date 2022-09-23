@@ -1,29 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Reusable.css";
 
-export const LabelSelect = ({ id, options, allInformation, handleChange, deleteThisInput }) => {
+export const LabelSelect = ({ id, options, pathInObject, handleChange, deleteThisInput }) => {
   return (
-    <div className="personalInf-item">
-      <label className="personalInf-label" htmlFor={id}>
-        {id[0].toUpperCase() + id.slice(1)}
+    <div className="reusable-item">
+      <label className="reusable-label" htmlFor={id}>
+        {id[0].toUpperCase() +
+          id
+            .slice(1)
+            .replace(/([A-Z])/g, " $1")
+            .trim()}
       </label>
-      <select
-        className="personalInf-select"
-        name={id}
-        id={id}
-        value={allInformation.personal[id]}
-        onChange={handleChange}
-      >
-        {allInformation.personal[id] === "" && <option value=""></option>}
+      <select className="reusable-select" name={id} id={id} value={pathInObject} onChange={handleChange}>
+        {pathInObject === "" && <option value=""></option>}
         {options.map((option) => (
           <option key={option} value={option}>
             {option[0].toUpperCase() + option.slice(1)}
           </option>
         ))}
       </select>
-      {allInformation.personal[id] !== "" && (
+      {pathInObject !== "" && (
         <button
-          className="personalInf-button-delete-input"
+          className="reusable-button-delete-input"
           type="button"
           tabIndex="-1"
           name={id}
@@ -39,7 +38,7 @@ export const LabelSelect = ({ id, options, allInformation, handleChange, deleteT
 LabelSelect.propTypes = {
   id: PropTypes.string.isRequired,
   options: PropTypes.array.isRequired,
-  allInformation: PropTypes.object.isRequired,
+  pathInObject: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   deleteThisInput: PropTypes.func.isRequired,
 };

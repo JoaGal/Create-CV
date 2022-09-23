@@ -1,0 +1,11 @@
+.languageExperience-box{
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.languageExperience-box1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -6,9 +6,9 @@ import { FaWrench } from "react-icons/fa";
 import { ProfileExperience } from "./ProfileExperience/ProfileExperience";
 import { WorkExperience } from "./WorkExperience/WorkExperience";
 import { SkillExperience } from "./SkillExperience/SkillExperience";
-import { LenguageExperience } from "./LenguageExperience/LenguageExperience";
-import { LenguageExperience2 } from "./LenguageExperience2/LenguageExperience2";
-import { LenguageExperience3 } from "./LenguageExperience3/LenguageExperience3";
+import { LanguageExperience } from "./LanguageExperience/LanguageExperience";
+import { LanguageExperience2 } from "./LanguageExperience2/LanguageExperience2";
+import { LanguageExperience3 } from "./LanguageExperience3/LanguageExperience3";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
 import { WorkExperience2 } from "./WorkExperience2/WorkExperience2";
 import { WorkExperience3 } from "./WorkExperience3/WorkExperience3";
@@ -25,8 +25,8 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   useEffect(() => {
     allInformation.experiences.workExperience2.workstation && setMoreInf(2);
     allInformation.experiences.workExperience3.workstation && setMoreInf(3);
-    allInformation.experiences.lenguages2.lenguage && setMoreInf2(2);
-    allInformation.experiences.lenguages3.lenguage && setMoreInf2(3);
+    allInformation.experiences.languages2.language && setMoreInf2(2);
+    allInformation.experiences.languages3.language && setMoreInf2(3);
   }, []);
 
   const closeEditSectionName = (e) => {
@@ -220,21 +220,21 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
           </button>
         </div>
         {openBox === 3 && (
-          <LenguageExperience
+          <LanguageExperience
             allInformation={allInformation}
             setAllInformation={setAllInformation}
             editSectionName={editSectionName}
           />
         )}
         {moreInf2 > 1 && openBox === 3 && (
-          <LenguageExperience2
+          <LanguageExperience2
             allInformation={allInformation}
             setAllInformation={setAllInformation}
             editSectionName={editSectionName}
           />
         )}
         {moreInf2 > 2 && openBox === 3 && (
-          <LenguageExperience3
+          <LanguageExperience3
             allInformation={allInformation}
             setAllInformation={setAllInformation}
             editSectionName={editSectionName}
@@ -246,7 +246,7 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
           </button>
         )}
         {moreInf2 > 1 && openBox === 3 && (
-          <button className="ExperienceInf-closemore-button" onClick={() => deleteLastAdded("lenguages", "moreInf2")}>
+          <button className="ExperienceInf-closemore-button" onClick={() => deleteLastAdded("languages", "moreInf2")}>
             Delete Language
           </button>
         )}

@@ -28,7 +28,7 @@ export const Template1 = ({ styleScale = "1" }) => {
 
       <div>
         <h1 className="template-1-h1">
-          {allInformation?.personal?.name} {allInformation?.personal?.lastname}
+          {allInformation?.personal?.name} {allInformation?.personal?.lastName}
         </h1>
 
         <p className="template-1-p">

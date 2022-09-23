@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { AiFillCamera } from "react-icons/ai";
 import { MdAddCircleOutline } from "react-icons/md";
 import { AiOutlineMinusCircle } from "react-icons/ai";
-import { LabelInputButton } from "./LabelInputButton";
-import { LabelSelect } from "./LabelSelect";
+import { LabelInputButton } from "../Reusable/LabelInputButton";
+import { LabelSelect } from "../Reusable/LabelSelect";
 import PropTypes from "prop-types";
 import "./PersonalInfo.css";
 
@@ -15,7 +15,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
       personal: {
         image: "",
         name: "",
-        lastname: "",
+        lastName: "",
         email: "",
         phone: "",
         address: "",
@@ -67,17 +67,17 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           skill: "",
           descriptionSkill: "",
         },
-        lenguages1: {
-          lenguage: "",
-          lenguageLevel: "",
+        languages1: {
+          language: "",
+          languageLevel: "",
         },
-        lenguages2: {
-          lenguage: "",
-          lenguageLevel: "",
+        languages2: {
+          language: "",
+          languageLevel: "",
         },
-        lenguages3: {
-          lenguage: "",
-          lenguageLevel: "",
+        languages3: {
+          language: "",
+          languageLevel: "",
         },
         studies: {
           study: "",
@@ -167,104 +167,87 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           <LabelInputButton
             id="name"
             extraClass="w-100 mb-1"
-            allInformation={allInformation}
+            pathInObject={allInformation.personal.name}
             handleChange={handleChange}
             deleteThisInput={deleteThisInput}
           />
           <LabelInputButton
-            id="lastname"
+            id="lastName"
             extraClass="w-100"
-            allInformation={allInformation}
+            pathInObject={allInformation.personal.lastName}
             handleChange={handleChange}
             deleteThisInput={deleteThisInput}
           />
         </div>
         <LabelInputButton
           id="email"
-          allInformation={allInformation}
+          pathInObject={allInformation.personal.email}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
         <LabelInputButton
           id="phone"
-          allInformation={allInformation}
+          pathInObject={allInformation.personal.phone}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
         <LabelInputButton
           id="address"
           extraClass="w-100"
-          allInformation={allInformation}
+          pathInObject={allInformation.personal.address}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
         <LabelInputButton
           id="country"
-          allInformation={allInformation}
+          pathInObject={allInformation.personal.country}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
         <LabelInputButton
           id="city"
-          allInformation={allInformation}
+          pathInObject={allInformation.personal.city}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
         {moreInfo && (
           <>
-            <div className="personalInf-item">
-              <label className="personalInf-label" htmlFor="date">
-                Date
-              </label>
-              <input
-                className="personalInf-input"
-                type="date"
-                name="date"
-                id="date"
-                value={allInformation.personal.date}
-                onChange={handleChange}
-              />
-              {allInformation.personal.date !== "" && (
-                <button
-                  className="personalInf-button-delete-input"
-                  type="button"
-                  tabIndex="-1"
-                  name="date"
-                  onClick={deleteThisInput}
-                >
-                  x
-                </button>
-              )}
-            </div>
+            <LabelInputButton
+              id="date"
+              type="date"
+              pathInObject={allInformation.personal.date}
+              handleChange={handleChange}
+              deleteThisInput={deleteThisInput}
+            />
             <LabelSelect
               id="maritalStatus"
               options={["single", "married", "separated", "widowed", "divorced"]}
-              allInformation={allInformation}
+              pathInObject={allInformation.personal.maritalStatus}
               handleChange={handleChange}
               deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="postalCode"
-              allInformation={allInformation}
+              pathInObject={allInformation.personal.postalCode}
               handleChange={handleChange}
               deleteThisInput={deleteThisInput}
             />
             <LabelSelect
               id="gender"
               options={["Man", "Woman", "transgender", "non-binary/non-conforming"]}
-              allInformation={allInformation}
+              pathInObject={allInformation.personal.gender}
               handleChange={handleChange}
               deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="linkedin"
-              allInformation={allInformation}
+              pathInObject={allInformation.personal.linkedin}
               handleChange={handleChange}
               deleteThisInput={deleteThisInput}
             />
             <LabelInputButton
               id="briefcase"
-              allInformation={allInformation}
+              pathInObject={allInformation.personal.briefcase}
               handleChange={handleChange}
               deleteThisInput={deleteThisInput}
             />

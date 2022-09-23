@@ -1,8 +1,11 @@
 import React from "react";
 import "./StudiesExperience.css";
 import PropTypes from "prop-types";
+import { LabelInputButton } from "../../Reusable/LabelInputButton";
+import { LabelSelect } from "../../Reusable/LabelSelect";
+import { LabelTextareaButton } from "../../Reusable/LabelTextareaButton";
 
-export const StudiesExperience = ({ allInformation, setAllInformation, editSectionName }) => {
+export const StudiesExperience = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
@@ -33,63 +36,36 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
   return (
     <div className="studiesExperience-box">
       <hr />
-      <p className="studiesExperience-p">Study</p>
-      <input
-        type="text"
-        className="studiesExperience-input"
-        name="study"
-        value={allInformation?.experiences?.studies?.study}
-        onChange={handleChange}
+      <LabelInputButton
+        id="study"
+        extraClass="w-100"
+        pathInObject={allInformation.experiences.studies.study}
+        handleChange={handleChange}
+        deleteThisInput={deleteThisInput}
       />
-      {allInformation.experiences.studies.study !== "" && !editSectionName && (
-        <button className="workExperience-button-delete-input" type="button" name="study" onClick={deleteThisInput}>
-          x
-        </button>
-      )}
       <div className="studiesExperience-box1">
-        <div className="studiesExperience-double1">
-          <p className="studiesExperience-p">Start period</p>
-          <input
-            type="date"
-            className="studiesExperience-input"
-            name="startPeriod"
-            value={allInformation?.experiences?.studies?.startPeriod}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="studiesExperience-double2">
-          <p className="studiesExperience-p">¿Finished?</p>
-          <select
-            type="text"
-            className="studiesExperience-select"
-            name="processPeriod"
-            value={allInformation?.experiences?.studies?.processPeriod}
-            onChange={handleChange}
-          >
-            <option>---</option>
-            <option>Finished</option>
-            <option>Process</option>
-          </select>
-        </div>
+        <LabelInputButton
+          id="startPeriod"
+          type="date"
+          pathInObject={allInformation.experiences.studies.startPeriod}
+          handleChange={handleChange}
+          deleteThisInput={deleteThisInput}
+        />
+        <LabelSelect
+          id="processPeriod"
+          options={["finished", "process"]}
+          pathInObject={allInformation.experiences.studies.processPeriod}
+          handleChange={handleChange}
+          deleteThisInput={deleteThisInput}
+        />
       </div>
-      <p className="studiesExperience-p">Description</p>
-      <textarea
-        type="text"
-        className="studiesExperience-textarea"
-        name="descriptionStudy"
-        value={allInformation?.experiences?.studies?.descriptionStudy}
-        onChange={handleChange}
+      <LabelTextareaButton
+        id="descriptionStudy"
+        extraClass="w-100"
+        pathInObject={allInformation.experiences.studies.descriptionStudy}
+        handleChange={handleChange}
+        deleteThisInput={deleteThisInput}
       />
-      {allInformation.experiences.studies.descriptionStudy !== "" && !editSectionName && (
-        <button
-          className="workExperience-button-delete-input"
-          type="button"
-          name="descriptionStudy"
-          onClick={deleteThisInput}
-        >
-          x
-        </button>
-      )}
     </div>
   );
 };
@@ -97,5 +73,4 @@ export const StudiesExperience = ({ allInformation, setAllInformation, editSecti
 StudiesExperience.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
-  editSectionName: PropTypes.bool.isRequired,
 };

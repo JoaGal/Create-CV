@@ -2,26 +2,3 @@
   display: block;
   margin-top: 1.5rem;
 }
-
-.profileExperience-p {
-  font-size: 1rem;
-  text-align: left;
-  margin-top: 1.4rem;
-  color: #333333;
-}
-
-.profileExperience-textarea {
-  width: 100%;
-  border: 0.13rem solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  height: 10rem;
-  padding: 0.5rem;
-  resize: none;
-  outline: none;
-}
-
-.profileExperience-textarea:focus {
-  border-color: #0584ce;
-  background-color: #0583cc1a;
-}
