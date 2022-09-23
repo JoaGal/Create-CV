@@ -30,104 +30,204 @@ export const Template2 = ({ styleScale = "1" }) => {
         <div
           className="template2-photo"
           style={{
-            backgroundImage: `url(${allInformation?.personal?.image}) no-repeat`,
-            border: "1px solid white",
+            backgroundImage: `url(${allInformation?.personal?.image})`,
           }}
         ></div>
         <div className="sidebar-data">
-          <h2 className="sidebar-title">{allInformation.experiences.titles.title1}</h2>
+          <h2 className="sidebar-title">
+            {allInformation?.experiences?.titles?.title1}
+          </h2>
           <ul className="sidebar-list">
             <li className="sidebar-item">
-              <span className="sidebar-label">{allInformation.experiences.profile.descriptionProfile}</span>
+              <span className="sidebar-label">
+                {allInformation?.experiences?.profile?.descriptionProfile}
+              </span>
             </li>
           </ul>
         </div>
         <div className="sidebar-data">
-          <h2 className="sidebar-title">Skills</h2>
+          <h2 className="sidebar-title">
+            {allInformation?.experiences?.titles?.title2}
+          </h2>
           <ul className="sidebar-list">
             <li className="sidebar-item">
-              <span className="sidebar-label">React - JavaScript - CSS3 - HTML5 - GIT</span>
+              <span className="sidebar-label">
+                {allInformation?.experiences?.skill?.skill}
+              </span>
             </li>
             <li className="sidebar-item">
-              <span className="sidebar-label">Me experimento mas con React</span>
+              <span className="sidebar-label">
+                {allInformation?.experiences?.skill?.descriptionSkill}
+              </span>
             </li>
           </ul>
         </div>
         <div className="sidebar-data">
-          <h2 className="sidebar-title">Idiomas</h2>
+          <h2 className="sidebar-title">
+            {allInformation?.experiences?.titles?.title3}
+          </h2>
           <ul className="sidebar-list">
             <li className="sidebar-item">
-              <span className="sidebar-label">Ingles</span>
-              <span className="sidebar-item-align-right">A2</span>
+              <span className="sidebar-label">
+                {allInformation?.experiences?.languages1?.language}
+              </span>
+              <span className="sidebar-item-align-right">
+                {allInformation?.experiences?.languages1?.languageLevel}
+              </span>
+            </li>
+            <li className="sidebar-item">
+              <span className="sidebar-label">
+                {allInformation?.experiences?.languages2?.language}
+              </span>
+              <span className="sidebar-item-align-right">
+                {allInformation?.experiences?.languages2?.languageLevel}
+              </span>
+            </li>
+            <li className="sidebar-item">
+              <span className="sidebar-label">
+                {allInformation?.experiences?.languages3?.language}
+              </span>
+              <span className="sidebar-item-align-right">
+                {allInformation?.experiences?.languages3?.languageLevel}
+              </span>
             </li>
           </ul>
         </div>
       </div>
+
+      {/* Empieza lo blanco */}
+      
       <div className="template2-sections">
         <div className="section-name">
-          <h1 className="section-h1">{allInformation.personal.name} {allInformation.personal.lastName}</h1>
+          <h1 className="section-h1">
+            {allInformation.personal.name} {allInformation.personal.lastName}
+          </h1>
         </div>
         <div className="section">
+          <a
+            className="template2-personal-inf"
+            href={`mailto:${allInformation?.personal?.email}`}
+          >
+            {allInformation?.personal?.email}
+          </a>
+          <p>{allInformation.personal.city}, {allInformation.personal.country} ({allInformation.personal.postalCode})</p>
+          <p>{allInformation.personal.phone}</p>
+          <p>{allInformation.personal.linkedin}</p>
+          <p>{allInformation.personal.briefcase}</p>
           <div className="section-title">
-            <h2 className="section-h2">Experiencia laboral</h2>
+            <h2 className="section-h2">
+              {allInformation?.experiences?.titles?.title0}
+            </h2>
           </div>
           <div className="section-time-line-overlay"></div>
           <ol className="section-list">
             <li className="section-item">
               <div className="section-heading-group">
-                <div className="section-date">ene 2028 - ene 2021</div>
+                <p className="section-p-date">{allInformation?.experiences?.workExperience1?.startWork} - {allInformation?.experiences?.workExperience1?.finishWork}</p>
                 <div className="section-heading">
-                  <h3 className="section-h3">React Dev</h3>
+                  <h3 className="section-h3">
+                    {allInformation?.experiences?.workExperience1?.workstation}
+                  </h3>
                 </div>
-                <div className="section-sub-heading">Homero, Uruguay </div>
+                <div className="section-sub-heading">
+                  {allInformation?.experiences?.workExperience1?.employer} (
+                  {allInformation?.experiences?.workExperience1?.city})
+                </div>
               </div>
               <div className="section-content">
                 <p className="section-p">
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                  {
+                    allInformation?.experiences?.workExperience1
+                      ?.descriptionWork
+                  }
                 </p>
               </div>
             </li>
           </ol>
+          {allInformation?.experiences?.workExperience2?.workstation && (
+            <ol className="section-list paddingTop">
+              <li className="section-item">
+                <div className="section-heading-group">
+                  <div className="section-date">
+                    {allInformation?.experiences?.workExperience2?.startWork}
+                  </div>
+                  <div className="section-finishWork">
+                    {allInformation?.experiences?.workExperience2?.finishWork}
+                  </div>
+                  <div className="section-heading">
+                    <h3 className="section-h3">
+                      {
+                        allInformation?.experiences?.workExperience2
+                          ?.workstation
+                      }
+                    </h3>
+                  </div>
+                  <div className="section-sub-heading">
+                    {allInformation?.experiences?.workExperience2?.employer} (
+                    {allInformation?.experiences?.workExperience2?.city})
+                  </div>
+                </div>
+                <div className="section-content">
+                  <p className="section-p">
+                    {
+                      allInformation?.experiences?.workExperience2
+                        ?.descriptionWork
+                    }
+                  </p>
+                </div>
+              </li>
+            </ol>
+          )}
+          {allInformation?.experiences?.workExperience3?.workstation && (
+            <ol className="section-list paddingTop">
+              <li className="section-item">
+                <div className="section-heading-group">
+                  <div className="section-date">
+                    {allInformation?.experiences?.workExperience3?.startWork}
+                  </div>
+                  <div className="section-finishWork">
+                    {allInformation?.experiences?.workExperience3?.finishWork}
+                  </div>
+                  <div className="section-heading">
+                    <h3 className="section-h3">
+                      {
+                        allInformation?.experiences?.workExperience3
+                          ?.workstation
+                      }
+                    </h3>
+                  </div>
+                  <div className="section-sub-heading">
+                    {allInformation?.experiences?.workExperience3?.employer} (
+                    {allInformation?.experiences?.workExperience3?.city})
+                  </div>
+                </div>
+                <div className="section-content">
+                  <p className="section-p">
+                    {
+                      allInformation?.experiences?.workExperience3
+                        ?.descriptionWork
+                    }
+                  </p>
+                </div>
+              </li>
+            </ol>
+          )}
         </div>
         <div className="section">
           <div className="section-title">
-            <h2 className="section-h2">Profile</h2>
-          </div>
-          <div className="section-content section-content-single-textarea">
-            <p className="section-p">
-              sapiourheghpofdgshosdhhopdshudshsdhpoiudsfhpohpsdapadspapapiopjosfdPJOPajAPAJOJSDFPODJSVOIMFDJGSVIOFJSDVOIJipjfdgposjghbjg´dfosákgodakgoka´df
-            </p>
-          </div>
-        </div>
-        <div className="section">
-          <div className="section-title">
-            <h2 className="section-h2">Destrezas</h2>
-          </div>
-          <div className="section-time-line-overlay"></div>
-          <div className="section-heading">
-            <h3 className="section-h3">React - java</h3>
-          </div>
-          <div className="section-content">
-            <p className="section-p">
-              sapiourheghpofdgshosdhhopdshudshsdhpoiudsfhpohpsdapadspapapiopjosfdPJOPajAPAJOJSDFPODJSVOIMFDJGSVIOFJSDVOIJipjfdgposjghbjg´dfosákgodakgoka´df
-            </p>
-          </div>
-        </div>
-        <div className="section">
-          <div className="section-title">
-            <h2>Certificados</h2>
+            <h2 className="section-h2">{allInformation?.experiences?.titles?.title4}</h2>
           </div>
           <div className="section-time-line-overlay"></div>
           <ol className="section-list">
             <li className="section-item">
               <div className="section-heading-group">
-                <div className="section-date">2016</div>
+              <p className="section-p-date">{allInformation?.experiences?.studies?.startPeriod} - {allInformation?.experiences?.studies?.processPeriod}</p>
                 <div className="section-heading">
-                  <h3 className="section-h3">Programador</h3>
+                  <h3 className="section-h3">{allInformation?.experiences?.studies?.study}</h3>
                 </div>
                 <div className="section-content">
                   <p className="section-p">
-                    hgrepáhoerjpoguivdhspopofwejiofejiojfsojoisfjoisfjiosfjoisgfgsgsgsfd
+                  {allInformation?.experiences?.studies?.descriptionStudy}
                   </p>
                 </div>
               </div>

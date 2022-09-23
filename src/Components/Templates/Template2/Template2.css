@@ -118,6 +118,10 @@
   margin: 0;
 }
 
+.paddingTop{
+  padding-top: 20px;
+}
+
 .section-item {
   display: block;
   position: relative;
@@ -132,15 +136,10 @@
   margin: 0;
 }
 
-.section-date {
-  position: absolute;
-  right: 0;
-  text-align: right;
-  top: 1px;
-  width: 125px;
-  font-size: 13px;
-  padding: 0;
-  margin: 0;
+.section-p-date{
+  color: #7e7e7e;
+  font-size: 13.5px;
+  padding-bottom: 3px;
 }
 
 .section-heading {
@@ -155,6 +154,12 @@
   margin: 0;
   font-style: italic;
   font-size: 13px;
+}
+
+.template2-personal-inf{
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
 
 .section-content {
@@ -175,7 +180,7 @@
 
 .section-h1{
   font-style: normal;
-  font-size: 30px;
+  font-size: 32px;
   margin: 0 0 20px 0;
   padding: 13px 0 15px 0;
   font-weight: 600;
@@ -183,7 +188,7 @@
 }
 
 .section-h2 {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
   margin: 0;
   padding: 0;
@@ -191,7 +196,7 @@
 }
 
 .section-h3 {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   margin: 0;
   padding: 0;
