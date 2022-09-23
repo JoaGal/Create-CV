@@ -35,73 +35,21 @@ export const Template2 = ({ styleScale = "1" }) => {
           }}
         ></div>
         <div className="sidebar-data">
-          <h2 className="sidebar-title">Personal</h2>
+          <h2 className="sidebar-title">{allInformation.experiences.titles.title1}</h2>
           <ul className="sidebar-list">
             <li className="sidebar-item">
-              <span className="sidebar-label">Nombre</span>
-              <br />
-              Joaquin Galdeano
+              <span className="sidebar-label">{allInformation.experiences.profile.descriptionProfile}</span>
             </li>
-
+          </ul>
+        </div>
+        <div className="sidebar-data">
+          <h2 className="sidebar-title">Skills</h2>
+          <ul className="sidebar-list">
             <li className="sidebar-item">
-              <span className="sidebar-label">Dirección</span>
-              <br />
-              Corrientes 1070 <br />
-              3500 Resistencia
+              <span className="sidebar-label">React - JavaScript - CSS3 - HTML5 - GIT</span>
             </li>
-
             <li className="sidebar-item">
-              <span className="sidebar-label">Número de teléfono</span>
-              <br />
-              <span dir="ltr">3624712344</span>
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">Correo electrónico</span>
-              <br />
-              joagalde@gmail.com
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">Fecha de nacimiento</span>
-              <br />
-              05-04-2001
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">Lugar de nacimiento</span>
-              <br />
-              Argentina
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">Género</span>
-              <br />
-              Hombre
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">Nacionalidad</span>
-              <br />
-              Argentina
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">Estado civil</span>
-              <br />
-              Soltero
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">Página web</span>
-              <br />
-              www.tuhermana.com
-            </li>
-
-            <li className="sidebar-item">
-              <span className="sidebar-label">LinkedIn</span>
-              <br />
-              www.tumama.com
+              <span className="sidebar-label">Me experimento mas con React</span>
             </li>
           </ul>
         </div>
@@ -117,7 +65,7 @@ export const Template2 = ({ styleScale = "1" }) => {
       </div>
       <div className="template2-sections">
         <div className="section-name">
-          <h1 className="section-h1">Joaquin Galdeano</h1>
+          <h1 className="section-h1">{allInformation.personal.name} {allInformation.personal.lastName}</h1>
         </div>
         <div className="section">
           <div className="section-title">
