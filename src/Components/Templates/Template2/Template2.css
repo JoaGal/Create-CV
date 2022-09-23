@@ -1,8 +1,204 @@
 #template2 {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    position: absolute;
-    width: 21cm;
-    height: 29.7cm;
-  }
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  position: absolute;
+  width: 21cm;
+  height: 29.7cm;
+}
+
+.template2-sidebar-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 215px;
+  background: #2b2b38;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.template2-sidebar {
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  color: #fff;
+  padding: 29px 0 0 20px;
+  width: 215px;
+  height: auto;
+}
+
+.template2-photo {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0 9px;
+  height: 155px;
+  width: 155px;
+  border-radius: 50%;
+  background-size: cover !important;
+}
+
+.sidebar-data {
+  display: block;
+}
+
+.sidebar-title {
+  font-size: 15px;
+  font-style: normal;
+  padding: 20px 0 11px 0;
+  margin: 0 0 10px 0;
+  page-break-inside: avoid;
+  border-bottom: 1px solid #fff;
+}
+
+.sidebar-list {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-item {
+  display: block;
+  list-style: none;
+  font-size: 12px;
+  margin: 0;
+  page-break-inside: avoid;
+  padding: 8px 5px 0 0;
+}
+
+.sidebar-label {
+  font-weight: 600;
+}
+
+.sidebar-item-align-right {
+  float: right;
+  margin-right: 20px;
+}
+
+.template2-sections {
+  left: 235px;
+  position: relative;
+  width: 535px;
+}
+
+.section-name {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.section-title {
+  display: block;
+  position: relative;
+  z-index: 99;
+  margin: 0 0 0 0;
+  font-weight: 600;
+  background: #fff;
+  padding: 30px 0 4px 0;
+  page-break-inside: avoid;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.section-time-line-overlay {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-item {
+  display: block;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-heading-group {
+  display: block;
+  padding: 1px 0 0 0;
+  margin: 0;
+}
+
+.section-date {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 1px;
+  width: 125px;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+.section-heading {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.section-sub-heading {
+  display: block;
+  padding: 3px 0 0 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.section-content {
+  display: block;
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+
+.section-p {
+  color: #4c4c4c;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.section-h1{
+  font-style: normal;
+  font-size: 30px;
+  margin: 0 0 20px 0;
+  padding: 13px 0 15px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.section-h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.section-h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  max-width: 430px;
+}
+
+.section-content-single-textarea {
+  padding-top: 10px;
+}
+
