@@ -85,6 +85,18 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           processPeriod: "",
           descriptionStudy: "",
         },
+        studies2: {
+          study: "",
+          startPeriod: "",
+          processPeriod: "",
+          descriptionStudy: "",
+        },
+        studies3: {
+          study: "",
+          startPeriod: "",
+          processPeriod: "",
+          descriptionStudy: "",
+        },
       },
     });
   };

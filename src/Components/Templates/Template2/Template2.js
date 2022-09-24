@@ -230,17 +230,17 @@ export const Template2 = ({ styleScale = "1"}) => {
             <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
-                  {allInformation?.experiences?.studies?.startPeriod} -{" "}
-                  {allInformation?.experiences?.studies?.processPeriod}
+                  {allInformation?.experiences?.studies1?.startPeriod} -{" "}
+                  {allInformation?.experiences?.studies1?.processPeriod}
                 </p>
                 <div className="section-heading">
                   <h3 className="section-h3">
-                    {allInformation?.experiences?.studies?.study}
+                    {allInformation?.experiences?.studies1?.study}
                   </h3>
                 </div>
                 <div className="section-content">
                   <p className="section-p">
-                    {allInformation?.experiences?.studies?.descriptionStudy}
+                    {allInformation?.experiences?.studies1?.descriptionStudy}
                   </p>
                 </div>
               </div>

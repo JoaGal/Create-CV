@@ -1,18 +1,17 @@
 import React from "react";
-import "./StudiesExperience.css";
 import PropTypes from "prop-types";
 import { LabelInputButton } from "../../Reusable/LabelInputButton";
 import { LabelSelect } from "../../Reusable/LabelSelect";
 import { LabelTextareaButton } from "../../Reusable/LabelTextareaButton";
 
-export const StudiesExperience = ({ allInformation, setAllInformation }) => {
+export const StudiesExperience3 = ({ allInformation, setAllInformation }) => {
   const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        studies1: {
-          ...allInformation.experiences.studies1,
+        studies3: {
+          ...allInformation.experiences.studies3,
           [e.target.name]: e.target.value,
         },
       },
@@ -25,8 +24,8 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
-        studies1: {
-          ...allInformation.experiences.studies1,
+        studies3: {
+          ...allInformation.experiences.studies3,
           [e.target.name]: "",
         },
       },
@@ -39,7 +38,7 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
       <LabelInputButton
         id="study"
         extraClass="w-100"
-        pathInObject={allInformation.experiences.studies1.study}
+        pathInObject={allInformation.experiences.studies3.study}
         handleChange={handleChange}
         deleteThisInput={deleteThisInput}
       />
@@ -47,14 +46,14 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
         <LabelInputButton
           id="startPeriod"
           type="date"
-          pathInObject={allInformation.experiences.studies1.startPeriod}
+          pathInObject={allInformation.experiences.studies3.startPeriod}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
         <LabelSelect
           id="processPeriod"
           options={["finished", "process"]}
-          pathInObject={allInformation.experiences.studies1.processPeriod}
+          pathInObject={allInformation.experiences.studies3.processPeriod}
           handleChange={handleChange}
           deleteThisInput={deleteThisInput}
         />
@@ -62,7 +61,7 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
       <LabelTextareaButton
         id="descriptionStudy"
         extraClass="w-100"
-        pathInObject={allInformation.experiences.studies1.descriptionStudy}
+        pathInObject={allInformation.experiences.studies3.descriptionStudy}
         handleChange={handleChange}
         deleteThisInput={deleteThisInput}
       />
@@ -70,7 +69,7 @@ export const StudiesExperience = ({ allInformation, setAllInformation }) => {
   );
 };
 
-StudiesExperience.propTypes = {
+StudiesExperience3.propTypes = {
   allInformation: PropTypes.object.isRequired,
   setAllInformation: PropTypes.func.isRequired,
 };

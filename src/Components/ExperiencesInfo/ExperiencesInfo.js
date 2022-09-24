@@ -10,6 +10,8 @@ import { LanguageExperience } from "./LanguageExperience/LanguageExperience";
 import { LanguageExperience2 } from "./LanguageExperience2/LanguageExperience2";
 import { LanguageExperience3 } from "./LanguageExperience3/LanguageExperience3";
 import { StudiesExperience } from "./StudiesExperience/StudiesExperience";
+import { StudiesExperience2 } from ".//StudiesExperience2/StudiesExperience2";
+import { StudiesExperience3 } from "./StudiesExperience3/StudiesExperience3";
 import { WorkExperience2 } from "./WorkExperience2/WorkExperience2";
 import { WorkExperience3 } from "./WorkExperience3/WorkExperience3";
 import PropTypes from "prop-types";
@@ -21,12 +23,15 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
   const [openBox, setOpenBox] = useState();
   const [moreInf, setMoreInf] = useState(1);
   const [moreInf2, setMoreInf2] = useState(1);
+  const[moreInf3, setMoreInf3] = useState(1);
 
   useEffect(() => {
     allInformation.experiences.workExperience2.workstation && setMoreInf(2);
     allInformation.experiences.workExperience3.workstation && setMoreInf(3);
     allInformation.experiences.languages2.language && setMoreInf2(2);
     allInformation.experiences.languages3.language && setMoreInf2(3);
+    allInformation.experiences.studies2.study && setMoreInf3(2);
+    allInformation.experiences.studies3.study && setMoreInf3(3);
   }, []);
 
   const closeEditSectionName = (e) => {
@@ -66,6 +71,8 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
       setMoreInf(moreInf + 1);
     } else if (moreInf2 < 3 && openBox === 3) {
       setMoreInf2(moreInf2 + 1);
+    } else if (moreInf3 < 3 && openBox === 4) {
+      setMoreInf3(moreInf3 + 1);
     }
   };
 
@@ -76,6 +83,9 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
     } else if (whatItemIsOpen === "moreInf2") {
       experience = experience + moreInf2;
       setMoreInf2(moreInf2 - 1);
+    } else if (whatItemIsOpen === "moreInf3") {
+      experience = experience + moreInf3;
+      setMoreInf3(moreInf3 - 1);
     }
     let allInfo = allInformation.experiences[experience];
     Object.keys(allInfo).forEach((key) => {
@@ -272,6 +282,30 @@ export const ExperiencesInfo = ({ allInformation, setAllInformation }) => {
             setAllInformation={setAllInformation}
             editSectionName={editSectionName}
           />
+        )}
+        {moreInf3 > 1 && openBox === 4 && (
+          <StudiesExperience2
+            allInformation={allInformation}
+            setAllInformation={setAllInformation}
+            editSectionName={editSectionName}
+          />
+        )}
+        {moreInf3 > 2 && openBox === 4 && (
+          <StudiesExperience3
+            allInformation={allInformation}
+            setAllInformation={setAllInformation}
+            editSectionName={editSectionName}
+          />
+        )}
+        {openBox === 4 && moreInf3 < 3 && (
+          <button className="ExperienceInf-more-button" onClick={openMoreInf}>
+            Other Study
+          </button>
+        )}
+        {moreInf3 > 1 && openBox === 4 && (
+          <button className="ExperienceInf-closemore-button" onClick={() => deleteLastAdded("studies", "moreInf3")}>
+            Delete Study
+          </button>
         )}
       </div>
     </>

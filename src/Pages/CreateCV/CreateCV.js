@@ -78,7 +78,19 @@ export const CreateCV = () => {
         language: "",
         languageLevel: "",
       },
-      studies: {
+      studies1: {
+        study: "",
+        startPeriod: "",
+        processPeriod: "",
+        descriptionStudy: "",
+      },
+      studies2: {
+        study: "",
+        startPeriod: "",
+        processPeriod: "",
+        descriptionStudy: "",
+      },
+      studies3: {
         study: "",
         startPeriod: "",
         processPeriod: "",
