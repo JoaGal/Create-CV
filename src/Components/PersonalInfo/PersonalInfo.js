@@ -79,7 +79,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
           language: "",
           languageLevel: "",
         },
-        studies: {
+        studies1: {
           study: "",
           startPeriod: "",
           processPeriod: "",
