@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   margin-top: 5rem;
+  z-index: 100;
 }
 
 .experiencesInf-box-open {
@@ -88,6 +89,7 @@
   font-weight: 600;
   outline: none;
   border: 0.13rem solid #ccc;
+  z-index: 999;
 }
 
 .experiencesInf-input-change:focus {
