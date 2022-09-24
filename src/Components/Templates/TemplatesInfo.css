@@ -181,12 +181,13 @@
 
 .templatesInf-grid-item-iframe {
   border: none;
-  border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   cursor: pointer;
-  height: 280px;
   overflow: hidden;
-  width: 200px;
+  height: 270.2px;
+  width: 191px;
+  /* height: 280px;
+  width: 200px; */
 }
 
 @media screen and (max-width: 1000px) {
