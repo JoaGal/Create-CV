@@ -14,6 +14,7 @@ export const TemplatesInfo = () => {
     if (window.innerWidth < 500) {
       scale = "0.35";
     } else if (window.innerWidth < 800) {
+
       scale = "0.5";
     } else if (window.innerWidth < 1450) {
       scale = "0.6";
@@ -29,7 +30,6 @@ export const TemplatesInfo = () => {
     }
   };
 
-  console.log(color)
 
   return (
     <div className={`templatesInf-container ${templateOpen !== "/noTemplate" && "o-hidden"}`}>
