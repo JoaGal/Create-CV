@@ -7,14 +7,15 @@ import "./TemplatesInfo.css";
 export const TemplatesInfo = () => {
   const [templateOpen, setTemplateOpen] = useState("/noTemplate");
   const [scale, setScale] = useState(0.7);
-  const [color, setColor] =useState("gray");
-
+  const [color, setColor] = useState(window.localStorage.getItem("Color"));
+  window.localStorage.setItem("Color", color);
+  
   useEffect(() => {
     let scale = 0.7;
     if (window.innerWidth < 500) {
       scale = "0.35";
     } else if (window.innerWidth < 800) {
-
+      
       scale = "0.5";
     } else if (window.innerWidth < 1450) {
       scale = "0.6";
@@ -23,13 +24,12 @@ export const TemplatesInfo = () => {
     }
     setScale(scale);
   }, [templateOpen]);
-
+  
   const closeTemplate = ({ target: { className } }) => {
     if (className.includes("templatesInf")) {
       setTemplateOpen("/noTemplate");
     }
   };
-
 
   return (
     <div className={`templatesInf-container ${templateOpen !== "/noTemplate" && "o-hidden"}`}>
@@ -39,7 +39,7 @@ export const TemplatesInfo = () => {
       >
         <button className="templatesInf-button-close-template">x</button>
         {templateOpen === "/template1" && <Template1 styleScale={scale} />}
-        {templateOpen === "/template2" && <Template2 styleScale={scale} color={color}/>}
+        {templateOpen === "/template2" && <Template2 styleScale={scale}/>}
         {templateOpen === "/template3" && <Template3 styleScale={scale} />}
         <a className="template-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
           Select this resume

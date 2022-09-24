@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Template2.css";
 
-export const Template2 = ({ styleScale = "1", color }) => {
+export const Template2 = ({ styleScale = "1"}) => {
   const allInformation = JSON.parse(localStorage.getItem("allInformation"));
 
   useEffect(() => {
@@ -15,8 +15,6 @@ export const Template2 = ({ styleScale = "1", color }) => {
     }
   }, []);
 
-  console.log(allInformation);
-
   return (
     <div
       id="template2"
@@ -25,7 +23,7 @@ export const Template2 = ({ styleScale = "1", color }) => {
         transformOrigin: `${styleScale === "0.24" ? "0 0" : "center"}`,
       }}
     >
-      <div className={`template2-sidebar-bg ${color}`}></div>
+      <div className={`template2-sidebar-bg  ${window.localStorage.getItem("Color")}`}></div>
       <div className="template2-sidebar">
         <div
           className="template2-photo"
@@ -257,5 +255,4 @@ export const Template2 = ({ styleScale = "1", color }) => {
 Template2.propTypes = {
   styleScale: PropTypes.string,
   allInformation: PropTypes.object,
-  color: PropTypes.string,
 };
