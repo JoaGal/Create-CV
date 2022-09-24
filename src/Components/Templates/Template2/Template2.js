@@ -96,11 +96,12 @@ export const Template2 = ({ styleScale = "1", color }) => {
       </div>
 
       {/* Empieza lo blanco */}
-      
+
       <div className="template2-sections">
         <div className="section-name">
           <h1 className="section-h1">
-            {allInformation.personal.name} {allInformation.personal.lastName}
+            {allInformation?.personal?.name}{" "}
+            {allInformation?.personal?.lastName}
           </h1>
         </div>
         <div className="section">
@@ -110,10 +111,14 @@ export const Template2 = ({ styleScale = "1", color }) => {
           >
             {allInformation?.personal?.email}
           </a>
-          <p>{allInformation.personal.city}, {allInformation.personal.country} ({allInformation.personal.postalCode})</p>
-          <p>{allInformation.personal.phone}</p>
-          <p>{allInformation.personal.linkedin}</p>
-          <p>{allInformation.personal.briefcase}</p>
+          <p>
+            {allInformation?.personal?.city},{" "}
+            {allInformation?.personal?.country} (
+            {allInformation?.personal?.postalCode})
+          </p>
+          <p>{allInformation?.personal?.phone}</p>
+          <p>{allInformation?.personal?.linkedin}</p>
+          <p>{allInformation?.personal?.briefcase}</p>
           <div className="section-title">
             <h2 className="section-h2">
               {allInformation?.experiences?.titles?.title0}
@@ -123,7 +128,10 @@ export const Template2 = ({ styleScale = "1", color }) => {
           <ol className="section-list">
             <li className="section-item">
               <div className="section-heading-group">
-                <p className="section-p-date">{allInformation?.experiences?.workExperience1?.startWork} - {allInformation?.experiences?.workExperience1?.finishWork}</p>
+                <p className="section-p-date">
+                  {allInformation?.experiences?.workExperience1?.startWork} -{" "}
+                  {allInformation?.experiences?.workExperience1?.finishWork}
+                </p>
                 <div className="section-heading">
                   <h3 className="section-h3">
                     {allInformation?.experiences?.workExperience1?.workstation}
@@ -215,19 +223,26 @@ export const Template2 = ({ styleScale = "1", color }) => {
         </div>
         <div className="section">
           <div className="section-title">
-            <h2 className="section-h2">{allInformation?.experiences?.titles?.title4}</h2>
+            <h2 className="section-h2">
+              {allInformation?.experiences?.titles?.title4}
+            </h2>
           </div>
           <div className="section-time-line-overlay"></div>
           <ol className="section-list">
             <li className="section-item">
               <div className="section-heading-group">
-              <p className="section-p-date">{allInformation?.experiences?.studies?.startPeriod} - {allInformation?.experiences?.studies?.processPeriod}</p>
+                <p className="section-p-date">
+                  {allInformation?.experiences?.studies?.startPeriod} -{" "}
+                  {allInformation?.experiences?.studies?.processPeriod}
+                </p>
                 <div className="section-heading">
-                  <h3 className="section-h3">{allInformation?.experiences?.studies?.study}</h3>
+                  <h3 className="section-h3">
+                    {allInformation?.experiences?.studies?.study}
+                  </h3>
                 </div>
                 <div className="section-content">
                   <p className="section-p">
-                  {allInformation?.experiences?.studies?.descriptionStudy}
+                    {allInformation?.experiences?.studies?.descriptionStudy}
                   </p>
                 </div>
               </div>
