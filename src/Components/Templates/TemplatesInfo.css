@@ -95,7 +95,7 @@
   margin-bottom: 20px;
 }
 
-.grey{
+.button-gray{
   background-color: #2b2b38;
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -108,7 +108,11 @@
   position: absolute;
 }
 
-.red{
+.gray{
+  background-color: #2b2b38;
+}
+
+.button-red{
   background-color: #b32d00;
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -121,7 +125,11 @@
   position: absolute;
 }
 
-.blue{
+.red{
+  background-color: #b32d00;
+}
+
+.button-blue{
   background-color: #336699;
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -133,7 +141,11 @@
   position: absolute;
 }
 
-.orange{
+.blue{
+  background-color: #336699;
+}
+
+.button-orange{
   background-color: #cc9900;
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -146,7 +158,11 @@
   position: absolute;
 }
 
-.beggie{
+.orange{
+  background-color: #cc9900;
+}
+
+.button-beggie{
   background-color: #ffd9b3;
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -157,6 +173,10 @@
   height: 30px;
   cursor: pointer;
   position: absolute;
+}
+
+.beggie{
+  background-color: #ffd9b3;
 }
 
 .templatesInf-grid-item-iframe {

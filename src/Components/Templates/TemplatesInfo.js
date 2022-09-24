@@ -7,6 +7,7 @@ import "./TemplatesInfo.css";
 export const TemplatesInfo = () => {
   const [templateOpen, setTemplateOpen] = useState("/noTemplate");
   const [scale, setScale] = useState(0.7);
+  const [color, setColor] =useState("gray");
 
   useEffect(() => {
     let scale = 0.7;
@@ -28,6 +29,8 @@ export const TemplatesInfo = () => {
     }
   };
 
+  console.log(color)
+
   return (
     <div className={`templatesInf-container ${templateOpen !== "/noTemplate" && "o-hidden"}`}>
       <div
@@ -36,16 +39,16 @@ export const TemplatesInfo = () => {
       >
         <button className="templatesInf-button-close-template">x</button>
         {templateOpen === "/template1" && <Template1 styleScale={scale} />}
-        {templateOpen === "/template2" && <Template2 styleScale={scale} />}
+        {templateOpen === "/template2" && <Template2 styleScale={scale} color={color}/>}
         {templateOpen === "/template3" && <Template3 styleScale={scale} />}
         <a className="template-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
           Select this resume
         </a>
-        <button className="grey"></button>
-        <button className="red"></button>
-        <button className="blue"></button>
-        <button className="orange"></button>
-        <button className="beggie"></button>
+        <button className="button-gray" onClick={()=> setColor("gray")}></button>
+        <button className="button-red" onClick={()=> setColor("red")}></button>
+        <button className="button-blue" onClick={()=> setColor("blue")}></button>
+        <button className="button-orange" onClick={()=> setColor("orange")}></button>
+        <button className="button-beggie" onClick={()=> setColor("beggie")}></button>
       </div>
 
       <div className="templatesInf-grid">
