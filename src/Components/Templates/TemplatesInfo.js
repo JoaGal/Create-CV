@@ -41,6 +41,11 @@ export const TemplatesInfo = () => {
         <a className="template-button-select-resume" href={templateOpen} target="_blank" rel="noreferrer">
           Select this resume
         </a>
+        <button className="grey"></button>
+        <button className="red"></button>
+        <button className="blue"></button>
+        <button className="orange"></button>
+        <button className="beggie"></button>
       </div>
 
       <div className="templatesInf-grid">
