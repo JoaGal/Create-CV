@@ -16,7 +16,7 @@ export const LabelInputButton = ({ id, extraClass, type, pathInObject, handleCha
       <input
         className="reusable-input"
         type={type || "text"}
-        maxLength="80"
+        maxLength="50"
         name={id}
         id={id}
         value={pathInObject}
