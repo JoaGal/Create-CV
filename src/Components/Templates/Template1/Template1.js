@@ -84,8 +84,8 @@ export const Template1 = ({ styleScale = "1" }) => {
             <dd className="template-1-dd">
               <h2 className="template-1-h2">{allInformation?.experiences?.workExperience1?.workstation}</h2>
               <p className="template-1-p">
-                {allInformation?.experiences?.workExperience1?.employer} -{" "}
-                {allInformation?.experiences?.workExperience1?.city} - |{" "}
+                {allInformation?.experiences?.workExperience1?.employer} (
+                {allInformation?.experiences?.workExperience1?.city}) |{" "}
                 {allInformation?.experiences?.workExperience1?.startWork} -{" "}
                 {allInformation?.experiences?.workExperience1?.finishWork}
                 <br />
@@ -95,8 +95,8 @@ export const Template1 = ({ styleScale = "1" }) => {
                 <>
                   <h2 className="template-1-h2">{allInformation?.experiences?.workExperience2?.workstation}</h2>
                   <p className="template-1-p">
-                    {allInformation?.experiences?.workExperience2?.employer} -{" "}
-                    {allInformation?.experiences?.workExperience2?.city} - |{" "}
+                    {allInformation?.experiences?.workExperience2?.employer} (
+                    {allInformation?.experiences?.workExperience2?.city}) |{" "}
                     {allInformation?.experiences?.workExperience2?.startWork} -{" "}
                     {allInformation?.experiences?.workExperience2?.finishWork}
                     <br />
@@ -108,8 +108,8 @@ export const Template1 = ({ styleScale = "1" }) => {
                 <>
                   <h2 className="template-1-h2">{allInformation?.experiences?.workExperience3?.workstation}</h2>
                   <p className="template-1-p">
-                    {allInformation?.experiences?.workExperience3?.employer} -{" "}
-                    {allInformation?.experiences?.workExperience3?.city} - |{" "}
+                    {allInformation?.experiences?.workExperience3?.employer} (
+                    {allInformation?.experiences?.workExperience3?.city}) |{" "}
                     {allInformation?.experiences?.workExperience3?.startWork} -{" "}
                     {allInformation?.experiences?.workExperience3?.finishWork}
                     <br />
@@ -133,10 +133,10 @@ export const Template1 = ({ styleScale = "1" }) => {
                 <>
                   <h2 className="template-1-h2">Languages</h2>
                   <p className="template-1-p">
-                    ● {allInformation?.experiences?.languages1?.language}{" "}
-                    ({allInformation?.experiences?.languages1?.languageLevel}) ●{" "}
-                    {allInformation?.experiences?.languages2?.language}{" "}
-                    ({allInformation?.experiences?.languages2?.languageLevel}) ●{" "}
+                    ● {allInformation?.experiences?.languages1?.language} (
+                    {allInformation?.experiences?.languages1?.languageLevel}) ●{" "}
+                    {allInformation?.experiences?.languages2?.language} (
+                    {allInformation?.experiences?.languages2?.languageLevel}) ●{" "}
                     {allInformation?.experiences?.languages3?.language} (
                     {allInformation?.experiences?.languages3?.languageLevel})
                   </p>
@@ -154,19 +154,19 @@ export const Template1 = ({ styleScale = "1" }) => {
             <dt className="template-1-dt">Studies</dt>
             <dd className="template-1-dd">
               <h2 className="template-1-h2">
-                {allInformation?.experiences?.studies1?.study} - {allInformation?.experiences?.studies1?.startPeriod} -{" "}
+                {allInformation?.experiences?.studies1?.study} | {allInformation?.experiences?.studies1?.startPeriod} -{" "}
                 {allInformation?.experiences?.studies1?.processPeriod}
               </h2>
               <p className="template-1-p">{allInformation?.experiences?.studies1?.descriptionStudy}</p>
               <br />
               <h2 className="template-1-h2">
-                {allInformation?.experiences?.studies2?.study} - {allInformation?.experiences?.studies2?.startPeriod} -{" "}
+                {allInformation?.experiences?.studies2?.study} | {allInformation?.experiences?.studies2?.startPeriod} -{" "}
                 {allInformation?.experiences?.studies2?.processPeriod}
               </h2>
               <p className="template-1-p">{allInformation?.experiences?.studies2?.descriptionStudy}</p>
               <br />
               <h2 className="template-1-h2">
-                {allInformation?.experiences?.studies3?.study} - {allInformation?.experiences?.studies3?.startPeriod} -{" "}
+                {allInformation?.experiences?.studies3?.study} | {allInformation?.experiences?.studies3?.startPeriod} -{" "}
                 {allInformation?.experiences?.studies3?.processPeriod}
               </h2>
               <p className="template-1-p">{allInformation?.experiences?.studies3?.descriptionStudy}</p>
@@ -174,22 +174,6 @@ export const Template1 = ({ styleScale = "1" }) => {
             </dd>
           </>
         )}
-        {/* 
-        <dd className="template-1-clear template-1-dd"></dd>
-
-        <dt className="template-1-dt">Pasatiempos</dt>
-        <dd className="template-1-dd">
-          <p className="template-1-p">
-            Diseñar planos 3D en SketchUp
-            <br />
-            Juntarme con amigos
-            <br />
-            Jugar videojuegos
-            <br />
-            Andar en bicicleta
-            <br />
-          </p>
-        </dd> */}
 
         <dd className="template-1-clear template-1-dd"></dd>
       </dl>
