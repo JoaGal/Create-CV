@@ -12,7 +12,7 @@ export const LabelTextareaButton = ({ id, extraClass, pathInObject, handleChange
             .replace(/([A-Z])/g, " $1")
             .trim()}
       </label>
-      <textarea className="reusable-textarea" name={id} id={id} value={pathInObject} onChange={handleChange} />
+      <textarea className="reusable-textarea" maxLength="220" name={id} id={id} value={pathInObject} onChange={handleChange} />
       {pathInObject !== "" && (
         <button
           className="reusable-button-delete-input"
