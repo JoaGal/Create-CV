@@ -9,6 +9,7 @@
   position: absolute;
   width: 21cm;
   height: 29.7cm;
+  overflow: hidden;
 }
 
 .template-1-img {

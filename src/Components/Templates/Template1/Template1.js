@@ -19,12 +19,9 @@ export const Template1 = ({ styleScale = "1" }) => {
       id="template1"
       style={{ transform: `scale(${styleScale})`, transformOrigin: `${styleScale === "0.24" ? "0 0" : "center"}` }}
     >
-      <img
-        className="template-1-img"
-        src={allInformation?.personal?.image}
-        alt="Profile picture"
-        id="pic"
-      />
+      {allInformation?.personal?.image && (
+        <img className="template-1-img" src={allInformation?.personal?.image} alt="Profile picture" id="pic" />
+      )}
 
       <div>
         <h1 className="template-1-h1">
@@ -32,34 +29,48 @@ export const Template1 = ({ styleScale = "1" }) => {
         </h1>
 
         <p className="template-1-p">
-          CUIL: 20-43343429-4
+          {allInformation?.personal?.phone && "Phone: "} {allInformation?.personal?.phone}
           <br />
-          Phone: {allInformation?.personal?.phone}
+          {(allInformation?.personal?.address ||
+            allInformation?.personal?.city ||
+            allInformation?.personal?.country) && (
+            <>
+              Address: {allInformation?.personal?.address}, {allInformation?.personal?.country},{" "}
+              {allInformation?.personal?.postalCode}, {allInformation?.personal?.city}
+            </>
+          )}
           <br />
-          Address: {allInformation?.personal?.address}
-          <br />
-          Email:
-          <a className="template-1-a" href={`mailto:${allInformation?.personal?.email}`}>
-            {allInformation?.personal?.email}
-          </a>
-          <br />
-          Github:
-          <a className="template-1-a" href="https://github.com/GiuliannT">
-            https://github.com/GiuliannT
-          </a>
-          <br />
-          Linkedin:
-          <a className="template-1-a" href="https://www.linkedin.com/in/giulianoconti/">
-            https://www.linkedin.com/in/giulianoconti
-          </a>
+          {allInformation?.personal?.email && (
+            <>
+              Email:
+              <a className="template-1-a" href={`mailto:${allInformation?.personal?.email}`}>
+                {allInformation?.personal?.email}
+              </a>
+              <br />
+            </>
+          )}
+          {allInformation?.personal?.briefcase && (
+            <>
+              Briefcase:
+              <a className="template-1-a" href={allInformation?.personal?.briefcase}>
+                {allInformation?.personal?.briefcase}
+              </a>
+              <br />
+            </>
+          )}
+          {allInformation?.personal?.linkedin && (
+            <>
+              Linkedin:
+              <a className="template-1-a" href={allInformation?.personal?.linkedin}>
+                {allInformation?.personal?.linkedin}
+              </a>
+            </>
+          )}
         </p>
       </div>
 
       <div id="template-1-objective">
-        <p className="template-1-objective-p">
-          Soy una persona autodidacta. Me gustan los desafíos. Tengo muchas ganas de unirme a un grupo de trabajo para
-          aportar, seguir aprendiendo y crecer con la programación.
-        </p>
+        <p className="template-1-objective-p">{allInformation?.experiences?.profile?.descriptionProfile}</p>
       </div>
 
       <div className="template-1-clear"></div>
@@ -67,50 +78,103 @@ export const Template1 = ({ styleScale = "1" }) => {
       <dl>
         <dd className="template-1-clear template-1-dd"></dd>
 
-        <dt className="template-1-dt">Educación</dt>
-        <dd className="template-1-dd">
-          <p className="template-1-p">
-            <strong>Primaria:</strong> Instituto Educativo Privado N° 2 (Arbo y Blanco 470, Resistencia, Chaco)
-            <br />
-            <strong>Secundaria:</strong> Título de Bachiller - EES N° 76 Colegio Nacional Jose Maria Paz (Av. 9 de Julio
-            640, Resistencia, Chaco)
-            <br />
-            <strong>Universidad:</strong> Primer año aprobado en Ingeniería civil - Facultad de Ingeniería - UNNE (Av.
-            Las Heras 727, Resistencia, Chaco)
-          </p>
-        </dd>
+        {allInformation?.experiences?.workExperience1?.workstation && (
+          <>
+            <dt className="template-1-dt">Works</dt>
+            <dd className="template-1-dd">
+              <h2 className="template-1-h2">{allInformation?.experiences?.workExperience1?.workstation}</h2>
+              <p className="template-1-p">
+                {allInformation?.experiences?.workExperience1?.employer} -{" "}
+                {allInformation?.experiences?.workExperience1?.city} - |{" "}
+                {allInformation?.experiences?.workExperience1?.startWork} -{" "}
+                {allInformation?.experiences?.workExperience1?.finishWork}
+                <br />
+                {allInformation?.experiences?.workExperience1?.descriptionWork}
+              </p>
+              {allInformation?.experiences?.workExperience2?.workstation && (
+                <>
+                  <h2 className="template-1-h2">{allInformation?.experiences?.workExperience2?.workstation}</h2>
+                  <p className="template-1-p">
+                    {allInformation?.experiences?.workExperience2?.employer} -{" "}
+                    {allInformation?.experiences?.workExperience2?.city} - |{" "}
+                    {allInformation?.experiences?.workExperience2?.startWork} -{" "}
+                    {allInformation?.experiences?.workExperience2?.finishWork}
+                    <br />
+                    {allInformation?.experiences?.workExperience2?.descriptionWork}
+                  </p>
+                </>
+              )}
+              {allInformation?.experiences?.workExperience3?.workstation && (
+                <>
+                  <h2 className="template-1-h2">{allInformation?.experiences?.workExperience3?.workstation}</h2>
+                  <p className="template-1-p">
+                    {allInformation?.experiences?.workExperience3?.employer} -{" "}
+                    {allInformation?.experiences?.workExperience3?.city} - |{" "}
+                    {allInformation?.experiences?.workExperience3?.startWork} -{" "}
+                    {allInformation?.experiences?.workExperience3?.finishWork}
+                    <br />
+                    {allInformation?.experiences?.workExperience3?.descriptionWork}
+                  </p>
+                </>
+              )}
+            </dd>
+          </>
+        )}
+
+        <dd className="template-1-clear template-1-dd"></dd>
+        {allInformation?.experiences?.skill?.skill && (
+          <>
+            <dt className="template-1-dt">Skills</dt>
+            <dd className="template-1-dd">
+              <h2 className="template-1-h2">{allInformation?.experiences?.skill?.skill}</h2>
+              <p className="template-1-p">{allInformation?.experiences?.skill?.descriptionSkill}</p>
+
+              {allInformation?.experiences?.languages1?.language && (
+                <>
+                  <h2 className="template-1-h2">Languages</h2>
+                  <p className="template-1-p">
+                    ● {allInformation?.experiences?.languages1?.language}{" "}
+                    ({allInformation?.experiences?.languages1?.languageLevel}) ●{" "}
+                    {allInformation?.experiences?.languages2?.language}{" "}
+                    ({allInformation?.experiences?.languages2?.languageLevel}) ●{" "}
+                    {allInformation?.experiences?.languages3?.language} (
+                    {allInformation?.experiences?.languages3?.languageLevel})
+                  </p>
+                  <br />
+                </>
+              )}
+            </dd>
+          </>
+        )}
 
         <dd className="template-1-clear template-1-dd"></dd>
 
-        <dt className="template-1-dt">Habilidades</dt>
-        <dd className="template-1-dd">
-          <h2 className="template-1-h2">Habilidades de programación</h2>
-          <p className="template-1-p">React, HTML5, CSS3, JavaScript y Git</p>
-
-          <h2 className="template-1-h2">Habilidades extras</h2>
-          <p className="template-1-p">
-            SketchUp, Software de productividad de Microsoft Office (Word, Excel, etc), Creación de mapas para juegos
-            FPS de Valve (Valve Hammer Editor), Linux (Ubuntu), Windows, Bueno googleando y encontrando soluciones a
-            diferentes problemas
-          </p>
-        </dd>
-
-        <dd className="template-1-clear template-1-dd"></dd>
-
-        <dt className="template-1-dt">Certificados</dt>
-        <dd className="template-1-dd">
-          <p className="template-1-p">
-            Curso de Desarrollo Web - Informatorio (Subsecretaría de Empleo del Chaco - SEC)
-            <br />
-            Curso de Introducción a la programación - Informatorio (SEC)
-            <br />
-            Curso Introducción al lenguaje de Programación - EducaciónIT (Alumni Education)
-            <br />
-            JavaScript for Beginners - The Complete introduction to JS - Udemy
-          </p>
-          <br />
-        </dd>
-
+        {allInformation?.experiences?.studies1?.study && (
+          <>
+            <dt className="template-1-dt">Studies</dt>
+            <dd className="template-1-dd">
+              <h2 className="template-1-h2">
+                {allInformation?.experiences?.studies1?.study} - {allInformation?.experiences?.studies1?.startPeriod} -{" "}
+                {allInformation?.experiences?.studies1?.processPeriod}
+              </h2>
+              <p className="template-1-p">{allInformation?.experiences?.studies1?.descriptionStudy}</p>
+              <br />
+              <h2 className="template-1-h2">
+                {allInformation?.experiences?.studies2?.study} - {allInformation?.experiences?.studies2?.startPeriod} -{" "}
+                {allInformation?.experiences?.studies2?.processPeriod}
+              </h2>
+              <p className="template-1-p">{allInformation?.experiences?.studies2?.descriptionStudy}</p>
+              <br />
+              <h2 className="template-1-h2">
+                {allInformation?.experiences?.studies3?.study} - {allInformation?.experiences?.studies3?.startPeriod} -{" "}
+                {allInformation?.experiences?.studies3?.processPeriod}
+              </h2>
+              <p className="template-1-p">{allInformation?.experiences?.studies3?.descriptionStudy}</p>
+              <br />
+            </dd>
+          </>
+        )}
+        {/* 
         <dd className="template-1-clear template-1-dd"></dd>
 
         <dt className="template-1-dt">Pasatiempos</dt>
@@ -125,7 +189,7 @@ export const Template1 = ({ styleScale = "1" }) => {
             Andar en bicicleta
             <br />
           </p>
-        </dd>
+        </dd> */}
 
         <dd className="template-1-clear template-1-dd"></dd>
       </dl>
