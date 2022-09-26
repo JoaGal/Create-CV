@@ -1,21 +1,18 @@
 import React from "react";
+import "./WorkExperience.css";
+import PropTypes from "prop-types";
 import { LabelInputButton } from "../../Reusable/LabelInputButton";
 import { LabelTextareaButton } from "../../Reusable/LabelTextareaButton";
-import PropTypes from "prop-types";
-import "./WorkExperience.css";
 
 export const WorkExperience = ({ allInformation, setAllInformation }) => {
-  const handleChange = ({ target: { value, name } }) => {
-    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
-      value = value.toUpperCase();
-    }
+  const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
         workExperience1: {
           ...allInformation.experiences.workExperience1,
-          [name]: value,
+          [e.target.name]: e.target.value,
         },
       },
     });

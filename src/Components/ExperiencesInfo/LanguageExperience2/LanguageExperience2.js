@@ -4,22 +4,18 @@ import { LabelSelect } from "../../Reusable/LabelSelect";
 import PropTypes from "prop-types";
 
 export const LanguageExperience2 = ({ allInformation, setAllInformation }) => {
-  const handleChange = ({ target: { value, name } }) => {
-    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
-      value = value.toUpperCase();
-    }
+  const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
         languages2: {
           ...allInformation.experiences.languages2,
-          [name]: value,
+          [e.target.name]: e.target.value,
         },
       },
     });
   };
-
 
   const deleteThisInput = (e) => {
     e.preventDefault();

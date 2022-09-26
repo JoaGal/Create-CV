@@ -4,17 +4,14 @@ import PropTypes from "prop-types";
 import { LabelTextareaButton } from "../../Reusable/LabelTextareaButton";
 
 export const ProfileExperience = ({ allInformation, setAllInformation }) => {
-  const handleChange = ({ target: { value, name } }) => {
-    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
-      value = value.toUpperCase();
-    }
+  const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
         profile: {
           ...allInformation.experiences.profile,
-          [name]: value,
+          [e.target.name]: e.target.value,
         },
       },
     });

@@ -5,17 +5,14 @@ import { LabelSelect } from "../../Reusable/LabelSelect";
 import { LabelTextareaButton } from "../../Reusable/LabelTextareaButton";
 
 export const StudiesExperience3 = ({ allInformation, setAllInformation }) => {
-  const handleChange = ({ target: { value, name } }) => {
-    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
-      value = value.toUpperCase();
-    }
+  const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
         studies3: {
           ...allInformation.experiences.studies3,
-          [name]: value,
+          [e.target.name]: e.target.value,
         },
       },
     });

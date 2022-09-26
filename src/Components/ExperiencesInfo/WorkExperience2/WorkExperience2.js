@@ -4,17 +4,14 @@ import { LabelTextareaButton } from "../../Reusable/LabelTextareaButton";
 import { LabelInputButton } from "../../Reusable/LabelInputButton";
 
 export const WorkExperience2 = ({ allInformation, setAllInformation }) => {
-  const handleChange = ({ target: { value, name } }) => {
-    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
-      value = value.toUpperCase();
-    }
+  const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
         workExperience2: {
           ...allInformation.experiences.workExperience2,
-          [name]: value,
+          [e.target.name]: e.target.value,
         },
       },
     });

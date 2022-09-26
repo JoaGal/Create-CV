@@ -4,17 +4,14 @@ import { LabelSelect } from "../../Reusable/LabelSelect";
 import PropTypes from "prop-types";
 
 export const LanguageExperience3 = ({ allInformation, setAllInformation }) => {
-  const handleChange = ({ target: { value, name } }) => {
-    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
-      value = value.toUpperCase();
-    }
+  const handleChange = (e) => {
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
         languages3: {
           ...allInformation.experiences.languages3,
-          [name]: value,
+          [e.target.name]: e.target.value,
         },
       },
     });
