@@ -137,20 +137,26 @@ export const Template2 = ({ styleScale = "1" }) => {
             />
             {allInformation?.personal?.phone}
           </p>
-          <p className="section-personal-p">
+          <a
+            className="template2-personal-inf"
+            href={allInformation?.personal?.linkedin}
+          >
             <BsLinkedin
               className="section-ico"
               id={window.localStorage.getItem("Color")}
             />
             {allInformation?.personal?.linkedin}
-          </p>
-          <p className="section-personal-p">
+          </a>
+          <a
+            className="template2-personal-inf"
+            href={allInformation?.personal?.briefcase}
+          >
             <BsBriefcaseFill
               className="section-ico"
               id={window.localStorage.getItem("Color")}
             />
             {allInformation?.personal?.briefcase}
-          </p>
+          </a>
           <div className="section-title">
             <h2 className="section-h2">
               {allInformation?.experiences?.titles?.title0}
@@ -161,7 +167,7 @@ export const Template2 = ({ styleScale = "1" }) => {
             <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
-                  {allInformation?.experiences?.workExperience1?.startWork} - {" "}
+                  {allInformation?.experiences?.workExperience1?.startWork} -{" "}
                   {allInformation?.experiences?.workExperience1?.finishWork}
                 </p>
                 <div className="section-heading">
@@ -188,10 +194,10 @@ export const Template2 = ({ styleScale = "1" }) => {
             <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
-                <p className="section-p-date">
-                  {allInformation?.experiences?.workExperience2?.startWork} - {" "}
-                  {allInformation?.experiences?.workExperience2?.finishWork}
-                </p>
+                  <p className="section-p-date">
+                    {allInformation?.experiences?.workExperience2?.startWork} -{" "}
+                    {allInformation?.experiences?.workExperience2?.finishWork}
+                  </p>
                   <div className="section-heading">
                     <h3 className="section-h3">
                       {
@@ -220,10 +226,10 @@ export const Template2 = ({ styleScale = "1" }) => {
             <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
-                <p className="section-p-date">
-                  {allInformation?.experiences?.workExperience3?.startWork} - {" "}
-                  {allInformation?.experiences?.workExperience3?.finishWork}
-                </p>
+                  <p className="section-p-date">
+                    {allInformation?.experiences?.workExperience3?.startWork} -{" "}
+                    {allInformation?.experiences?.workExperience3?.finishWork}
+                  </p>
                   <div className="section-heading">
                     <h3 className="section-h3">
                       {
@@ -277,7 +283,7 @@ export const Template2 = ({ styleScale = "1" }) => {
             </li>
           </ol>
           {allInformation?.experiences?.studies2?.study && (
-            <ol className="section-list">
+            <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
                   <p className="section-p-date">
@@ -299,7 +305,7 @@ export const Template2 = ({ styleScale = "1" }) => {
             </ol>
           )}
           {allInformation?.experiences?.studies3?.study && (
-            <ol className="section-list">
+            <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
                   <p className="section-p-date">
