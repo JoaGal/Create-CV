@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Template2.css";
 import { FaTelegramPlane } from "react-icons/fa";
-import { GrLocation } from "react-icons/gr";
+import { ImLocation } from "react-icons/im";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsLinkedin, BsBriefcaseFill } from "react-icons/bs";
 
-
-export const Template2 = ({ styleScale = "1"}) => {
+export const Template2 = ({ styleScale = "1" }) => {
   const allInformation = JSON.parse(localStorage.getItem("allInformation"));
 
   useEffect(() => {
@@ -28,7 +27,11 @@ export const Template2 = ({ styleScale = "1"}) => {
         transformOrigin: `${styleScale === "0.24" ? "0 0" : "center"}`,
       }}
     >
-      <div className={`template2-sidebar-bg  ${window.localStorage.getItem("Color")}`}></div>
+      <div
+        className={`template2-sidebar-bg  ${window.localStorage.getItem(
+          "Color"
+        )}`}
+      ></div>
       <div className="template2-sidebar">
         <div
           className="template2-photo"
@@ -112,16 +115,42 @@ export const Template2 = ({ styleScale = "1"}) => {
             className="template2-personal-inf"
             href={`mailto:${allInformation?.personal?.email}`}
           >
-            <FaTelegramPlane className="section-ico"/> {allInformation?.personal?.email}
+            <FaTelegramPlane
+              className="section-ico"
+              id={window.localStorage.getItem("Color")}
+            />{" "}
+            {allInformation?.personal?.email}
           </a>
           <p className="section-personal-p">
-           <GrLocation className="section-ico"/> {allInformation?.personal?.city},{" "}
+            <ImLocation
+              className="section-ico"
+              id={window.localStorage.getItem("Color")}
+            />{" "}
+            {allInformation?.personal?.city},{" "}
             {allInformation?.personal?.country} (
             {allInformation?.personal?.postalCode})
           </p>
-          <p className="section-personal-p"><FiPhoneCall className="section-ico"/>{allInformation?.personal?.phone}</p>
-          <p className="section-personal-p"><BsLinkedin className="section-ico"/>{allInformation?.personal?.linkedin}</p>
-          <p className="section-personal-p"><BsBriefcaseFill className="section-ico"/>{allInformation?.personal?.briefcase}</p>
+          <p className="section-personal-p">
+            <FiPhoneCall
+              className="section-ico"
+              id={window.localStorage.getItem("Color")}
+            />
+            {allInformation?.personal?.phone}
+          </p>
+          <p className="section-personal-p">
+            <BsLinkedin
+              className="section-ico"
+              id={window.localStorage.getItem("Color")}
+            />
+            {allInformation?.personal?.linkedin}
+          </p>
+          <p className="section-personal-p">
+            <BsBriefcaseFill
+              className="section-ico"
+              id={window.localStorage.getItem("Color")}
+            />
+            {allInformation?.personal?.briefcase}
+          </p>
           <div className="section-title">
             <h2 className="section-h2">
               {allInformation?.experiences?.titles?.title0}
@@ -132,7 +161,7 @@ export const Template2 = ({ styleScale = "1"}) => {
             <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
-                  {allInformation?.experiences?.workExperience1?.startWork} - {" "}
+                  {allInformation?.experiences?.workExperience1?.startWork} -{" "}
                   {allInformation?.experiences?.workExperience1?.finishWork}
                 </p>
                 <div className="section-heading">
@@ -253,47 +282,47 @@ export const Template2 = ({ styleScale = "1"}) => {
           </ol>
           {allInformation?.experiences?.studies2?.study && (
             <ol className="section-list">
-            <li className="section-item">
-              <div className="section-heading-group">
-                <p className="section-p-date">
-                  {allInformation?.experiences?.studies2?.startPeriod} -{" "}
-                  {allInformation?.experiences?.studies2?.processPeriod}
-                </p>
-                <div className="section-heading">
-                  <h3 className="section-h3">
-                    {allInformation?.experiences?.studies2?.study}
-                  </h3>
-                </div>
-                <div className="section-content">
-                  <p className="section-p">
-                    {allInformation?.experiences?.studies2?.descriptionStudy}
+              <li className="section-item">
+                <div className="section-heading-group">
+                  <p className="section-p-date">
+                    {allInformation?.experiences?.studies2?.startPeriod} -{" "}
+                    {allInformation?.experiences?.studies2?.processPeriod}
                   </p>
+                  <div className="section-heading">
+                    <h3 className="section-h3">
+                      {allInformation?.experiences?.studies2?.study}
+                    </h3>
+                  </div>
+                  <div className="section-content">
+                    <p className="section-p">
+                      {allInformation?.experiences?.studies2?.descriptionStudy}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ol>
+              </li>
+            </ol>
           )}
           {allInformation?.experiences?.studies3?.study && (
             <ol className="section-list">
-            <li className="section-item">
-              <div className="section-heading-group">
-                <p className="section-p-date">
-                  {allInformation?.experiences?.studies3?.startPeriod} -{" "}
-                  {allInformation?.experiences?.studies3?.processPeriod}
-                </p>
-                <div className="section-heading">
-                  <h3 className="section-h3">
-                    {allInformation?.experiences?.studies3?.study}
-                  </h3>
-                </div>
-                <div className="section-content">
-                  <p className="section-p">
-                    {allInformation?.experiences?.studies3?.descriptionStudy}
+              <li className="section-item">
+                <div className="section-heading-group">
+                  <p className="section-p-date">
+                    {allInformation?.experiences?.studies3?.startPeriod} -{" "}
+                    {allInformation?.experiences?.studies3?.processPeriod}
                   </p>
+                  <div className="section-heading">
+                    <h3 className="section-h3">
+                      {allInformation?.experiences?.studies3?.study}
+                    </h3>
+                  </div>
+                  <div className="section-content">
+                    <p className="section-p">
+                      {allInformation?.experiences?.studies3?.descriptionStudy}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ol>
+              </li>
+            </ol>
           )}
         </div>
       </div>

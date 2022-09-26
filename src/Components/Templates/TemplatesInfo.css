@@ -112,6 +112,10 @@
   background-color: #2b2b38;
 }
 
+#gray{
+  color: #2b2b38;
+}
+
 .button-red{
   background-color: #b32d00;
   border: 2px solid #ffffff;
@@ -129,6 +133,10 @@
   background-color: #b32d00;
 }
 
+#red{
+  color: #b32d00;
+}
+
 .button-blue{
   background-color: #336699;
   border: 2px solid #ffffff;
@@ -143,6 +151,10 @@
 
 .blue{
   background-color: #336699;
+}
+
+#blue{
+  color: #336699;
 }
 
 .button-orange{
@@ -162,6 +174,11 @@
   background-color: #cc9900;
 }
 
+#orange{
+  color: #cc9900;
+}
+
+
 .button-beggie{
   background-color: #ffd9b3;
   border: 2px solid #ffffff;
@@ -177,6 +194,10 @@
 
 .beggie{
   background-color: #ffd9b3;
+}
+
+#beggie{
+  color: #ffd9b3;
 }
 
 .templatesInf-grid-item-iframe {
