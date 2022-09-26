@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Template2.css";
 import { FaTelegramPlane } from "react-icons/fa";
 import { ImLocation } from "react-icons/im";
-import { FiPhoneCall } from "react-icons/fi";
+import { FaPhoneAlt } from "react-icons/fa";
 import { BsLinkedin, BsBriefcaseFill } from "react-icons/bs";
 
 export const Template2 = ({ styleScale = "1" }) => {
@@ -131,7 +131,7 @@ export const Template2 = ({ styleScale = "1" }) => {
             {allInformation?.personal?.postalCode})
           </p>
           <p className="section-personal-p">
-            <FiPhoneCall
+            <FaPhoneAlt
               className="section-ico"
               id={window.localStorage.getItem("Color")}
             />
