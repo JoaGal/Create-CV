@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Template2.css";
+import { FaTelegramPlane } from "react-icons/fa";
+import { GrLocation } from "react-icons/gr";
+import { FiPhoneCall } from "react-icons/fi";
+import { BsLinkedin, BsBriefcaseFill } from "react-icons/bs";
+
 
 export const Template2 = ({ styleScale = "1"}) => {
   const allInformation = JSON.parse(localStorage.getItem("allInformation"));
@@ -107,16 +112,16 @@ export const Template2 = ({ styleScale = "1"}) => {
             className="template2-personal-inf"
             href={`mailto:${allInformation?.personal?.email}`}
           >
-            {allInformation?.personal?.email}
+            <FaTelegramPlane className="section-ico"/> {allInformation?.personal?.email}
           </a>
-          <p>
-            {allInformation?.personal?.city},{" "}
+          <p className="section-personal-p">
+           <GrLocation className="section-ico"/> {allInformation?.personal?.city},{" "}
             {allInformation?.personal?.country} (
             {allInformation?.personal?.postalCode})
           </p>
-          <p>{allInformation?.personal?.phone}</p>
-          <p>{allInformation?.personal?.linkedin}</p>
-          <p>{allInformation?.personal?.briefcase}</p>
+          <p className="section-personal-p"><FiPhoneCall className="section-ico"/>{allInformation?.personal?.phone}</p>
+          <p className="section-personal-p"><BsLinkedin className="section-ico"/>{allInformation?.personal?.linkedin}</p>
+          <p className="section-personal-p"><BsBriefcaseFill className="section-ico"/>{allInformation?.personal?.briefcase}</p>
           <div className="section-title">
             <h2 className="section-h2">
               {allInformation?.experiences?.titles?.title0}

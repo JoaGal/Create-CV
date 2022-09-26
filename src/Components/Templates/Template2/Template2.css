@@ -88,6 +88,18 @@
   margin-bottom: 1.5rem;
 }
 
+.section-ico{
+  width: 20px;
+  height: 18px;
+  margin-right: 7px;
+}
+
+.section-personal-p{
+  display: flex;
+  margin-top: 5px;
+
+}
+
 .section {
   position: relative;
   width: 100%;
@@ -160,6 +172,7 @@
   font-size: 15px;
   color: rgb(0, 0, 0);
   text-decoration: none;
+  display: flex;
 }
 
 .section-content {
