@@ -13,6 +13,7 @@
 }
 
 .template-1-img {
+  object-fit: cover;
   float: right;
   margin: 0;
   height: 12rem;
