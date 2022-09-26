@@ -283,7 +283,7 @@ export const Template2 = ({ styleScale = "1" }) => {
             </li>
           </ol>
           {allInformation?.experiences?.studies2?.study && (
-            <ol className="section-list">
+            <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
                   <p className="section-p-date">
@@ -305,7 +305,7 @@ export const Template2 = ({ styleScale = "1" }) => {
             </ol>
           )}
           {allInformation?.experiences?.studies3?.study && (
-            <ol className="section-list">
+            <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
                   <p className="section-p-date">
