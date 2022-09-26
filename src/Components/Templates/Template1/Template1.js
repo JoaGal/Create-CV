@@ -80,7 +80,7 @@ export const Template1 = ({ styleScale = "1" }) => {
 
         {allInformation?.experiences?.workExperience1?.workstation && (
           <>
-            <dt className="template-1-dt">Works</dt>
+            <dt className="template-1-dt">{allInformation?.experiences?.titles?.title0}</dt>
             <dd className="template-1-dd">
               <h2 className="template-1-h2">{allInformation?.experiences?.workExperience1?.workstation}</h2>
               <p className="template-1-p">
@@ -124,14 +124,14 @@ export const Template1 = ({ styleScale = "1" }) => {
         <dd className="template-1-clear template-1-dd"></dd>
         {allInformation?.experiences?.skill?.skill && (
           <>
-            <dt className="template-1-dt">Skills</dt>
+            <dt className="template-1-dt">{allInformation?.experiences?.titles?.title2}</dt>
             <dd className="template-1-dd">
               <h2 className="template-1-h2">{allInformation?.experiences?.skill?.skill}</h2>
               <p className="template-1-p">{allInformation?.experiences?.skill?.descriptionSkill}</p>
 
               {allInformation?.experiences?.languages1?.language && (
                 <>
-                  <h2 className="template-1-h2">Languages</h2>
+                  <h2 className="template-1-h2">{allInformation?.experiences?.titles?.title3}</h2>
                   <p className="template-1-p">
                     ● {allInformation?.experiences?.languages1?.language} (
                     {allInformation?.experiences?.languages1?.languageLevel}) ●{" "}
@@ -151,7 +151,7 @@ export const Template1 = ({ styleScale = "1" }) => {
 
         {allInformation?.experiences?.studies1?.study && (
           <>
-            <dt className="template-1-dt">Studies</dt>
+            <dt className="template-1-dt">{allInformation?.experiences?.titles?.title4}</dt>
             <dd className="template-1-dd">
               <h2 className="template-1-h2">
                 {allInformation?.experiences?.studies1?.study} | {allInformation?.experiences?.studies1?.startPeriod} -{" "}

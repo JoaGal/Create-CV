@@ -32,7 +32,7 @@ export const PersonalInfo = ({ allInformation, setAllInformation }) => {
         titles: {
           title0: "Work experience",
           title1: "Profile",
-          title2: "Skill",
+          title2: "Skills",
           title3: "Languages",
           title4: "Studies and certifications",
         },
