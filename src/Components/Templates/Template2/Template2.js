@@ -127,7 +127,7 @@ export const Template2 = ({ styleScale = "1"}) => {
             <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
-                  {allInformation?.experiences?.workExperience1?.startWork} -{" "}
+                  {allInformation?.experiences?.workExperience1?.startWork} - {" "}
                   {allInformation?.experiences?.workExperience1?.finishWork}
                 </p>
                 <div className="section-heading">
@@ -251,17 +251,17 @@ export const Template2 = ({ styleScale = "1"}) => {
             <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
-                  {allInformation?.experiences?.studies1?.startPeriod} -{" "}
-                  {allInformation?.experiences?.studies1?.processPeriod}
+                  {allInformation?.experiences?.studies2?.startPeriod} -{" "}
+                  {allInformation?.experiences?.studies2?.processPeriod}
                 </p>
                 <div className="section-heading">
                   <h3 className="section-h3">
-                    {allInformation?.experiences?.studies1?.study}
+                    {allInformation?.experiences?.studies2?.study}
                   </h3>
                 </div>
                 <div className="section-content">
                   <p className="section-p">
-                    {allInformation?.experiences?.studies1?.descriptionStudy}
+                    {allInformation?.experiences?.studies2?.descriptionStudy}
                   </p>
                 </div>
               </div>
@@ -273,17 +273,17 @@ export const Template2 = ({ styleScale = "1"}) => {
             <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
-                  {allInformation?.experiences?.studies1?.startPeriod} -{" "}
-                  {allInformation?.experiences?.studies1?.processPeriod}
+                  {allInformation?.experiences?.studies3?.startPeriod} -{" "}
+                  {allInformation?.experiences?.studies3?.processPeriod}
                 </p>
                 <div className="section-heading">
                   <h3 className="section-h3">
-                    {allInformation?.experiences?.studies1?.study}
+                    {allInformation?.experiences?.studies3?.study}
                   </h3>
                 </div>
                 <div className="section-content">
                   <p className="section-p">
-                    {allInformation?.experiences?.studies1?.descriptionStudy}
+                    {allInformation?.experiences?.studies3?.descriptionStudy}
                   </p>
                 </div>
               </div>
