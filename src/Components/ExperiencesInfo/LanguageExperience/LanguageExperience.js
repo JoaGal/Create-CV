@@ -5,14 +5,17 @@ import PropTypes from "prop-types";
 import "./LanguageExperience.css";
 
 export const LanguageExperience = ({ allInformation, setAllInformation }) => {
-  const handleChange = (e) => {
+  const handleChange = ({ target: { value, name } }) => {
+    if (value.trim().length === 1 && value.match(/^[A-Za-z]+$/)) {
+      value = value.toUpperCase();
+    }
     setAllInformation({
       ...allInformation,
       experiences: {
         ...allInformation.experiences,
         languages1: {
           ...allInformation.experiences.languages1,
-          [e.target.name]: e.target.value,
+          [name]: value,
         },
       },
     });
