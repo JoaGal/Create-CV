@@ -11,6 +11,7 @@ export const LabelInputButton = ({ id, extraClass, type, pathInObject, handleCha
             .slice(1)
             .replace(/([A-Z])/g, " $1")
             .trim()}
+        {(id === "briefcase" || id === "linkedin") && " (URL)"}
       </label>
       <input
         className="reusable-input"
