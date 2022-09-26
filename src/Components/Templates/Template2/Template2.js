@@ -161,7 +161,7 @@ export const Template2 = ({ styleScale = "1" }) => {
             <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
-                  {allInformation?.experiences?.workExperience1?.startWork} -{" "}
+                  {allInformation?.experiences?.workExperience1?.startWork} - {" "}
                   {allInformation?.experiences?.workExperience1?.finishWork}
                 </p>
                 <div className="section-heading">
@@ -188,12 +188,10 @@ export const Template2 = ({ styleScale = "1" }) => {
             <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
-                  <div className="section-date">
-                    {allInformation?.experiences?.workExperience2?.startWork}
-                  </div>
-                  <div className="section-finishWork">
-                    {allInformation?.experiences?.workExperience2?.finishWork}
-                  </div>
+                <p className="section-p-date">
+                  {allInformation?.experiences?.workExperience2?.startWork} - {" "}
+                  {allInformation?.experiences?.workExperience2?.finishWork}
+                </p>
                   <div className="section-heading">
                     <h3 className="section-h3">
                       {
@@ -222,12 +220,10 @@ export const Template2 = ({ styleScale = "1" }) => {
             <ol className="section-list paddingTop">
               <li className="section-item">
                 <div className="section-heading-group">
-                  <div className="section-date">
-                    {allInformation?.experiences?.workExperience3?.startWork}
-                  </div>
-                  <div className="section-finishWork">
-                    {allInformation?.experiences?.workExperience3?.finishWork}
-                  </div>
+                <p className="section-p-date">
+                  {allInformation?.experiences?.workExperience3?.startWork} - {" "}
+                  {allInformation?.experiences?.workExperience3?.finishWork}
+                </p>
                   <div className="section-heading">
                     <h3 className="section-h3">
                       {
