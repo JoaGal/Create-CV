@@ -139,13 +139,13 @@ export const Template2 = ({ styleScale = "1" }) => {
           </p>
           <a
             className="template2-personal-inf"
-            href={allInformation?.personal?.linkedin}
+            href="https://www.linkedin.com/in/joaquin-galdeano-174281209/"
           >
             <BsLinkedin
               className="section-ico"
               id={window.localStorage.getItem("Color")}
             />
-            {allInformation?.personal?.linkedin}
+            https://www.linkedin.com/in/joaquin-galdeano-174281209/
           </a>
           <a
             className="template2-personal-inf"
