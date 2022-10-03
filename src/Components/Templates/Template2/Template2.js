@@ -163,8 +163,6 @@ export const Template2 = ({ styleScale = "1" }) => {
             </h2>
           </div>
           <div className="section-time-line-overlay"></div>
-          <ol className="section-list">
-            <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
                   {allInformation?.experiences?.workExperience1?.startWork} -{" "}
@@ -188,11 +186,8 @@ export const Template2 = ({ styleScale = "1" }) => {
                   }
                 </p>
               </div>
-            </li>
-          </ol>
           {allInformation?.experiences?.workExperience2?.workstation && (
-            <ol className="section-list paddingTop">
-              <li className="section-item">
+              <div className="paddingTop">
                 <div className="section-heading-group">
                   <p className="section-p-date">
                     {allInformation?.experiences?.workExperience2?.startWork} -{" "}
@@ -219,12 +214,10 @@ export const Template2 = ({ styleScale = "1" }) => {
                     }
                   </p>
                 </div>
-              </li>
-            </ol>
+              </div>
           )}
           {allInformation?.experiences?.workExperience3?.workstation && (
-            <ol className="section-list paddingTop">
-              <li className="section-item">
+              <div className="paddingTop">
                 <div className="section-heading-group">
                   <p className="section-p-date">
                     {allInformation?.experiences?.workExperience3?.startWork} -{" "}
@@ -251,8 +244,7 @@ export const Template2 = ({ styleScale = "1" }) => {
                     }
                   </p>
                 </div>
-              </li>
-            </ol>
+              </div>
           )}
         </div>
         <div className="section">
@@ -262,8 +254,6 @@ export const Template2 = ({ styleScale = "1" }) => {
             </h2>
           </div>
           <div className="section-time-line-overlay"></div>
-          <ol className="section-list">
-            <li className="section-item">
               <div className="section-heading-group">
                 <p className="section-p-date">
                   {allInformation?.experiences?.studies1?.startPeriod} -{" "}
@@ -280,11 +270,8 @@ export const Template2 = ({ styleScale = "1" }) => {
                   </p>
                 </div>
               </div>
-            </li>
-          </ol>
           {allInformation?.experiences?.studies2?.study && (
-            <ol className="section-list paddingTop">
-              <li className="section-item">
+              <div className="paddingTop">
                 <div className="section-heading-group">
                   <p className="section-p-date">
                     {allInformation?.experiences?.studies2?.startPeriod} -{" "}
@@ -301,12 +288,10 @@ export const Template2 = ({ styleScale = "1" }) => {
                     </p>
                   </div>
                 </div>
-              </li>
-            </ol>
+              </div>
           )}
           {allInformation?.experiences?.studies3?.study && (
-            <ol className="section-list paddingTop">
-              <li className="section-item">
+              <div className="paddingTop">
                 <div className="section-heading-group">
                   <p className="section-p-date">
                     {allInformation?.experiences?.studies3?.startPeriod} -{" "}
@@ -323,8 +308,7 @@ export const Template2 = ({ styleScale = "1" }) => {
                     </p>
                   </div>
                 </div>
-              </li>
-            </ol>
+              </div>
           )}
         </div>
       </div>
