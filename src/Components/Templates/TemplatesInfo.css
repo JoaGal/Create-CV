@@ -179,8 +179,8 @@
 }
 
 
-.button-beggie{
-  background-color: #ffd9b3;
+.button-purple{
+  background-color: #b076c5;
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   bottom: 75px;
@@ -192,12 +192,12 @@
   position: absolute;
 }
 
-.beggie{
-  background-color: #ffd9b3;
+.purple{
+  background-color: #b076c5;
 }
 
-#beggie{
-  color: #ffd9b3;
+#purple{
+  color: #b076c5;
 }
 
 .templatesInf-grid-item-iframe {

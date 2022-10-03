@@ -49,7 +49,7 @@ export const TemplatesInfo = () => {
             <button className="button-red" onClick={() => setColor("red")}></button>
             <button className="button-blue" onClick={() => setColor("blue")}></button>
             <button className="button-orange" onClick={() => setColor("orange")}></button>
-            <button className="button-beggie" onClick={() => setColor("beggie")}></button>
+            <button className="button-purple" onClick={() => setColor("purple")}></button>
           </>
         )}
       </div>
