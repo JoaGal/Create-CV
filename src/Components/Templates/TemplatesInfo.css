@@ -109,11 +109,11 @@
 }
 
 .gray{
-  background-color: #2b2b38;
+  background-color: #2b2b38 !important;
 }
 
 #gray{
-  color: #2b2b38;
+  color: #2b2b38 !important;
 }
 
 .button-red{
@@ -130,11 +130,11 @@
 }
 
 .red{
-  background-color: #b32d00;
+  background-color: #b32d00 !important;
 }
 
 #red{
-  color: #b32d00;
+  color: #b32d00 !important;
 }
 
 .button-blue{
@@ -150,11 +150,11 @@
 }
 
 .blue{
-  background-color: #336699;
+  background-color: #336699 !important;
 }
 
 #blue{
-  color: #336699;
+  color: #336699 !important;
 }
 
 .button-orange{
@@ -171,11 +171,11 @@
 }
 
 .orange{
-  background-color: #cc9900;
+  background-color: #cc9900 !important;
 }
 
 #orange{
-  color: #cc9900;
+  color: #cc9900 !important;
 }
 
 

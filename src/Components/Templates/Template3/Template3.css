@@ -5,11 +5,134 @@
   position: absolute;
   width: 21cm;
   height: 29.7cm;
+  overflow: hidden;
 }
 
-.template-3-img {
-  float: right;
+.template3-sidebar-bg{
+  position: fixed;
+  top: 100px;
+  left: 0;
+  height: 205px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.section-head{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  top: 100px;
+  padding: 27px 0 0 27px;
+  color: #2b2b38;
+}
+
+.template3-photo {
+  padding: 0;
+  height: 155px;
+  width: 155px;
+  border-radius: 50%;
+  background-size: cover !important;
+}
+
+.title-head{
+ text-align: center;
+ border-left: 2px solid #c4c3c3;
+ border-right: 2px solid #c4c3c3;
+}
+
+.template3-h1{
+  font-style: normal;
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #2b2b38;
+}
+
+.head-personalinf{
+  width: 70%;
+  margin: auto;
+  margin-right: 5px;
+}
+
+.body-ico{
+  width: 27px;
+  height: 23px;
+  color: #ffffff;
+  margin-right: 7px;
+}
+
+.body-personalinf{
+  font-size: 17px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  margin-top: 5.5px;
+}
+
+.section-body{
+  width: 100%;
+  height: auto;
+  margin-top: 235px;
+  display: flex;
+  padding-bottom: 20px;
+}
+.section-body-left{
+  width: 50%;
+  border-right: 1px solid #c4c3c3;
+}
+
+.section-body-rigth{
+  width: 50%;
+  border-left: 1px solid #c4c3c3;
+}
+
+.body-title{
+  display: block;
+  position: relative;
+  z-index: 99;
+  font-weight: 600;
+  background: #fff;
+  padding: 30px 0 5px 0;
+  margin-bottom: 14px;
+  page-break-inside: avoid;
+  border-bottom: 1.5px solid #c4c3c3;
+}
+
+.body-h2{
+  font-size: 23px;
+  font-weight: 600;
   margin: 0;
-  height: 12rem;
-  width: 12rem;
+  padding: 0;
+  display: block;
+}
+
+.body-box{
+  margin-top: 25px;
+}
+
+.center{
+  text-align: center;
+}
+
+
+.body-language{
+  display: flex;
+  justify-content: center;
+}
+
+.body-language-p{
+  font-weight: 700;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.body-box2{
+  display: block;
+  position: fixed;
+  border: 2px solid #c4c3c3;
+  width: 95%;
+  margin-top: 10px;
+  padding: 10px;
 }
