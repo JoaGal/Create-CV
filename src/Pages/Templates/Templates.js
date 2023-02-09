@@ -6,18 +6,18 @@ export const Templates = () => {
   const allTemplates = [
     {
       id: 1,
-      name: "Harvard",
-      templates: "https://www.cvmaker.com.ar/assets/images/cvs/2/cv-ejemplo-harvard-434a54.jpg",
+      name: "Simple",
+      templates: "resume1.webp",
     },
     {
       id: 2,
-      name: "Standford",
-      templates: "https://www.cvmaker.com.ar/assets/images/cvs/9/cv-ejemplo-edinburgh-ffc209.jpg",
+      name: "Vertical",
+      templates: "resume2.webp",
     },
     {
       id: 3,
-      name: "Edingburgh",
-      templates: "https://www.cvmaker.com.ar/assets/images/cvs/3/cv-ejemplo-standford-424954.jpg",
+      name: "Horizontal",
+      templates: "resume3.webp",
     },
   ];
 
@@ -25,8 +25,8 @@ export const Templates = () => {
     <div className="templates-screen">
       <h1 className="templates-title">Examples of professional CV</h1>
       <p className="templates-subtitle">
-        Increase your chances of finding a job and build your resume with one of our professionally designed resume
-        templates.
+        Increase your chances of finding a job and build your resume with one of our professionally
+        designed resume templates.
       </p>
       <Link to="/createcv">
         <button className="templates-button">Create CV</button>
